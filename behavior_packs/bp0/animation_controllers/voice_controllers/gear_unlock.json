@@ -1,0 +1,61 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.voice_unlock": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "unlock1": "query.mark_variant == 11"
+                        },
+                        {
+                            "unlock2": "query.mark_variant == 12"
+                        },
+                        {
+                            "unlock3": "query.mark_variant == 13"
+                        },
+                        {
+                            "unlock4": "query.mark_variant == 14"
+                        },
+                        {
+                            "unlock5": "query.mark_variant == 15"
+                        },
+                        {
+                            "unlock6": "query.mark_variant == 16"
+                        }
+                    ]
+                },
+                "unlock1": {
+                    "animations": [
+                        "unlock1"
+                    ]
+                },
+                "unlock2": {
+                    "animations": [
+                        "unlock2"
+                    ]
+                },
+                "unlock3": {
+                    "animations": [
+                        "unlock3"
+                    ]
+                },
+                "unlock4": {
+                    "animations": [
+                        "unlock4"
+                    ]
+                },
+                "unlock5": {
+                    "animations": [
+                        "unlock5"
+                    ]
+                },
+                "unlock6": {
+                    "animations": [
+                        "unlock6"
+                    ]
+                }
+            }
+        }
+    }
+}

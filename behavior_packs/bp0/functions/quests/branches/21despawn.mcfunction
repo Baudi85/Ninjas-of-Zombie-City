@@ -1,0 +1,1 @@
+execute @e[x=48,y=54,z=352,dx=47,dy=15,dz=47,tag=!branchMob,type=!player] ~ ~ ~ function quests/branches/selectedDespawn

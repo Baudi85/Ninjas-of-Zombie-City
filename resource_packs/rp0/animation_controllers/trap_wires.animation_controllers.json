@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.trap_wires.sparks": {
+      "states": {
+        "default": {
+          "transitions": [
+		    { "on": "query.is_sheared" }
+          ]
+        },
+	    "on": {
+          "animations": [ "electricity_sound" ],
+          "particle_effects": [
+              {"effect": "spark_a"},
+              {"effect": "spark_b"}
+          ],
+          "transitions": [
+            { "default": "!query.is_sheared" }
+          ]
+        }
+      }
+    }
+  }
+}

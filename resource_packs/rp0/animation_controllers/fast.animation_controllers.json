@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.fast.move": {
+	 "initial_state": "spawn",
+      "states": {
+        "spawn": {
+          "animations": [ "spawn" ],
+          "transitions": [
+			{ "idle": "query.anim_time >= 1.15" }
+          ],
+          "blend_transition": 0.2 
+        },
+        "idle": {
+          "animations": [ "idle" ],
+          "transitions": [
+			{ "run": "query.modified_move_speed > 0.01" },
+			{ "attack": "query.is_delayed_attacking" }
+          ],
+          "blend_transition": 0.2 
+        },
+		"run": {
+          "animations": [ "run" ],
+          "transitions": [
+            { "idle": "query.modified_move_speed <= 0.01" },
+			{ "attack": "query.is_delayed_attacking" }
+          ] ,
+          "blend_transition": 0.2 
+        },
+		"attack": {
+          "animations": [ "attack" ],
+          "transitions": [
+            { "idle": "query.anim_time >= 0.7 && query.modified_move_speed <= 0.01" },
+			{ "run": "query.anim_time >= 0.7 && query.modified_move_speed > 0.01" }
+          ] ,
+          "blend_transition": 0.2 
+        }
+      }
+    }
+  }
+}

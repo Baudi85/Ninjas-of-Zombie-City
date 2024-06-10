@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.range",
+      "textures": {
+        "default": "textures/entity/zombie/range/default",
+        "projectile": "textures/entity/zombie/range/projectile",
+        "shield": "textures/entity/zombie/shield"
+      },
+      "geometry": {
+        "default": "geometry.range",
+        "shield": "geometry.range_shield"
+      },
+      "materials": {
+        "default": "transparency",
+        "shield": "shield"
+      },
+      "animations": {
+        "misc": "animation.range.misc",
+        "idle": "animation.range.idle", 
+        "walk": "animation.range.walk",
+        "shoot": "animation.range.shoot",
+        "spawn": "animation.range.spawn",
+        "fire_sound": "animation.range.fire_sound",
+        "move": "controller.animation.range.move",
+        "range": "controller.animation.range.shoot"
+      },
+      "scripts": {
+        "animate": [
+          "move", "range"
+        ]
+      },
+      "sound_effects": {
+        "range_jump": "range_jump",
+        "range_fire": "range_fire"
+      },
+      "render_controllers": [
+        "controller.render.base",
+        "controller.render.shield"
+      ]
+    }
+  }
+}

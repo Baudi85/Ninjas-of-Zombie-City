@@ -1,0 +1,32 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.tutorial_boss.falldown": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "fall": "query.variant == 1"
+                        }
+                    ]
+                },
+                "fall": {
+                    "animations": [
+                        "fall"
+                    ],
+                    "transitions": [
+                        {
+                            "fallen": "query.anim_time >= 1.0"
+                        }
+                    ]
+                },
+                "fallen": {
+                    "animations": [
+                        "fallen"
+                    ]
+                }
+            }
+        }
+    }
+}

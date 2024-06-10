@@ -1,0 +1,25 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.poster": {
+      "arrays": {
+        "textures": {
+          "array.skins": [
+            "Texture.a",
+            "Texture.b",
+            "Texture.c",
+            "Texture.d", 
+            "Texture.e",
+            "Texture.f",
+            "Texture.g",
+            "Texture.h",
+            "Texture.i"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [{"*": "Material.default"}],
+      "textures": ["array.skins[query.variant]"]
+    }
+  }
+}

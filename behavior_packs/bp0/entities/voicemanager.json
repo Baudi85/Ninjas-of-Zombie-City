@@ -1,0 +1,1073 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.voicemanager",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "interrupt": "animation.interrupt",
+                "main": "controller.animation.voice_main",
+                "dungeon_branch": "controller.animation.voice_dungeon_branch",
+                "branch11": "animation.branch11",
+                "branch12": "animation.branch12",
+                "branch13": "animation.branch13",
+                "branch21": "animation.branch21",
+                "branch22": "animation.branch22",
+                "branch23": "animation.branch23",
+                "branch31": "animation.branch31",
+                "branch32": "animation.branch32",
+                "branch33": "animation.branch33",
+                "branch41": "animation.branch41",
+                "branch42": "animation.branch42",
+                "mission_type": "controller.animation.voice_mission_type",
+                "missionVar11": "animation.missionVar11",
+                "missionVar12": "animation.missionVar12",
+                "missionVar13": "animation.missionVar13",
+                "missionVar14": "animation.missionVar14",
+                "missionVar21": "animation.missionVar21",
+                "missionVar22": "animation.missionVar22",
+                "missionVar23": "animation.missionVar23",
+                "missionVar24": "animation.missionVar24",
+                "missionVar31": "animation.missionVar31",
+                "missionVar32": "animation.missionVar32",
+                "missionVar33": "animation.missionVar33",
+                "missionVar34": "animation.missionVar34",
+                "missionVar41": "animation.missionVar41",
+                "missionVar42": "animation.missionVar42",
+                "missionVar43": "animation.missionVar43",
+                "missionVar44": "animation.missionVar44",
+                "direction": "controller.animation.voice_direction",
+                "dungeon1": "animation.dungeon1",
+                "dungeon2": "animation.dungeon2",
+                "dungeon3": "animation.dungeon3",
+                "dungeon4": "animation.dungeon4",
+                "mission_success": "animation.success_message",
+                "gear_unlock": "controller.animation.voice_unlock",
+                "unlock1": "animation.gear_unlock1",
+                "unlock2": "animation.gear_unlock2",
+                "unlock3": "animation.gear_unlock3",
+                "unlock4": "animation.gear_unlock4",
+                "unlock5": "animation.gear_unlock5",
+                "unlock6": "animation.gear_unlock6",
+                "final_boss": "animation.final_boss",
+                "final_boss_congrats": "animation.final_boss_congrats"
+            },
+            "scripts": {
+                "animate": [
+                    "main"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:waiting": {
+                "minecraft:mark_variant": {
+                    "value": 0
+                },
+                "minecraft:environment_sensor": {
+                    "triggers": [
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "talk"
+                            },
+                            "event": "noxcrew:to_talk1"
+                        },
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "despawn"
+                            },
+                            "event": "noxcrew:to_despawn"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:missionsuccess": {
+                "minecraft:mark_variant": {
+                    "value": 0
+                },
+                "minecraft:environment_sensor": {
+                    "triggers": [
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "talksuccess"
+                            },
+                            "event": "noxcrew:to_talk10"
+                        },
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "despawn"
+                            },
+                            "event": "noxcrew:to_despawn"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:finalbosssuccess": {
+                "minecraft:mark_variant": {
+                    "value": 60
+                }
+            },
+            "noxcrew:interrupt_check": {
+                "minecraft:environment_sensor": {
+                    "triggers": [
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "stop_talking"
+                            },
+                            "event": "noxcrew:to_interrupted"
+                        },
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "despawn"
+                            },
+                            "event": "noxcrew:to_despawn"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:interrupted": {
+                "minecraft:environment_sensor": {
+                    "triggers": {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "despawn"
+                        },
+                        "event": "noxcrew:to_despawn"
+                    }
+                },
+                "minecraft:mark_variant": {
+                    "value": 4
+                }
+            },
+            "noxcrew:despawn_check": {
+                "minecraft:environment_sensor": {
+                    "triggers": {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "despawn"
+                        },
+                        "event": "noxcrew:to_despawn"
+                    }
+                }
+            },
+            "noxcrew:talk1": {
+                "minecraft:mark_variant": {
+                    "value": 1
+                }
+            },
+            "noxcrew:talk2": {
+                "minecraft:mark_variant": {
+                    "value": 2
+                }
+            },
+            "noxcrew:talk3": {
+                "minecraft:mark_variant": {
+                    "value": 3
+                }
+            },
+            "noxcrew:talk10": {
+                "minecraft:mark_variant": {
+                    "value": 10
+                }
+            },
+            "noxcrew:talk11": {
+                "minecraft:mark_variant": {
+                    "value": 11
+                }
+            },
+            "noxcrew:talk12": {
+                "minecraft:mark_variant": {
+                    "value": 12
+                }
+            },
+            "noxcrew:talk13": {
+                "minecraft:mark_variant": {
+                    "value": 13
+                }
+            },
+            "noxcrew:talk14": {
+                "minecraft:mark_variant": {
+                    "value": 14
+                }
+            },
+            "noxcrew:talk15": {
+                "minecraft:mark_variant": {
+                    "value": 15
+                }
+            },
+            "noxcrew:talk16": {
+                "minecraft:mark_variant": {
+                    "value": 16
+                }
+            },
+            "noxcrew:talk50": {
+                "minecraft:mark_variant": {
+                    "value": 50
+                }
+            },
+            "noxcrew:talk99": {
+                "minecraft:mark_variant": {
+                    "value": 99
+                }
+            },
+            "noxcrew:branch11": {
+                "minecraft:skin_id": {
+                    "value": 11
+                }
+            },
+            "noxcrew:branch12": {
+                "minecraft:skin_id": {
+                    "value": 12
+                }
+            },
+            "noxcrew:branch13": {
+                "minecraft:skin_id": {
+                    "value": 13
+                }
+            },
+            "noxcrew:branch21": {
+                "minecraft:skin_id": {
+                    "value": 21
+                }
+            },
+            "noxcrew:branch22": {
+                "minecraft:skin_id": {
+                    "value": 22
+                }
+            },
+            "noxcrew:branch23": {
+                "minecraft:skin_id": {
+                    "value": 23
+                }
+            },
+            "noxcrew:branch31": {
+                "minecraft:skin_id": {
+                    "value": 31
+                }
+            },
+            "noxcrew:branch32": {
+                "minecraft:skin_id": {
+                    "value": 32
+                }
+            },
+            "noxcrew:branch33": {
+                "minecraft:skin_id": {
+                    "value": 33
+                }
+            },
+            "noxcrew:branch41": {
+                "minecraft:skin_id": {
+                    "value": 41
+                }
+            },
+            "noxcrew:branch42": {
+                "minecraft:skin_id": {
+                    "value": 42
+                }
+            },
+            "noxcrew:missionVar11": {
+                "minecraft:variant": {
+                    "value": 11
+                }
+            },
+            "noxcrew:missionVar12": {
+                "minecraft:variant": {
+                    "value": 12
+                }
+            },
+            "noxcrew:missionVar13": {
+                "minecraft:variant": {
+                    "value": 13
+                }
+            },
+            "noxcrew:missionVar14": {
+                "minecraft:variant": {
+                    "value": 14
+                }
+            },
+            "noxcrew:missionVar21": {
+                "minecraft:variant": {
+                    "value": 21
+                }
+            },
+            "noxcrew:missionVar22": {
+                "minecraft:variant": {
+                    "value": 22
+                }
+            },
+            "noxcrew:missionVar23": {
+                "minecraft:variant": {
+                    "value": 23
+                }
+            },
+            "noxcrew:missionVar24": {
+                "minecraft:variant": {
+                    "value": 24
+                }
+            },
+            "noxcrew:missionVar31": {
+                "minecraft:variant": {
+                    "value": 31
+                }
+            },
+            "noxcrew:missionVar32": {
+                "minecraft:variant": {
+                    "value": 32
+                }
+            },
+            "noxcrew:missionVar33": {
+                "minecraft:variant": {
+                    "value": 33
+                }
+            },
+            "noxcrew:missionVar34": {
+                "minecraft:variant": {
+                    "value": 34
+                }
+            },
+            "noxcrew:missionVar41": {
+                "minecraft:variant": {
+                    "value": 41
+                }
+            },
+            "noxcrew:missionVar42": {
+                "minecraft:variant": {
+                    "value": 42
+                }
+            },
+            "noxcrew:missionVar43": {
+                "minecraft:variant": {
+                    "value": 43
+                }
+            },
+            "noxcrew:missionVar44": {
+                "minecraft:variant": {
+                    "value": 44
+                }
+            },
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "utility"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0,
+                "height": 0
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting"
+                    ]
+                }
+            },
+            "noxcrew:to_missionsuccess": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:missionsuccess"
+                    ]
+                }
+            },
+            "noxcrew:to_finalbosssuccess": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:finalbosssuccess"
+                    ]
+                }
+            },
+            "noxcrew:to_interrupted": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:waiting",
+                        "noxcrew:interrupt_check",
+                        "noxcrew:talk1",
+                        "noxcrew:talk2",
+                        "noxcrew:talk3",
+                        "noxcrew:branch11",
+                        "noxcrew:branch12",
+                        "noxcrew:branch13",
+                        "noxcrew:branch21",
+                        "noxcrew:branch22",
+                        "noxcrew:branch23",
+                        "noxcrew:branch31",
+                        "noxcrew:branch32",
+                        "noxcrew:branch33",
+                        "noxcrew:branch41",
+                        "noxcrew:branch42",
+                        "noxcrew:missionVar11",
+                        "noxcrew:missionVar12",
+                        "noxcrew:missionVar13",
+                        "noxcrew:missionVar14",
+                        "noxcrew:missionVar21",
+                        "noxcrew:missionVar22",
+                        "noxcrew:missionVar23",
+                        "noxcrew:missionVar24",
+                        "noxcrew:missionVar31",
+                        "noxcrew:missionVar32",
+                        "noxcrew:missionVar33",
+                        "noxcrew:missionVar34",
+                        "noxcrew:missionVar41",
+                        "noxcrew:missionVar42",
+                        "noxcrew:missionVar43",
+                        "noxcrew:missionVar44"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:interrupted"
+                    ]
+                }
+            },
+            "noxcrew:to_waiting": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:interrupted"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting"
+                    ]
+                }
+            },
+            "noxcrew:to_talk1": {
+                "sequence": [
+                    {
+                        "remove": {
+                            "component_groups": [
+                                "noxcrew:waiting"
+                            ]
+                        }
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:talk1",
+                                "noxcrew:interrupt_check"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar11"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar11"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar12"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar12"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar13"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar13"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar14"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar14"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar21"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar21"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar22"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar22"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar23"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar23"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar24"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar24"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar31"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar31"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar32"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar32"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar33"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar33"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar34"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar34"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar41"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar41"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar42"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar42"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar43"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar43"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "missionVar44"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:missionVar44"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_talk2": {
+                "sequence": [
+                    {
+                        "remove": {
+                            "component_groups": [
+                                "noxcrew:talk1"
+                            ]
+                        }
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:talk2"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "branch11"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch11"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "branch12"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch12"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "branch13"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch13"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "branch21"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch21"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "branch22"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch22"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "branch23"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch23"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "branch31"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch31"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "branch32"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch32"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "branch33"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch33"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "branch41"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch41"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "branch42"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch42"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_talk3": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:talk2"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:talk3"
+                    ]
+                }
+            },
+            "noxcrew:to_talk10": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:success"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:talk10",
+                        "noxcrew:despawn_check"
+                    ]
+                }
+            },
+            "noxcrew:to_talkupgrade": {
+                "sequence": [
+                    {
+                        "remove": {
+                            "component_groups": [
+                                "noxcrew:talk10"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "unlock1"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:talk11"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "unlock2"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:talk12"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "unlock3"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:talk13"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "unlock4"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:talk14"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "unlock5"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:talk15"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "unlock6"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:talk16"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "unlockFB"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:talk50"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_tag",
+                                    "subject": "self",
+                                    "operator": "!=",
+                                    "value": "unlock1"
+                                },
+                                {
+                                    "test": "has_tag",
+                                    "subject": "self",
+                                    "operator": "!=",
+                                    "value": "unlock2"
+                                },
+                                {
+                                    "test": "has_tag",
+                                    "subject": "self",
+                                    "operator": "!=",
+                                    "value": "unlock3"
+                                },
+                                {
+                                    "test": "has_tag",
+                                    "subject": "self",
+                                    "operator": "!=",
+                                    "value": "unlock4"
+                                },
+                                {
+                                    "test": "has_tag",
+                                    "subject": "self",
+                                    "operator": "!=",
+                                    "value": "unlock5"
+                                },
+                                {
+                                    "test": "has_tag",
+                                    "subject": "self",
+                                    "operator": "!=",
+                                    "value": "unlock6"
+                                },
+                                {
+                                    "test": "has_tag",
+                                    "subject": "self",
+                                    "operator": "!=",
+                                    "value": "unlockFB"
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:talk99"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_talk99": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:talk11",
+                        "noxcrew:talk12",
+                        "noxcrew:talk13",
+                        "noxcrew:talk14",
+                        "noxcrew:talk15",
+                        "noxcrew:talk16"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:talk99"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

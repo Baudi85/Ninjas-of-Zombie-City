@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.zombie_dead": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "to_dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/function gameplay/zombieKills"
+                    ]
+                },
+                "to_dead": {}
+            }
+        }
+    }
+}

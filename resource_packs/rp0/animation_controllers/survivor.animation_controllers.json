@@ -1,0 +1,55 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.survivor.move": {
+      "states": {
+        "default": {
+          "animations": [ "idle", "look_at_target" ],
+          "transitions": [
+            { "callout": "query.is_tamed" },
+            { "talking": "query.variant == 1" }
+          ],
+          "blend_transition": 0.2 
+        },
+        "callout": {
+          "animations": [ "callout", "look_at_target" ],
+          "transitions": [
+            { "default": "query.anim_time >= 1.9" },
+            { "talking": "query.variant == 1" }
+          ],
+          "blend_transition": 0.6 
+        },
+		"talking": {
+          "animations": [ "idle", "look_at_target", "talking" ],
+          "transitions": [
+            { "poof": "query.is_sheared" }
+          ]
+        },
+		"poof": {
+          "animations": [ "poof" ],
+          "particle_effects": [
+            {
+              "effect": "poof_particle"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.survivor.particle": {
+      "states": {
+		"default": {
+          "particle_effects": [
+            {
+              "effect": "objective"
+            }
+          ],
+          "transitions": [
+            { "poof": "query.is_sheared" }
+          ]
+        },
+		"poof": {
+        }
+      }
+    }
+  }
+}

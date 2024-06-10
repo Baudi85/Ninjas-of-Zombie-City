@@ -1,0 +1,968 @@
+﻿txt.noxcrew.version= [ 1, 0, 0 ]
+pack.name=Ninjas of Zombie City RP
+pack.description=by Noxcrew
+
+##ITEMS
+item.experience_bottle.name=Spirit Warp
+item.chainmail_boots.name=Master Boots
+item.chainmail_chestplate.name=Master Tunic
+item.chainmail_helmet.name=Master Headband
+item.chainmail_leggings.name=Master Leggings
+item.diamond_boots.name=Sensei Boots
+item.diamond_chestplate.name=Sensei Tunic
+item.diamond_helmet.name=Sensei Headband
+item.diamond_leggings.name=Sensei Leggings
+item.diamond_sword.name=Ono Axe
+item.egg.name=Parachute
+item.ender_pearl.name=Dragon Cloud
+item.iron_boots.name=Warrior Boots
+item.iron_chestplate.name=Warrior Tunic
+item.iron_helmet.name=Warrior Headband
+item.iron_leggings.name=Warrior Leggings
+item.iron_sword.name=Sai Dagger
+item.netherite_sword.name=Katana
+item.leather_boots.name=Rookie Boots
+item.leather_helmet.name=Rookie Headband
+item.leather_leggings.name=Rookie Leggings
+item.leather_chestplate.name=Rookie Tunic
+potion.heal.postfix=Health Potion
+potion.prefix.grenade=Grunt
+item.emptyPotion.name=Love Flare
+item.snowball.name=Tiger Claws
+entity.snowball.name=Tiger Claws
+item.stone_sword.name=Baseball Bat
+item.trident.name=Throwing Sword
+ 
+
+
+item.noxcrew:zcn.wood.name=Wooden Scrap
+item.noxcrew:zcn.cloth.name=Cloth Scrap
+item.noxcrew:zcn.metal.name=Metal Scrap
+item.noxcrew:zcn.magic_powder.name=Magic Powder
+item.noxcrew:zcn.machine_part_a.name=Coolant Tank
+item.noxcrew:zcn.machine_part_b.name=Meter Reader
+item.noxcrew:zcn.machine_part_c.name=Exhaust Cap
+item.noxcrew:zcn.machine_part_d.name=Heat Fan
+item.noxcrew:zcn.fuelcan_empty.name=Empty Fuel Can
+item.noxcrew:zcn.fuelcan_full.name=Full Fuel Can
+item.noxcrew:zcn.zombiecoin.name=§aZombie Coin
+
+##Mission PDA
+item.noxcrew:zcn.111.name=§aSlay the Monstrosity§f in the §dPolice Station: Academy
+item.noxcrew:zcn.112.name=§aFix the Machine§f in the §dPolice Station: Academy
+item.noxcrew:zcn.113.name=§aSupply Run§f in the §dPolice Station: Academy
+item.noxcrew:zcn.114.name=§aRescue the Runner§f in the §dPolice Station: Academy
+item.noxcrew:zcn.121.name=§aSlay the Monstrosity§f in the §dPolice Station: Cells
+item.noxcrew:zcn.122.name=§aFix the Machine§f in the §dPolice Station: Cells
+item.noxcrew:zcn.123.name=§aSupply Run§f in the §dPolice Station: Cells
+item.noxcrew:zcn.124.name=§aRescue the Runner§f in the §dPolice Station: Cells
+item.noxcrew:zcn.131.name=§aSlay the Monstrosity§f in the §dPolice Station: Officer's Quarters
+item.noxcrew:zcn.132.name=§aFix the Machine§f in the §dPolice Station: Officer's Quarters
+item.noxcrew:zcn.133.name=§aSupply Run§f in the §dPolice Station: Officer's Quarters
+item.noxcrew:zcn.134.name=§aRescue the Runner§f in the §dPolice Station: Officer's Quarters
+item.noxcrew:zcn.211.name=§aSlay the Monstrosity§f in the §dHospital: Wing A
+item.noxcrew:zcn.212.name=§aFix the Machine§f in the §dHospital: Wing A
+item.noxcrew:zcn.213.name=§aSupply Run§f in the §dHospital: Wing A
+item.noxcrew:zcn.214.name=§aRescue the Runner§f in the §dHospital: Wing A
+item.noxcrew:zcn.221.name=§aSlay the Monstrosity§f in the §dHospital: Medical School
+item.noxcrew:zcn.222.name=§aFix the Machine§f in the §dHospital: Medical School
+item.noxcrew:zcn.223.name=§aSupply Run§f in the §dHospital: Medical School
+item.noxcrew:zcn.224.name=§aRescue the Runner§f in the §dHospital: Medical School
+item.noxcrew:zcn.231.name=§aSlay the Monstrosity§f in the §dHospital: Old Building
+item.noxcrew:zcn.232.name=§aFix the Machine§f in the §dHospital: Old Building
+item.noxcrew:zcn.233.name=§aSupply Run§f in the §dHospital: Old Building
+item.noxcrew:zcn.234.name=§aRescue the Runner§f in the §dHospital: Old Building
+item.noxcrew:zcn.311.name=§aSlay the Monstrosity§f in the §dMall: Z-Mart
+item.noxcrew:zcn.312.name=§aFix the Machine§f in the §dMall: Z-Mart
+item.noxcrew:zcn.313.name=§aSupply Run§f in the §dMall: Z-Mart
+item.noxcrew:zcn.314.name=§aRescue the Runner§f in the §dMall: Z-Mart
+item.noxcrew:zcn.321.name=§aSlay the Monstrosity§f in the §dMall: Food Court
+item.noxcrew:zcn.322.name=§aFix the Machine§f in the §dMall: Food Court
+item.noxcrew:zcn.323.name=§aSupply Run§f in the §dMall: Food Court
+item.noxcrew:zcn.324.name=§aRescue the Runner§f in the §dMall: Food Court
+item.noxcrew:zcn.331.name=§aSlay the Monstrosity§f in the §dMall: Cinema Halls
+item.noxcrew:zcn.332.name=§aFix the Machine§f in the §dMall: Cinema Halls
+item.noxcrew:zcn.333.name=§aSupply Run§f in the §dMall: Cinema Halls
+item.noxcrew:zcn.334.name=§aRescue the Runner§f in the §dMall: Cinema Halls
+item.noxcrew:zcn.411.name=§aSlay the Monstrosity§f in §dKobra Tower: Offices
+item.noxcrew:zcn.412.name=§aFix the Machine§f in §dKobra Tower: Offices
+item.noxcrew:zcn.413.name=§aSupply Run§f in §dKobra Tower: Offices
+item.noxcrew:zcn.414.name=§aRescue the Runner§f in §dKobra Tower: Offices
+item.noxcrew:zcn.421.name=§aSlay the Monstrosity§f in §dKobra Tower: Headquarters
+item.noxcrew:zcn.422.name=§aFix the Machine§f in §dKobra Tower: Headquarters
+item.noxcrew:zcn.423.name=§aSupply Run§f in §dKobra Tower: Headquarters
+item.noxcrew:zcn.424.name=§aRescue the Runner§f in §dKobra Tower: Headquarters
+
+##ENTITIES
+entity.noxcrew:zcn.tutorial_boss.name=Fake Monstrosity
+entity.noxcrew:zcn.tutorial_machine.name=Play Machine
+entity.noxcrew:zcn.tutorial_survivor.name=Fake Survivor
+entity.noxcrew:zcn.tutorial_supply_box.name=Xmas Supplies
+entity.noxcrew:zcn.tutorial_wood.name=Wooden Scrap
+entity.noxcrew:zcn.tutorial_cloth.name=Cloth Scrap
+entity.noxcrew:zcn.tutorial_magic.name=Magic Powder
+entity.noxcrew:zcn.tutorial_metal.name=Metal Scrap
+entity.noxcrew:zcn.grunt.name=Grunt
+entity.noxcrew:zcn.fast.name=Sprinter
+entity.noxcrew:zcn.dog.name=Flesh Hound
+entity.noxcrew:zcn.explode.name=Boomer
+entity.noxcrew:zcn.vomit.name=Sneezer
+entity.noxcrew:zcn.climb.name=Scrambler
+entity.noxcrew:zcn.tank.name=Tank
+entity.noxcrew:zcn.range.name=Fire Spitter
+entity.noxcrew:zcn.projectile_skull.name=Thrown Skull
+entity.noxcrew:zcn.splitter.name=Splitter
+entity.noxcrew:zcn.candyman.name=Candyman
+entity.noxcrew:zcn.gumball_machine.name=Gumball Machine
+entity.noxcrew:zcn.gumball_warrior.name=Gumball Warrior
+entity.noxcrew:zcn.bug_bear.name=Bug Bear
+entity.noxcrew:zcn.bug_bear_poison.name=Bug Bear Poison
+entity.dragon_fireball.name=Fireball
+entity.noxcrew:zcn.mask.name=Death Mask
+entity.noxcrew:zcn.npc_wambo.name=Wambo
+entity.noxcrew:zcn.npc_robot.name=RoboNinja
+entity.noxcrew:zcn.npc_speed.name=Speedy
+entity.noxcrew:zcn.npc_mad.name=Madman
+entity.noxcrew:zcn.npc_vendor.name=Trader
+entity.noxcrew:zcn.citizen.name=Survivor
+entity.noxcrew:zcn.training_dummy.name=Dummy
+entity.noxcrew:zcn.dragon_cloud.name=Dragon Cloud
+entity.noxcrew:smoke_attractor.name=Attractor
+entity.noxcrew:zcn.supply_box.name=Supply Box
+entity.noxcrew:zcn.resource_cache.name=Resource Cache
+entity.noxcrew:zcn.resource_cloth.name=Cloth Resource Cache
+entity.noxcrew:zcn.resource_magic.name=Magic Resource Cache
+entity.noxcrew:zcn.resource_metal.name=Metal Resource Cache
+entity.noxcrew:zcn.resource_wood.name=Wood Resource Cache
+entity.noxcrew:zcn.resource_cloth_trap.name=Cloth Mimic
+entity.noxcrew:zcn.resource_magic_trap.name=Magic Mimic
+entity.noxcrew:zcn.resource_metal_trap.name=Metal Mimic
+entity.noxcrew:zcn.resource_wood_trap.name=Wood Mimic
+entity.noxcrew:zcn.sprinkler.name=Sprinkler
+entity.noxcrew:zcn.gas_tank.name=Gas Tank
+entity.noxcrew:zcn.generator.name=Generator
+entity.noxcrew:zcn.trap_wires.name=Zap Trap
+entity.noxcrew:zcn.trap_blades.name=Blade Trap
+entity.noxcrew:zcn.trap_doorpower.name=Power Door
+entity.noxcrew:zcn.trap_barrel.name=Barrel Trap
+entity.noxcrew:zcn.machine.name=Machine
+entity.noxcrew:zcn.machine_part_a.name=Coolant Tank
+entity.noxcrew:zcn.machine_part_b.name=Meter Reader
+entity.noxcrew:zcn.machine_part_c.name=Exhaust Cap
+entity.noxcrew:zcn.machine_part_d.name=Heat Fan
+entity.noxcrew:zcn.store_counter.name=Store Counter
+entity.noxcrew:zcn.trash.name=Trash Can
+entity.noxcrew:zcn.posters.name=Poster
+entity.noxcrew:zcn.paint_cans.name=Paint Cans
+entity.noxcrew:zcn.wet_floor.name=Wet Floor Sign
+entity.noxcrew:zcn.car.name=Car
+entity.noxcrew:zcn.truck.name=Truck
+entity.noxcrew:zcn.van.name=Van
+
+
+##Interact Strings
+action.interact.armor1=Equip Rookie Armour
+action.interact.armor2=Equip Warrior Armour
+action.interact.armor3=Equp Master Armour
+action.interact.armor4=Equip Sensei Armour
+action.interact.weapon1=Equip Baseball Bat
+action.interact.weapon2=Equip Sai Dagger
+action.interact.weapon3=Equip Ono Axe
+action.interact.weapon4=Equip Katana
+action.interact.recycle=Recycle
+action.interact.collectsupplies=Collect Supplies
+action.interact.claim=Claim Reward
+action.interact.pickup_cloth=Pick Up Cloth
+action.interact.pickup_magic=Pick Up Magic Powder
+action.interact.pickup_metal=Pick Up Metal
+action.interact.pickup_wood=Pick Up Wood
+action.interact.fill_fuel_can=Fill Fuel Can
+action.interact.fuel_generator=Fuel Generator
+action.interact.fuel_machine=Fuel Machine
+action.interact.place_part=Place Part
+action.interact.pickup_coolant=Pick Up Coolant Tank
+action.interact.pickup_fan=Pick Up Heat Fan
+action.interact.pickup_cap=Pick Up Exhaust Cap
+action.interact.pickup_reader=Pick Up Meter Reader
+action.interact.deposit_cloth=Deposit Cloth
+action.interact.deposit_magic=Deposit Magic Powder
+action.interact.deposit_metal=Deposit Metal
+action.interact.deposit_wood=Deposit Wood
+action.interact.rescue_wambo=Rescue Wambo
+action.interact.rescue_speedy=Rescue Speedy
+action.interact.rescue_roboninja=Rescue RoboNinja
+action.interact.rescue_madman=Rescue MadMan
+action.interact.rescue_friend=Rescue Friend
+action.interact.new_mission=Get New Mission
+action.interact.change_difficulty=Change Difficulty
+action.interact.elytra=Equip Wing-Suit
+
+##SIGNS
+##Misc
+txt.misc.sn1_1=§lStart
+txt.misc.sn1_2=§lGame
+txt.misc.sn2_1=§lBack
+txt.misc.sn2_2=§lto
+txt.misc.sn2_3=§lBase
+txt.misc.sn3_1=§lOpen
+txt.misc.sn3_2=§lFront Gate
+txt.misc.sn4_1=§lActivate
+txt.misc.sn4_2=§lSprinklers
+txt.misc.sn5_1=§lOpen
+txt.misc.sn6_1=§lDetonate
+txt.misc.sn7_1=§lOpen
+txt.misc.sn7_2=§lSewer Gate
+txt.misc.sn8_1=§lGenerate
+txt.misc.sn8_2=§lPower
+
+##Lookout Points
+txt.lookout.sn1_1=§lThe Lotus
+txt.lookout.sn1_2=§lLookout Point
+txt.lookout.sn2_1=§lThe Fox
+txt.lookout.sn2_2=§lLookout Point
+txt.lookout.sn3_1=§lThe Tiger
+txt.lookout.sn3_2=§lLookout Point
+txt.lookout.sn4_1=§lThe Dragon
+txt.lookout.sn4_2=§lLookout Point
+txt.lookout.sn5_1=§lThe Mongoose
+txt.lookout.sn5_2=§lLookout Point
+txt.lookout.sn6_1=§lThe Hawk
+txt.lookout.sn6_2=§lLookout Point
+txt.lookout.sn7_1=§lThe Rat
+txt.lookout.sn7_2=§lLookout Point
+
+##Base
+txt.base.sn1_1=§lNew
+txt.base.sn1_2=§lMission
+txt.base.sn2_1=§lDIFFICULTY
+txt.base.sn2_2=§2§lNormal
+txt.base.sn2_3=[§1Rewards§r]
+txt.base.sn3_1=§lDIFFICULTY
+txt.base.sn3_2=§4§lNINJA
+txt.base.sn3_3=[§1Rewards+§r]
+txt.base.sn4_1=§lInteract
+txt.base.sn4_2=with a weapon or armour piece to equip it.
+txt.base.sn5_1=§lInteract§r while holding the resource to pay into the counter.
+txt.base.sn6_1=§lThis store
+txt.base.sn6_2=§lis locked!
+txt.base.sn6_3=Place resources to unlock it.
+txt.base.sn7_1=§lThrowable
+txt.base.sn7_2=§lSword
+txt.base.sn8_1=A high damage throwable sword. Breaks after one throw.
+txt.base.sn9_1=§oA strong ninja 
+txt.base.sn9_2=§othrows big sharp 
+txt.base.sn9_3=§othings at their 
+txt.base.sn9_4=§oenemies.
+txt.base.sn10_1=§lParachute
+txt.base.sn11_1=Use this item to prevent a deadly fall and glide safely down.
+txt.base.sn12_1=§oA good ninja 
+txt.base.sn12_2=§oneeds no safety 
+txt.base.sn12_3=§onet. A wise ninja
+txt.base.sn12_4=§ohas one anyway.
+txt.base.sn13_1=§lHealth
+txt.base.sn13_2=§lPotion
+txt.base.sn14_1=Use this item to quickly recover lost health.
+txt.base.sn15_1=§oA ninja must be 
+txt.base.sn15_2=§ospirited and 
+txt.base.sn15_3=§olively. Tea or 
+txt.base.sn15_4=§opotions work.
+txt.base.sn16_1=§lGrunt Love
+txt.base.sn16_2=§lFlare
+txt.base.sn17_1=Too many Grunts? Throw this flare to distract them!
+txt.base.sn18_1=§oThe art of 
+txt.base.sn18_2=§omisdirection is 
+txt.base.sn18_3=§ofound in pretty 
+txt.base.sn18_4=§ocolours.
+txt.base.sn19_1=§lTiger
+txt.base.sn19_2=§lClaws
+txt.base.sn20_1=Quick throwable claws that can damage your enemies!
+txt.base.sn21_1=§oWhen waking a 
+txt.base.sn21_2=§obeast, use a long 
+txt.base.sn21_3=§ostick. Or throw 
+txt.base.sn21_4=§oTiger Claws.
+txt.base.sn22_1=§lDragon
+txt.base.sn22_2=§lCloud
+txt.base.sn23_1=Throw this item to make a cloud platform to jump on!
+txt.base.sn24_1=§oFools dream of 
+txt.base.sn24_2=§oslaying dragons, 
+txt.base.sn24_3=§oninjas jump on 
+txt.base.sn24_4=§othem.
+txt.base.sn25_1=§lPlayer
+txt.base.sn25_2=§lGuidebook
+txt.base.sn26_1=§lParachute
+txt.base.sn26_2=§lTrader
+txt.base.sn27_1=§lDragon Cloud
+txt.base.sn27_2=§lCloud
+txt.base.sn27_3=§lTrader
+txt.base.sn28_1=§lTiger
+txt.base.sn28_2=§lClaws
+txt.base.sn28_3=§lTrader
+txt.base.sn29_1=§lGrunt Love
+txt.base.sn29_2=§lFlare
+txt.base.sn29_3=§lTrader
+txt.base.sn30_1=§lHealth
+txt.base.sn30_2=§lPotion
+txt.base.sn30_3=§lTrader
+txt.base.sn31_1=§lThrowable
+txt.base.sn31_2=§lSword
+txt.base.sn31_3=§lTrader
+txt.base.sn32_1=§lMaps
+txt.base.sn33_1=§lSwaps
+txt.base.sn33_2=§lTrader
+txt.base.sn34_1=Swap your
+txt.base.sn34_2=§aZombie Coins§r 
+txt.base.sn34_3= for other
+txt.base.sn34_4=resources!
+txt.base.sn35_1=§oWaste not, want not.
+txt.base.sn35_2=§oA ninja trades!
+txt.base.sn36_1=§lAchievements
+txt.base.sn37_1=§lRecycler
+txt.base.sn38_1=Throw unwanted equipment in here to clear your inventory!
+txt.base.sn39_1=§l§4Ninja Mode
+txt.base.sn39_2=§oDetails
+txt.base.sn40_1=§41.§r No Health regeneration.
+txt.base.sn40_2=§42.§r Lose inventory on death.
+txt.base.sn41_1=§43.§r Only spawn at Base Camp
+txt.base.sn41_2=§44.§r More Zombie Coins drop.
+txt.base.sn42_1=§45.§r Reward Caches have more resources.
+txt.base.sn43_1=Push the button to get a map.
+txt.base.sn44_1=Push the button to list achievements!
+txt.base.sn45_1=You get a Widget update every time you get a new mission!
+txt.base.sn46_1=Check your Widget for your mission details!
+txt.base.sn47_1=Using an armour or weapon rack §lheals you§r to full health!
+
+##MESSAGES
+##Reserved
+txt.res.msg1=[§6§l!§r]: You've entered §aCreative mode§r. 
+txt.res.msg2=[§6§l!§r]:
+txt.res.msg3=[§6§l!§r]: §5You are leaving the playable area! Turn back!
+txt.res.msg4=[§6§l!§r]: §lYou were teleported back to safety.
+txt.res.msg5=[§6§l!§r]: §6Gamemode changed!§r This map is designed to be played in §aAdventure mode§r. Some features may not work as intended.
+
+##Miscellaneous
+txt.misc.msg1=§r[§6§l!§r]: §5This shortcut has already been opened.
+txt.misc.msg2=§r[§6§l!§r]: §eYou have completed a mission!
+txt.misc.msg3=§r[§6§l!§r]: §2The Base Camp is under attack! Return to base!
+txt.misc.msg4=§r[§6§l!§r]: §eYou have defeated a Monstrosity!
+txt.misc.msg5=§r[§6§l!§r]: §eYou have completed enough missions and unlocked §lnew equipment§r!
+txt.misc.msg6=§r[§6§l!§r]: §2Normal Mode Activated.
+txt.misc.msg7=§r[§6§l!§r]: §4NINJA Mode Activated. §6Resource gain has increased!
+txt.misc.msg8=§r[§6§l!§r]: §5This monster is too powerful to face head on! §6Use the barrels to blow them up!
+txt.misc.msg9=§r[§6§l!§r]: §eYou have unlocked a shortcut!
+txt.misc.msg10=§r[§6§l!§r]: §eYou have found the §oLotus§r§e Lookout Point of Spry Sage!
+txt.misc.msg11=§r[§6§l!§r]: §eYou have found the §oFox§r§e Lookout Point of Manic Max!
+txt.misc.msg12=§r[§6§l!§r]: §eYou have found the §oTiger§r§e Lookout Point of Swift Emi!
+txt.misc.msg13=§r[§6§l!§r]: §eYou have found the §oDragon§r§e Lookout Point of Wise Jana!
+txt.misc.msg14=§r[§6§l!§r]: §eYou have found the §oMongoose§r§e Lookout Point of Strong Jon!
+txt.misc.msg15=§r[§6§l!§r]: §eYou have found the §oHawk§r§e Lookout Point of Paranoid Pablo!
+txt.misc.msg16=§r[§6§l!§r]: §eYou have found the §oRat§r§e Lookout Point of Shady Jim!
+txt.misc.msg17=§r[§6§l!§r]: §bThe Dragon Cloud store is open! Enjoy your free sample!
+txt.misc.msg18=§r[§6§l!§r]: §bThe Tiger Claw store is open! Enjoy your free sample!
+txt.misc.msg19=§r[§6§l!§r]: §bThe Throwable Sword store is open! Enjoy your free sample!
+txt.misc.msg20=§r[§6§l!§r]: §bThe Health Potion store is open! Enjoy your free sample!
+txt.misc.msg21=§r[§6§l!§r]: §bThe Grunt Love Flare store is open! Enjoy your free sample!
+txt.misc.msg22=§r[§6§l!§r]: §bThe Parachute store is open! Enjoy your free sample!
+txt.misc.msg23=§r[§6§l!§r]: §6Mission updated. Check your Widget!
+txt.misc.msg24=§r[§6§l!§r]: §6Objective reached: §aSlay the Monstrosity!
+txt.misc.msg25=§r[§6§l!§r]: §6Objective reached: §aFind the missing part and fix the machine!
+txt.misc.msg26=§r[§6§l!§r]: §6Objective reached: §aFind the Runner!
+txt.misc.msg27=§r[§6§l!§r]: §6Objective reached: §aFind the Supplies!
+txt.misc.msg28=§r[§6§l!§r]: §6Front Gate is now powered and can be opened.
+txt.misc.msg29=§r[§6§l!§r]: §5This shortcut needs to be powered. §6Follow the power line.  
+txt.misc.msg30=§6Mission Cancelled!
+
+##Hideout/Lookout Progress
+txt.hideoutprog.msg1=§r[§6§l!§r]: §21/7 Ninja Lookout Points found!
+txt.hideoutprog.msg2=§r[§6§l!§r]: §22/7 Ninja Lookout Points found!
+txt.hideoutprog.msg3=§r[§6§l!§r]: §23/7 Ninja Lookout Points found!
+txt.hideoutprog.msg4=§r[§6§l!§r]: §24/7 Ninja Lookout Points found!
+txt.hideoutprog.msg5=§r[§6§l!§r]: §25/7 Ninja Lookout Points found!
+txt.hideoutprog.msg6=§r[§6§l!§r]: §26/7 Ninja Lookout Points found!
+txt.hideoutprog.msg7=§r[§6§l!§r]: §27/7 Ninja Lookout Points found!
+
+##Weapon+armour Unlock Progress
+txt.unlock.msg1=§r[§6§l!§r]: §eMission Complete!
+txt.unlock.msg2=§r[§6§l!§r]: §eMission Complete! §64 Missions until your next unlock!
+txt.unlock.msg3=§r[§6§l!§r]: §eMission Complete! §63 Missions until your next unlock!
+txt.unlock.msg4=§r[§6§l!§r]: §eMission Complete! §62 Missions until your next unlock!
+txt.unlock.msg5=§r[§6§l!§r]: §eMission Complete! §61 Mission until your next unlock!
+txt.unlock.msg6=§r[§6§l!§r]: §eMission Complete! §65 Missions until your next unlock!
+txt.unlock.msg7=§r[§6§l!§r]: §eMission Complete! §66 Missions until your next unlock!
+txt.unlock.msg8=§r[§6§l!§r]: §eMission Complete! §67 Missions until your next unlock!
+txt.unlock.msg9=§r[§6§l!§r]: §eMission Complete! §68 Missions until your next unlock!
+txt.unlock.msg10=§r[§6§l!§r]: §eMission Complete! §69 Missions until your next unlock!
+
+##Death Messages
+deathScreen.message=You were knocked out!
+txt.death.msg1=§r[§6§l!§r]: §6TIP: §fPrepare for your run by trading resources for useful items!
+txt.death.msg2=§r[§6§l!§r]: §6TIP: §fSort your actionbar! Make sure you have everything you need for quick access!
+txt.death.msg3=§r[§6§l!§r]: §6TIP: §fTry to lead zombies into traps before turning them on for maximum damage!
+txt.death.msg4=§r[§6§l!§r]: §6TIP: §fBe quick and be speedy! You can run around most zombies and still complete your mission!
+txt.death.msg5=§r[§6§l!§r]: §6TIP: §fKeep your Fuel Can filled! Having fuel at hand means any generator you need can be powered instantly!
+txt.death.msg6=§r[§6§l!§r]: §6TIP: §fIt's over, you have the high ground! Keep to the rooftops and high up to avoid zombies!
+txt.death.msg7=§r[§6§l!§r]: §6TIP: §fComplete 5 Missions to get an upgrade to your weapons or armour!
+txt.death.msg8=§r[§6§l!§r]: §6TIP: §fTrade §aZombie Coins§f for extra resources!
+txt.death.msg9=§r[§6§l!§r]: §6TIP: §fHave unwanted resources? Trade the Swap Trader to swap them for something you need!
+txt.death.msg10=§r[§6§l!§r]: §6TIP: §fNinja mode can help you get resources more quickly! But be careful, it's not easy.
+txt.death.msg11=§r[§6§l!§r]: §6TIP: §fCheck out the §2Player Guidebook§r§f in the base if you have any questions!
+txt.death.msg12=§r[§6§l!§r]: §6TIP: §fLost? Check your map! The four icons represent the Hospital, Police Station, Mall, and Kobra Tower!
+txt.death.msg13=§r[§6§l!§r]: §aT§eI§cP: Want to beat up zombies? Of §ocorpse§r§f you can.
+txt.death.msg14=§r[§6§l!§r]: §aT§eI§cP: §fDon't judge zombies too harshly. It takes real §odeadication§r§f to be a Zombie.
+txt.death.msg15=§r[§6§l!§r]: §aT§eI§cP: §fAll new runners take a crash §ocorpse§r§f in Ninja School.
+txt.death.msg16=§r[§6§l!§r]: §aT§eI§cP: §fA §odecayde§r§f ago Zombie City had no zombies!
+txt.death.msg17=§r[§6§l!§r]: §aT§eI§cP: §fThe Sensei plays April §oGhoul's§r§f jokes on survivors. Watch out!
+txt.death.msg18=§r[§6§l!§r]: §aT§eI§cP: §fFortune favors the bold and the §ograve§r§f.
+txt.death.msg19=§r[§6§l!§r]: §aT§eI§cP: §fWhy not take a break? Ninjas should never be §odead§r§f tired.
+txt.death.msg20=§r[§6§l!§r]: §aT§eI§cP: §fMissions are hard work but §oZombodie§r§f has to do it.
+
+##Achievements
+txt.ach.house=_________________________________________________
+txt.ach.msg1=§2§lAchievement Unlocked!
+txt.ach.1_unlocked=§2Monster Slayer: §r§oYou have slain every type of Monstrosity!
+txt.ach.2_unlocked=§2Ninja Hero: §r§oYou have beaten the game!
+txt.ach.3_unlocked=§2Eagle Eye: §r§oYou found a Ninja Lookout Point!
+txt.ach.4_unlocked=§2Shopping Spree: §r§oYou have unlocked all the stores!
+txt.ach.5_unlocked=§2Ultimate Ninja: §r§oYou have completed 10 missions on Ninja mode without returning to Base Camp!
+txt.ach.6_unlocked=§2Shady Space: §r§oYou have invaded Shady Jim's personal space.
+txt.ach.7_unlocked=§2Zombie Buster: §r§oYou have slain 1000 zombies!
+txt.ach.8_unlocked=§2Baby's First Steps: §r§oYou have died in Ninja Mode!
+txt.ach.9_unlocked=§2Gimme Gimme: §r§oYou have opened 50 Resource Caches!
+txt.ach.10_unlocked=§2Treasure Hunter: §r§oYou have found 250 resources across Zombie City!
+txt.ach.11_unlocked=§2Ninja Sense: §r§oYou have found all the Ninja Lookout Points!
+txt.ach.12_unlocked=§2A Friend in Me: §r§oYou rescued all the Runners!
+txt.ach.13_unlocked=§2Flying Ninja, Soaring Dragon: §r§oYou have escaped to the clouds above!
+txt.ach.1_locked=§cAchievement Locked: §r§oA healthy variety of monstrosities need destroying.
+txt.ach.2_locked=§cAchievement Locked: §r§oA Mission a day... or two, or more. A whole lotta missions.
+txt.ach.3_locked=§cAchievement Locked: §r§oA journey to the top starts with a tower.
+txt.ach.4_locked=§cAchievement Locked: §r§oTraders need resources to really be traders.
+txt.ach.5_locked=§cAchievement Locked: §r§oBeing a real Ninja is about endurance. Take tenfold Ninja Mode missions away from the base. 
+txt.ach.6_locked=§cAchievement Locked: §r§oShady Jim is a lonely guy. Go and have a chat with him.
+txt.ach.7_locked=§cAchievement Locked: §r§oBloodthirst is not quenched by bloodless zombies. But why not give it a go anyway?
+txt.ach.8_locked=§cAchievement Locked: §r§oAn attempt at something difficult is more admirable than to make no attempt at all.
+txt.ach.9_locked=§cAchievement Locked: §r§oA healthy base requires lots of Resource Caches.
+txt.ach.10_locked=§cAchievement Locked: §r§oA healthy Ninja in a base needs lots of resources.
+txt.ach.11_locked=§cAchievement Locked: §r§oOne lookout is very useful, but seven lookouts is best. 
+txt.ach.12_locked=§cAchievement Locked: §r§oMeet and rescue the whole Runner team!
+txt.ach.13_locked=§cAchievement Locked: §r§oAll dragons live in clouds. Don't believe it? Go the highest you can and see.
+
+##Area Entry
+txt.area.0=§r
+txt.area.1=Entering: §6Base Camp
+txt.area.2=Entering: §dThe Police Station
+txt.area.3=Entering: §dThe Hospital
+txt.area.4=Entering: §dKobra Tower
+txt.area.5=Entering: §dThe Mall
+txt.area.6=Entering: §dCells
+txt.area.7=Entering: §dAcademy
+txt.area.8=Entering: §dOfficer's Quarters
+txt.area.9=Entering: §dWing A
+txt.area.10=Entering: §dMedical School
+txt.area.11=Entering: §dOld Building
+txt.area.12=Entering: §dOffices
+txt.area.13=Entering: §dHeadquarters
+txt.area.14=Entering: §dZ-Mart
+txt.area.15=Entering: §dFood Court
+txt.area.16=Entering: §dCinemas
+txt.area.17=Entering: §6Hospital District
+txt.area.18=Entering: §6Mall District
+txt.area.19=Entering: §6Police District
+txt.area.20=Entering: §6Kobra District
+txt.area.21=Entering: §6Construction Site
+
+##Tutorial Actionbar Hints
+txt.th.msg1=§r[§6§l!§r] §bGo through the door up ahead on the left.
+txt.th.msg2=§r[§6§l!§r] §bJump over the locked door.
+txt.th.msg3=§r[§6§l!§r] §bOpen the shortcut by flipping the lever on the left.
+txt.th.msg4=§r[§6§l!§r] §bContinue through the opened shortcut on the the right.
+txt.th.msg4_1=§r[§6§l!§r] §bUse the jump boost platform to jump over the wall.
+txt.th.msg5=§r[§6§l!§r] §bHead in the direction of the fish statue's tail.
+txt.th.msg6=§r[§6§l!§r] §bJump over the zombie pit.
+txt.th.msg7=§r[§6§l!§r] §bInteract with the Fuel Tank to get a filled Fuel Can.
+txt.th.msg8=§r[§6§l!§r] §bUse the filled Fuel Can to power the generator.
+txt.th.msg9=§r[§6§l!§r] §bContinue ahead through the opened door.
+txt.th.msg10=§r[§6§l!§r] §bPower the Generator with a Fuel to open the door and continue.
+txt.th.msg11=§r[§6§l!§r] §bContinue on ahead.
+txt.th.msg12=§r[§6§l!§r] §bBeware of Elite Zombies.
+txt.th.msg13=§r[§6§l!§r] §bCollect resources in the immediate area.
+txt.th.msg14=§r[§6§l!§r] §bUnlock Shady Jim by paying resources into the Store Counter.
+txt.th.msg15=§r[§6§l!§r] §bUse the Dragon Cloud and jump on it to get over the gap.
+txt.th.msg16=§r[§6§l!§r] §bCollect resources, trade a Dragon Cloud, then use it to cross the gap.
+txt.th.msg17=§r[§6§l!§r] §bBeat up the zombie and take their Zombie Coin.
+txt.th.msg18=§r[§6§l!§r] §bContinue on ahead.
+txt.th.msg19=§r[§6§l!§r] §bInteract with the Supply Box to collect it.
+txt.th.msg20=§r[§6§l!§r] §bContinue on ahead.
+txt.th.msg21=§r[§6§l!§r] §bFind the missing part on the machine and place it.
+txt.th.msg22=§r[§6§l!§r] §bFill the machine with fuel.
+txt.th.msg23=§r[§6§l!§r] §bContinue on ahead.
+txt.th.msg24=§r[§6§l!§r] §bHit an explosive barrel over the Monstrosity to defeat it.
+txt.th.msg25=§r[§6§l!§r] §bContinue on ahead.
+txt.th.msg26=§r[§6§l!§r] §bInteract with the Ally to rescue them.
+txt.th.msg27=§r[§6§l!§r] §bContinue on ahead to Base Camp.
+txt.th.msg28=§r[§6§l!§r] §bPick up a weapon from the Weapon rack.
+txt.th.msg29=§r[§6§l!§r] §bInteract with the New Mission button to begin your ninja career!
+
+##TRADERS
+txt.vendor1=Throwing Sword Trader
+txt.vendor2=Tiger Claw Trader
+txt.vendor3=Dragon Cloud Trader
+txt.vendor4=Health Potion Trader
+txt.vendor5=Parachute Trader
+txt.vendor6=Grunt Love Flare Trader
+txt.vendor7=Swaps Trader
+txt.vendorname1=Strong Jon
+txt.vendorname2=Swift Emi
+txt.vendorname3=Wise Jana
+txt.vendorname4=Spry Sage
+txt.vendorname5=Paranoid Pablo
+txt.vendorname6=Manic Max
+txt.vendorname7=Shady Jim
+
+##BOOKS
+txt.pg.bk1_p1_l1=       §lWelcome to
+txt.pg.bk1_p1_l2=     §l§2Zombie City
+txt.pg.bk1_p1_l3=§rZombie City is filled with zombies! And it's your job as a Ninja to help your Sensei in making a base.
+txt.pg.bk1_p1_l4=It's an ongoing task, but the dream is to eventually rid Zombie City of Zombies!
+txt.pg.bk1_p2_l1=§lA Ninja's Task
+txt.pg.bk1_p2_l2=§rAs a Ninja in Zombie City, you need to complete missions to help your Sensei.
+txt.pg.bk1_p2_l3=You can find the §6New Mission§r button in your base.
+txt.pg.bk1_p2_l4=Remember, there's always another mission!
+txt.pg.bk1_p3_l1=§lMissions
+txt.pg.bk1_p3_l2=§rEvery set of missions you complete will unlock new pieces of armour and weapons!
+txt.pg.bk1_p3_l3=Completing a mission gives you §6resources§r that you can spend on consumables and unlocking traders.
+txt.pg.bk1_p4_l1=§lMission Difficulty
+txt.pg.bk1_p4_l2=§rThere are two difficulty settings.
+txt.pg.bk1_p4_l3=§2Normal Mode§r and §4NINJA Mode§r.
+txt.pg.bk1_p4_l4=There are §omore resources§r in §4NINJA Mode§r, but it is also §omore difficult§r.
+txt.pg.bk1_p5_l1=§lMission Specifics
+txt.pg.bk1_p5_l2=§rThere are four types of missions you can complete, which are randomly given when you hit the §6New Mission§r button.
+txt.pg.bk1_p5_l3=A §2Monstrosity§r mission requires you to defeat a powerful zombie. Come prepared.
+txt.pg.bk1_p6_l1=§lMission Specifics
+txt.pg.bk1_p6_l2=§rA §2Supply Run§r mission requires you to find the supply box.
+txt.pg.bk1_p6_l3=A §2Machine Repair§r mission requires you to fix a broken machine.
+txt.pg.bk1_p6_l4=A §2Save the Runner§r mission requires you to find and save a runner in trouble.
+txt.pg.bk1_p7_l1=§lTraders§r
+txt.pg.bk1_p7_l2=In the base area there is a street filled with Traders.
+txt.pg.bk1_p7_l3=These traders sell items that you can use to help on your missions, but they need to be unlocked by placing the required §6resources§r into their §6counter§r.
+txt.pg.bk1_p8_l1=§lConsumables
+txt.pg.bk1_p8_l2=§rThere are §6six items§r that you can use around Zombie City.
+txt.pg.bk1_p8_l3=If you visit the trader alley you can see the items each Trader sells before unlocking the store.
+txt.pg.bk1_p9_l1=§lWeapons and Armour
+txt.pg.bk1_p9_l2=§rYou can equip any of your weapons and armour inside your base.
+txt.pg.bk1_p9_l3=Walk up the the weapon or armour rack and interact with it to equip your armour!
+txt.pg.bk1_p9_l4=You can only equip one set at a time.
+txt.pg.bk1_p10_l1=§lNavigating
+txt.pg.bk1_p10_l2=§rTrying to find your mission objective can be difficult.
+txt.pg.bk1_p10_l3=Look for landmarks in the city that can guide you.
+txt.pg.bk1_p10_l4=There are also shortcuts that can be unlocked with button press or lever switch.
+txt.pg.bk1_p11_l1=§lNavigating
+txt.pg.bk1_p11_l2=§rWhen you reach your mission location, check the walls and other areas.
+txt.pg.bk1_p11_l3=Survivors have left graffiti marks to help you find your objectives.
+txt.pg.bk1_p12_l1=§lThank you!
+txt.pg.bk1_p12_l2=§rFrom all of us at the §4Noxcrew§r, thank you for buying our map and we hope you enjoy it!
+txt.pg.bk1_p12_l3=If you do, leave us a review on the store!
+txt.pg.bk1_p12_l4=Now get out there and become the best ninja around.
+
+##DEBRIEFS
+txt.sub.comm.1=§oSensei's Spirit whispers to you...
+txt.sub.comm.2=§oSensei's Spirit disappears...
+txt.sub.greeting_1=<§aSensei§r> Hello! Looks like you need a mission!
+txt.sub.greeting_2=<§aSensei§r> Well hello! I have a mission for you.
+txt.sub.greeting_3=<§aSensei§r> Good day! Looking for a mission?
+txt.sub.greeting_4=<§aSensei§r> Hello again, ready for a mission?
+txt.sub.greeting_5=<§aSensei§r> It's that time again, §oMission time§r.
+txt.sub.missionVar11=<§aSensei§r> We've got a §aMonstrosity§r that needs destroying. Multiple times. A Splitter is on the loose! 
+txt.sub.missionVar12=<§aSensei§r> A §aMonstrosity§r has been spotted dealing out mutated candy. A Candy Man who needs a shorter lifespan! 
+txt.sub.missionVar13=<§aSensei§r> We've reports of a §aMonstrosity§r! A cuddly, big Bug Bear that needs squashing! 
+txt.sub.missionVar14=<§aSensei§r> There's a §aMonstrosity§r building power. A deadly Death Mask, who needs taking out!
+txt.sub.missionVar21=<§aSensei§r> One of our §aMachine Generators§r is down and out. Overheated, it needs its Coolant Tank replacing.
+txt.sub.missionVar22=<§aSensei§r> A §aMachine Generator§r is malfunctioning. Maybe. We don't know, the Meter Reader is broken and needs replacing.
+txt.sub.missionVar23=<§aSensei§r> There's a §aMachine Generator§r that is having trouble. It's sputtered out and stopped, so the Exhaust Cap needs replacing.
+txt.sub.missionVar24=<§aSensei§r> We have a §aMachine Generator§r that isn't working. The airflow has turned into smog. So the Heat Fan needs replacing.
+txt.sub.missionVar31=<§aSensei§r> We have to make a §aSupply Run§r. Our vendors need parts, and luck has it that we've found a Crafting Supply Cache.
+txt.sub.missionVar32=<§aSensei§r> I want you to make a §aSupply Run§r. We're running low on food and we know the location of a Food Supply Cache.
+txt.sub.missionVar33=<§aSensei§r> We've got a §aSupply Run§r that needs doing. Our machines need fuel and we know where to find a Fuel Supply Cache.
+txt.sub.missionVar34=<§aSensei§r> We need you for a §aSupply Run§r. A Medical Supply Cache has been spotted and we're in sore need of bandages and what have you.
+txt.sub.missionVar41=<§aSensei§r> We've got a §aRunner§r in trouble. Wambo has gone off and done it again. He's done what he shouldn't have and now needs backup.
+txt.sub.missionVar42=<§aSensei§r> There's a §aRunner§r that needs rescuing. Speedy has sped off into a nest of trouble, and you need to help them!
+txt.sub.missionVar43=<§aSensei§r> One of our §aRunners§r is in real trouble. RoboNinja is out there alone and needs a helping hand.
+txt.sub.missionVar44=<§aSensei§r> A §aRunner§r requires rescue! Madman has bitten off more than they can chew and you need to help them.
+txt.sub.branch11=<§aSensei§r> You'll need to go to the §dAcademy§r quarter, in the §dPolice Station§r. It's a left from the main entrance.
+txt.sub.branch12=<§aSensei§r> You'll need to go to the §dCells§r quarter in the §dPolice Station§r. Take a right from the main entrance.
+txt.sub.branch13=<§aSensei§r> You'll need to go to the §dOfficer's Quarters§r in the §dPolice Station§r. It's straight ahead and up from the main entrance.
+txt.sub.branch21=<§aSensei§r> You'll need to go to §dWing A§r in the §dHospital§r. Take the left staircase after entering the Lobby.
+txt.sub.branch22=<§aSensei§r> You'll need to go to the §dMedical School§r in the §dHospital§r. Take the right staircase after entering the Lobby.
+txt.sub.branch23=<§aSensei§r> You'll need to go to the §dOld Building§r behind the §dHospital§r. Go straight through after entering the Lobby.
+txt.sub.branch31=<§aSensei§r> You'll need to go to §dZ-Mart§r in the §dMall§r. Take a right from the entrance.
+txt.sub.branch32=<§aSensei§r> You'll need to go to the §dFood Court§r in the §dMall§r. It's on the left side of the Mall, second floor.
+txt.sub.branch33=<§aSensei§r> You'll need to go to the §dCinema Halls§r in the §dMall§r. It's on the top floor, roughly on the right side.
+txt.sub.branch41=<§aSensei§r> You'll need to go to the §dOffices§r on the 3rd floor of §dKobra Tower§r. You should be able to get there from the ground floor.
+txt.sub.branch42=<§aSensei§r> You'll need to go to the §dHeadquarters§r at the top of §dKobra Tower§r. You can get in from the Construction Site and using the crane.
+txt.sub.dir0to1=<§aSensei§r> From your current location, you can §6get to the Police Station by taking the Base Pool Exit then heading leftish.§r You'll know it by the pool on the outer wall. Good luck!
+txt.sub.dir1to1=<§aSensei§r> From where you are presently, you can §6get to the Police Station by... oh, you're already there.§r Just keep your wits about you, you'll find it. Good luck!
+txt.sub.dir2to1=<§aSensei§r> However, §6getting to the Police Station will be tricky. You'll need to go towards the Mall first, look for the Red Tower, then head towards the Zeppelin.§r Good luck!
+txt.sub.dir3to1=<§aSensei§r> From where you are now, you can §6get to the Police Station by heading towards the Zeppelin§r, you should see it in floating up above in the sky. Good luck!
+txt.sub.dir4to1=<§aSensei§r> You can §6get to the Police Station by heading towards the Old Train on the broken Train Tracks§r. You should be able to see the station from there. Good luck!
+txt.sub.dir0to2=<§aSensei§r> From where you are now, you can §6get to the Hospital by taking the Base Traders Exit, you'll see the sign, and continuing in that general leftish direction§r. Good luck!
+txt.sub.dir1to2=<§aSensei§r> But! §6Getting to the Hospital will be a journey. You'll need to go to Kobra Tower, go by Old Train tracks way, then look for, and cross the Red Bridge.§r Good luck!
+txt.sub.dir2to2=<§aSensei§r> And I can see that §6you're presently quite close to the Hospital, if not already inside§r. Just keep your wits about you and you should find it. Good luck!
+txt.sub.dir3to2=<§aSensei§r> From your current location, §6finding the Hospital should be easy. Look for the Red Tower and head in that general direction§r, you should get there. Good luck!
+txt.sub.dir4to2=<§aSensei§r> From your present position, you can §6get to the Hospital by heading towards the train tracks, no train, then crossing the Red Bridge.§r Good luck!
+txt.sub.dir0to3=<§aSensei§r> From your current location, you can §6get to the Mall by taking the Base Great Wall Exit, it's the biggest wall we have, and continuing in a leftish direction.§r Good luck!
+txt.sub.dir1to3=<§aSensei§r> §6Getting to the Mall will be quick, just look up for the Zeppelin and head in that direction. You can also take the path from Neon Street.§r Either works. Good luck!
+txt.sub.dir2to3=<§aSensei§r> You can §6get to the Mall by heading in the direction of the Red Tower, large red thing in a sea of brown.§r You should reach the Mall parking lot straight after. Good luck!
+txt.sub.dir3to3=<§aSensei§r> You can §6get to the Mall by... Hmm. It seems that you're already very close.§r If you can see the parking lot, you should find the entrance quite easily. Good luck!
+txt.sub.dir4to3=<§aSensei§r> However, §6getting to the Mall will be dangerous. You need to travel to the Hospital, going by the Red Bridge, then continuing in the direction of the Red Tower.§r Good luck!
+txt.sub.dir0to4=<§aSensei§r> To §6get to Kobra Tower from where you are is easy. Take the Base Garden Exit, look for the garden patches, then head in a leftish direction§r, you should find it. Good luck!
+txt.sub.dir1to4=<§aSensei§r> From your present location, you can §6get to the Kobra Tower by heading towards the Old Train tracks and continuing straight ahead.§r Enormous Tower, you can't miss it. Good luck!
+txt.sub.dir2to4=<§aSensei§r> So, from your current position you can §6get to Kobra Tower by crossing the Red Bridge and heading towards the Train Tracks.§r You should see the Tower from there. Good luck!
+txt.sub.dir3to4=<§aSensei§r> Unfortunately §6getting to Kobra Tower will be a bit of trek. You'll need to go to Police station, head towards the zeppelin, then go to the Old Train and continue ahead.§r Good luck!
+txt.sub.dir4to4=<§aSensei§r> And as for the directions from your current location, you... well- §6you're quite close so you should already see the Tower.§r Look around and keep your wits about you. Good luck!
+ 
+ 
+ 
+ 
+ 
+txt.sub.congrats_1=<§aSensei§r> Nicely done!
+txt.sub.congrats_2=<§aSensei§r> Well done! Have you considered resupplying at Base Camp?
+txt.sub.congrats_3=<§aSensei§r> Good work!
+txt.sub.congrats_4=<§aSensei§r> Good job!
+
+##TUTORIAL
+##Scene 1_1 Part A
+txt.tut.scene1.1_state1_A_l1=<§aSensei§r> Ah! There you are!
+txt.tut.scene1.1_state1_A_l2=<§aSensei§r> I'm your Spirit Sensei.
+txt.tut.scene1.1_state1_A_l3=<§aSensei§r> We need all Ninjas back to Base Camp to take care of our zombie problem!
+txt.tut.scene1.1_state1_A_l4=<§aSensei§r> Continue through this hallway and use your ninja prowess to jump up to that door on the left.
+
+##Scene 1_1 Part B
+txt.tut.scene1.1_state1_B_l1=<§aSensei§r> Well done!
+
+##Scene 1_2
+txt.tut.scene1.2_state1_A_l1=<§aSensei§r> Now, in Zombie City there are many doors.
+txt.tut.scene1.2_state1_A_l2=<§aSensei§r> The true ninja knows which doors are locked and which ones are open.
+txt.tut.scene1.2_state1_A_l3=<§aSensei§r> Quick tip: They're all locked.
+txt.tut.scene1.2_state1_A_l4=<§aSensei§r> You'll need to jump over it.
+
+##Scene 1_3 State1_PartA
+txt.tut.scene1.3_state1_A_l1=<§aSensei§r> Good.
+txt.tut.scene1.3_state1_A_l2=<§aSensei§r> Now, in Zombie City there are a number of shortcuts.
+txt.tut.scene1.3_state1_A_l3=<§aSensei§r> They usually need a button press or lever switch to open them.
+txt.tut.scene1.3_state1_A_l4=<§aSensei§r> Try opening up the tunnel to the right.
+
+##Scene 1_3 State1_PartB
+txt.tut.scene1.3_state1_B_l1=<§aSensei§r> Nicely done.
+
+##Scene 1_3 State2_PartA
+txt.tut.scene1.3_state2_A_l1=<§aSensei§r> Good.
+txt.tut.scene1.3_state2_A_l2=<§aSensei§r> I was going to ask you to open this shortcut, but it's already opened.
+txt.tut.scene1.3_state2_A_l3=<§aSensei§r> They can be found all over Zombie City, and usually need a button press or lever switch to open them.
+txt.tut.scene1.3_state2_A_l4=<§aSensei§r> Go on ahead through the shortcut.
+
+##Scene 1_4 PartA
+txt.tut.scene1.4_state1_A_l1=<§aSensei§r> The ninja navigates the city using landmarks. 
+txt.tut.scene1.4_state1_A_l2=<§aSensei§r> Like that wonderful fish statue up ahead.
+txt.tut.scene1.4_state1_A_l3=<§aSensei§r> In a sewer.
+txt.tut.scene1.4_state1_A_l4=<§aSensei§r> Oddly placed if you ask me.
+
+##Scene 1_4 PartB
+txt.tut.scene1.4_state1_B_l1=<§aSensei§r> We should continue to the right, past the Fish Statue.
+
+##Scene 1_4 PartC
+txt.tut.scene1.4_state1_C_l1=<§aSensei§r> What are you doing here?
+txt.tut.scene1.4_state1_C_l2=<§aSensei§r> Turn around and go left from the fish statue. 
+
+##Scene 1_4 PartD
+txt.tut.scene1.4_state1_D_l1=<§aSensei§r> This is the wrong direction.
+txt.tut.scene1.4_state1_D_l2=<§aSensei§r> Turn around and go straight past the fish statue.
+
+##Scene 1_4 PartE
+txt.tut.scene1.4_state1_E_l1=<§aSensei§r> You've got yourself all tangled up!
+txt.tut.scene1.4_state1_E_l2=<§aSensei§r> This is where you came from.
+txt.tut.scene1.4_state1_E_l3=<§aSensei§r> Go ahead and go right from the fish statue.
+
+##Scene 2_
+txt.tut.scene2.1_state1_A_l1=<§aSensei§r> Ah. The source of all our troubles.
+txt.tut.scene2.1_state1_A_l2=<§aSensei§r> Zombies.
+txt.tut.scene2.1_state1_A_l3=<§aSensei§r> We don't know much, but we do know they're dangerous.
+txt.tut.scene2.1_state1_A_l4=<§aSensei§r> Sometimes you have to fight them, sometimes you have to run.
+txt.tut.scene2.1_state1_A_l5=<§aSensei§r> This is an occasion where you should run.
+
+##Scene 2_2 State1_PartA
+txt.tut.scene2.2_state1_A_l1=<§aSensei§r> Ah, time for some tinkering.
+txt.tut.scene2.2_state1_A_l2=<§aSensei§r> Generators can power both doors and traps for a short while.
+txt.tut.scene2.2_state1_A_l3=<§aSensei§r> But they usually need fuel.
+txt.tut.scene2.2_state1_A_l4=<§aSensei§r> You can get Fuel from Fuel tanks all over Zombie City.
+txt.tut.scene2.2_state1_A_l5=<§aSensei§r> Walk up to the Fuel Tank and grab a can.
+
+##Scene 2_2 State1_PartB
+txt.tut.scene2.2_state1_B_l1=<§aSensei§r> Good.
+txt.tut.scene2.2_state1_B_l2=<§aSensei§r> Now we can power the door and those traps.
+txt.tut.scene2.2_state1_B_l3=<§aSensei§r> Use the Fuel Can on the generator.
+
+##Scene 2_2 State1_PartC
+txt.tut.scene2.2_state1_C_l1=<§aSensei§r> Brilliant! Now you can continue ahead.
+txt.tut.scene2.2_state1_C_l2=<§aSensei§r> Be careful of those traps though, they hurt.
+
+##Scene 2_2 State2_PartA
+txt.tut.scene2.2_state2_A_l1=<§aSensei§r> Ah. A latecomer.
+txt.tut.scene2.2_state2_A_l2=<§aSensei§r> Well some doors and traps need to be opened with energy. 
+txt.tut.scene2.2_state2_A_l3=<§aSensei§r> Use your Fuel Can and fill it at the Gas tank, then once you've done that fill the small generator.
+txt.tut.scene2.2_state2_A_l4=<§aSensei§r> That'll power both traps and doors for a short time.
+txt.tut.scene2.2_state2_A_l5=<§aSensei§r> Continue ahead.
+
+##Scene 2_3
+txt.tut.scene2.3_state1_A_l1=<§aSensei§r> Something I ought to mention about Zombie City, is that it's much more dangerous during the night.
+txt.tut.scene2.3_state1_A_l2=<§aSensei§r> More zombies prowl the streets, but there are also more resources.
+txt.tut.scene2.3_state1_A_l3=<§aSensei§r> Venturing out in the night is a higher risk but a higher reward.
+
+##Scene 2_4
+txt.tut.scene2.4_state1_A_l1=<§aSensei§r> Ah...
+txt.tut.scene2.4_state1_A_l2=<§aSensei§r> That ugly looking thing is what we call an §lelite zombie§r, §omutated zombies with dangerous powers§r.
+txt.tut.scene2.4_state1_A_l3=<§aSensei§r> This one is a §lSneezer§r.
+txt.tut.scene2.4_state1_A_l4=<§aSensei§r> It sneezes out a protective shield on it's fellow zombies.
+txt.tut.scene2.4_state1_A_l5=<§aSensei§r> Avoid them if you can.
+
+##Scene 3_1 State 1
+txt.tut.scene3.1_state1_A_l1=<§aSensei§r> Ah!
+txt.tut.scene3.1_state1_A_l2=<§aSensei§r> This is who we call Shady Jim!
+txt.tut.scene3.1_state1_A_l3=<§aSensei§r> He's one of the Traders upstairs and he makes us lovely things!
+txt.tut.scene3.1_state1_A_l4=<§aSensei§r> But it's not free, so we need to get some resources first.
+txt.tut.scene3.1_state1_A_l5=<§aSensei§r> Search the area for scrap!
+
+##Scene 3_1 State 2
+txt.tut.scene3.1_state2_A_l1=<§aSensei§r> Ah!
+txt.tut.scene3.1_state2_A_l2=<§aSensei§r> This is Shady Jim.
+txt.tut.scene3.1_state2_A_l3=<§aSensei§r> He's one of the Traders upstairs and is selling a §lDragon Cloud§r.
+txt.tut.scene3.1_state2_A_l4=<§aSensei§r> Collect some resources and trade Jim for the §lDragon Cloud§r.
+txt.tut.scene3.1_state2_A_l5=<§aSensei§r> Then use the Dragon Cloud to cross the gap!
+
+##Scene 3_2
+txt.tut.scene3.2_state1_A_l1=<§aSensei§r> This is §lScrap Metal§r.
+txt.tut.scene3.2_state1_A_l2=<§aSensei§r> Mostly falls off other metal things.
+txt.tut.scene3.2_state1_A_l3=<§aSensei§r> You'll need it. So just grab it.
+
+##Scene 3_3
+txt.tut.scene3.3_state1_A_l1=<§aSensei§r> Oh §lWood§r!
+txt.tut.scene3.3_state1_A_l2=<§aSensei§r> We'll need that. For handles... and uh-
+txt.tut.scene3.3_state1_A_l3=<§aSensei§r> Other wooden contraptions.
+txt.tut.scene3.3_state1_A_l4=<§aSensei§r> Get it.
+
+##Scene 3_4
+txt.tut.scene3.4_state1_A_l1=<§aSensei§r> Ah... §lCloth§r.
+txt.tut.scene3.4_state1_A_l2=<§aSensei§r> Great for clothing, and other things that use cloth.
+txt.tut.scene3.4_state1_A_l3=<§aSensei§r> Pick it up.
+
+##Scene 3_5
+txt.tut.scene3.5_state1_A_l1=<§aSensei§r> Aha! 
+txt.tut.scene3.5_state1_A_l2=<§aSensei§r> §lMagic Powder§r!
+txt.tut.scene3.5_state1_A_l3=<§aSensei§r> Wonderful stuff.
+txt.tut.scene3.5_state1_A_l4=<§aSensei§r> Don't really know how it works, but we just add it to things and POOF!
+txt.tut.scene3.5_state1_A_l5=<§aSensei§r> §oMagic.
+txt.tut.scene3.5_state1_A_l6=<§aSensei§r> You'll need that, so pick it up.
+
+##Scene 3_6
+txt.tut.scene3.6_state1_A_l1=<§aSensei§r> Wonderful!
+txt.tut.scene3.6_state1_A_l2=<§aSensei§r> Now we need to pay Shady Jim our due.
+txt.tut.scene3.6_state1_A_l3=<§aSensei§r> Place the items in the counter next to him and we can trade.
+		
+##Scene 3_7 State1_PartA
+txt.tut.scene3.7_state1_A_l1=<§aSensei§r> Trade Shady Jim the resources and then use the Dragon Cloud to cross the pit to the exit.
+txt.tut.scene3.7_state1_A_l2=<§aSensei§r> You've got this.
+txt.tut.scene3.7_state1_A_l3=<§aSensei§r> I believe in you.
+txt.tut.scene3.7_state1_A_l4=<§aSensei§r> Partially.
+txt.tut.scene3.7_state1_A_l5=<§aSensei§r> There's a chance you'll fall.
+txt.tut.scene3.7_state1_A_l6=<§aSensei§r> You never know.
+
+##Scene 3_7 State1_PartB
+txt.tut.scene3.7_state1_B_l1=<§aSensei§r> Ooh that's too bad.
+txt.tut.scene3.7_state1_B_l2=<§aSensei§r> Head back up and get another Dragon Cloud off Jim.
+txt.tut.scene3.7_state1_B_l3=<§aSensei§r> You'll get it this time.
+
+##Scene 3_7 State1_PartC
+txt.tut.scene3.7_state1_C_l1=<§aSensei§r> Ooh! Well done!
+txt.tut.scene3.7_state1_C_l2=<§aSensei§r> Right, moving on.
+
+##Scene 3_8 State1_PartA
+txt.tut.scene3.8_state1_A_l1=<§aSensei§r> Something we've discovered is that zombies drop magical coins when killed.
+txt.tut.scene3.8_state1_A_l2=<§aSensei§r> Knock over that zombie and take their coin!
+
+##Scene 3_8 State1_PartB
+txt.tut.scene3.8_state1_B_l1=<§aSensei§r> Well done.
+txt.tut.scene3.8_state1_B_l2=<§aSensei§r> You can trade those coins for resources up at the §6Trader's Alley§r in our Base.
+txt.tut.scene3.8_state1_B_l3=<§aSensei§r> Shady Jim takes them all, not sure what he does with them though.
+txt.tut.scene3.8_state1_B_l4=<§aSensei§r> Oh well.
+txt.tut.scene3.8_state1_B_l5=<§aSensei§r> Onwards!
+
+##Scene 3_8 State2_PartA
+txt.tut.scene3.8_state2_A_l1=<§aSensei§r> Ah.
+txt.tut.scene3.8_state2_A_l2=<§aSensei§r> Late again...
+txt.tut.scene3.8_state2_A_l3=<§aSensei§r> Well, zombies drop magical coins.
+txt.tut.scene3.8_state2_A_l4=<§aSensei§r> Which you can use to trade for other resources up at the §6Trader's Alley§r in our Base.
+txt.tut.scene3.8_state2_A_l5=<§aSensei§r> This zombie has already been cleaned of coins though.
+txt.tut.scene3.8_state2_A_l6=<§aSensei§r> Continue on!
+
+##Scene 4_1 State 1_PartA
+txt.tut.scene4.1_state1_A_l1=<§aSensei§r> All our runners are sent on missions to help secure our base in Zombie City.
+txt.tut.scene4.1_state1_A_l2=<§aSensei§r> And one of the things we need are §aSupplies§r.
+txt.tut.scene4.1_state1_A_l3=<§aSensei§r> Unfortunately, this one is just made out of cardboard because we're in §oshort supply§r. 
+txt.tut.scene4.1_state1_A_l4=<§aSensei§r> Ahahaha...
+txt.tut.scene4.1_state1_A_l5=<§aSensei§r> Go get it.
+
+##Scene 4_1 State1_PartB
+txt.tut.scene4.1_state1_B_l1=<§aSensei§r> Good!
+txt.tut.scene4.1_state1_B_l2=<§aSensei§r> Now continue on ahead.
+
+##Scene 4_1 State2_PartA
+txt.tut.scene4.1_state2_A_l1=<§aSensei§r> All our runners are sent on missions to help secure our base in Zombie City.
+txt.tut.scene4.1_state2_A_l2=<§aSensei§r> And one of the things we need are §aSupplies§r.
+txt.tut.scene4.1_state2_A_l3=<§aSensei§r> Fortunately for you, this one has already been picked up.
+txt.tut.scene4.1_state2_A_l4=<§aSensei§r> So just continue on ahead.
+
+##Scene 4_2 State1_PartA
+txt.tut.scene4.2_state1_A_l1=<§aSensei§r> Within the Ninja, everything must be connected. And it works that way with electricity too.
+txt.tut.scene4.2_state1_A_l2=<§aSensei§r> We have a number of §aMachines§r like this out and about, but they break frequently and need maintenance.
+txt.tut.scene4.2_state1_A_l3=<§aSensei§r> The parts just pop off!
+txt.tut.scene4.2_state1_A_l4=<§aSensei§r> Find the right one and place it in the machine.
+
+##Scene 4_2 State1_PartB
+txt.tut.scene4.2_state1_B_l1=<§aSensei§r> Well done!
+txt.tut.scene4.2_state1_B_l2=<§aSensei§r> Now we need to fill it with gas.
+txt.tut.scene4.2_state1_B_l3=<§aSensei§r> You've done this before, just take your Fuel Can to the Gas Tank and fill it up.
+txt.tut.scene4.2_state1_B_l4=<§aSensei§r> Then fuel the machine.
+
+##Scene 4_2 State1_PartC
+txt.tut.scene4.2_state1_C_l1=<§aSensei§r> Good work.
+txt.tut.scene4.2_state1_C_l2=<§aSensei§r> Now let's continue ahead.
+
+##Scene 4_2 State2_PartA
+txt.tut.scene4.2_state2_A_l1=<§aSensei§r> The early bird gets the worm, but the second mouse gets the cheese.
+txt.tut.scene4.2_state2_A_l2=<§aSensei§r> You being the mouse in this situation.
+txt.tut.scene4.2_state2_A_l3=<§aSensei§r> The §aMachine§r was missing a part, but has already been repaired.
+txt.tut.scene4.2_state2_A_l4=<§aSensei§r> Also, it needed to be fueled with gas, but that's been done too.
+txt.tut.scene4.2_state2_A_l5=<§aSensei§r> Best to just continue ahead.
+
+##Scene 4_3 State1_PartA
+txt.tut.scene4.3_state1_A_l1=<§aSensei§r> Ah.
+txt.tut.scene4.3_state1_A_l2=<§aSensei§r> In a Ninja's path, there are always great and deadly enemies.
+txt.tut.scene4.3_state1_A_l3=<§aSensei§r> This is one of them.
+txt.tut.scene4.3_state1_A_l4=<§aSensei§r> One day, you may need to fight them head on, but not today! 
+txt.tut.scene4.3_state1_A_l5=<§aSensei§r> See those explosive barrels?
+txt.tut.scene4.3_state1_A_l6=<§aSensei§r> See if you can drop one right on that §aMonstrosity's§r ghastly head!
+
+##Scene 4_3 State1_PartB
+txt.tut.scene4.3_state1_B_l1=<§aSensei§r> Expertly handled!
+txt.tut.scene4.3_state1_B_l2=<§aSensei§r> Now let us continue.
+
+##Scene 4_3 State2_PartA
+txt.tut.scene4.3_state2_A_l1=<§aSensei§r> Ah, another contender!
+txt.tut.scene4.3_state2_A_l2=<§aSensei§r> Well your dangerous enemy has already been defeated with the clever use of explosive barrels!
+txt.tut.scene4.3_state2_A_l3=<§aSensei§r> Feel free to blow one up if you like, but there's no gargantuan creature here. 
+txt.tut.scene4.3_state2_A_l4=<§aSensei§r> There'll be more Monstrosities, just none here.
+txt.tut.scene4.3_state2_A_l5=<§aSensei§r> You can continue ahead.
+
+##Scene 4_4 State1_PartA
+txt.tut.scene4.4_state1_A_l1=<§aSensei§r> A Ninja's greatest asset is their §aAllies§r.
+txt.tut.scene4.4_state1_A_l2=<§aSensei§r> Unfortunately sometimes those allies can get themselves in a tricky little bit of trouble.
+txt.tut.scene4.4_state1_A_l3=<§aSensei§r> So you need to help them up.
+txt.tut.scene4.4_state1_A_l4=<§aSensei§r> See if you can go help out your friend.
+
+##Scene 4_4 State1_PartB
+txt.tut.scene4.4_state1_B_l1=<§aSensei§r> Ah, always good to see friends helping one another.
+txt.tut.scene4.4_state1_B_l2=<§aSensei§r> Wish I had a camera.
+txt.tut.scene4.4_state1_B_l3=<§aSensei§r> Anyway, you should continue ahead and make your way back to the base.
+
+##Scene 4_4 State2_PartA
+txt.tut.scene4.4_state2_A_l1=<§aSensei§r> Ah. There's no late like fashionably late.
+txt.tut.scene4.4_state2_A_l2=<§aSensei§r> There was actually a fellow ninja in trouble here.
+txt.tut.scene4.4_state2_A_l3=<§aSensei§r> It's likely they'll be in trouble again, and you'll have to help them.
+txt.tut.scene4.4_state2_A_l4=<§aSensei§r> So I wouldn't worry too much about it.
+txt.tut.scene4.4_state2_A_l5=<§aSensei§r> Continue on ahead to the base.
+
+##Scene 5_1 State 1
+txt.tut.scene5.1_state1_A_l1=<§aSensei§r> Welcome to our Base Camp in Zombie City!
+txt.tut.scene5.1_state1_A_l2=<§aSensei§r> You'll find all you need here.
+txt.tut.scene5.1_state1_A_l3=<§aSensei§r> Unfortunately, I took everything you collected in the sewers to pay off Shady Jim, so you'll need a §lweapon§r.
+txt.tut.scene5.1_state1_A_l4=<§aSensei§r> You can find the weapon selection area in this building, which is your own personal §obase§r if you like.
+txt.tut.scene5.1_state1_A_l5=<§aSensei§r> Used to be a restaurant.
+
+##Scene 5_1 State 2
+txt.tut.scene5.1_state2_A_l1=<§aSensei§r> Welcome to our Base Camp in Zombie City!
+txt.tut.scene5.1_state2_A_l2=<§aSensei§r> You'll find all you need here...
+txt.tut.scene5.1_state2_A_l3=<§aSensei§r> Weapons, armour, and the traders outside!
+txt.tut.scene5.1_state2_A_l4=<§aSensei§r> Hit the New Mission button for a mission, or you can join your fellow Ninjas on an existing one.
+
+##Scene 5_2
+txt.tut.scene5.2_state1_A_l1=<§aSensei§r> Ah yes, a good choice.
+txt.tut.scene5.2_state1_A_l2=<§aSensei§r> Now to start off your Ninja Career!
+txt.tut.scene5.2_state1_A_l3=<§aSensei§r> Head downstairs and hit the New Mission button, and we begin.
+
+##Scene 6.1  State1_PartA
+txt.tut.scene6.1_state1_A_l1=<§aSensei§r> Hello!
+txt.tut.scene6.1_state1_A_l2=<§aSensei§r> With all the good work you've been doing, we have a new weapon available for you!
+txt.tut.scene6.1_state1_A_l3=<§aSensei§r> Come back to Base Camp and give it a go!
+
+##Scene 6.1  State1_PartB
+txt.tut.scene6.1_state1_B_l1=<§aSensei§r> Hello!
+txt.tut.scene6.1_state1_B_l2=<§aSensei§r> With all the work you've done, we've crafted a new armour set for you!
+txt.tut.scene6.1_state1_B_l3=<§aSensei§r> Come back to Base Camp and try it on!
+
+##Scene 6.1  State1_PartC
+txt.tut.scene6.1_state1_C_l1=<§aSensei§r> Hello!
+txt.tut.scene6.1_state1_C_l2=<§aSensei§r> We have a new Armour set for you, so you chould come back to Base Camp!
+txt.tut.scene6.1_state1_C_l3=<§aSensei§r> Also, I'm working on a special project for you.
+txt.tut.scene6.1_state1_C_l4=<§aSensei§r> I'd say another ten missions or so and it'll be finished!
+
+##Scene 6.2  State1_PartA
+txt.tut.scene6.2_state1_A_l1=<§aSensei§r> Hello!
+txt.tut.scene6.2_state1_A_l2=<§aSensei§r> The special project is completed!
+txt.tut.scene6.2_state1_A_l3=<§aSensei§r> Come back to Base and be ready for a lovely little surprise!
+
+##Scene 6.2  State1_PartB
+txt.tut.scene6.2_state1_B_l1=<§aSensei§r> Ah, you're back!
+txt.tut.scene6.2_state1_B_l2=<§aSensei§r> So, this special project...
+txt.tut.scene6.2_state1_B_l3=<§aSensei§r> I was tweaking with this idea I had a while back and-
+txt.tut.scene6.2_state1_B_l4=<§aSensei§r> Wait.
+txt.tut.scene6.2_state1_B_l5=<§aSensei§r> What?
+txt.tut.scene6.2_state1_B_l6=<§aSensei§r> ZOMBIES!
+txt.tut.scene6.2_state1_B_l7=<§aSensei§r> ZOMBIES IN THE BASE CAMP!
+txt.tut.scene6.2_state1_B_l8=<§aSensei§r> NINJAS!
+txt.tut.scene6.2_state1_B_l9=<§aSensei§r> GET THEM!
+txt.tut.scene6.2_state1_B_l10=<§aSensei§r> GET THEM OUT!
+
+##Scene 6.2 State1_PartC
+txt.tut.scene6.2_state1_C_l1=<§aSensei§r> Well done! 
+txt.tut.scene6.2_state1_C_l2=<§aSensei§r> I knew I could trust you.
+txt.tut.scene6.2_state1_C_l3=<§aSensei§r> Anyway, the special project is complete!
+txt.tut.scene6.2_state1_C_l4=<§aSensei§r> A new Wing-Suit, which allows you to glide at will!
+txt.tut.scene6.2_state1_C_l5=<§aSensei§r> I've placed it on a rack in the restaurant.
+txt.tut.scene6.2_state1_C_l6=<§aSensei§r> Take it for a whirl!
+
+##SURVIVOR LINES
+##Wambo
+txt.survivor.wambo1=<§aWambo§r> Who am I? A zombie worst nightmare.
+txt.survivor.wambo2=<§aWambo§r> To survive Zombie City, you gotta §obecome§r Zombie City
+txt.survivor.wambo3=<§aWambo§r> We're not hunting zombies, they're hunting §ous§r.
+txt.survivor.wambo4=<§aWambo§r> Live for nothing, or die for nothing. The choice is yours.
+txt.survivor.wambo5=<§aWambo§r> These zombies want brains, cos they ain't got any.
+
+##Speedy
+txt.survivor.speedy1=<§aSpeedy§r> Hey Hey! What's rolling?
+txt.survivor.speedy2=<§aSpeedy§r> Thanks for saving me!
+txt.survivor.speedy3=<§aSpeedy§r> Thanks for saving me! Bye!
+txt.survivor.speedy4=<§aSpeedy§r> Looks like I went too fast.
+txt.survivor.speedy5=<§aSpeedy§r> Good to know I got friends!
+txt.survivor.speedy6=<§aSpeedy§r> Time to speed off!
+
+##Robo Ninja
+txt.survivor.robo1=<§aRoboNinja§r> Appreciation for rescue.
+txt.survivor.robo2=<§aRoboNinja§r> Rescuer detected.
+txt.survivor.robo3=<§aRoboNinja§r> Detecting good vibes.
+txt.survivor.robo4=<§aRoboNinja§r> Routing to base.
+txt.survivor.robo5=<§aRoboNinja§r> Formal greeting.
+
+##Mad Ninja
+txt.survivor.mad1=<§aMadMan§r> You. Good.
+txt.survivor.mad2=<§aMadMan§r> Yes. Help.
+txt.survivor.mad3=<§aMadMan§r> No. Hope.
+txt.survivor.mad4=<§aMadMan§r> Thank. You.
+txt.survivor.mad5=<§aMadMan§r> Zombie. Bad.

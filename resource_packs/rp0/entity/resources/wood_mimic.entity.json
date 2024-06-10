@@ -1,0 +1,29 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.resource_wood_trap",
+      "textures": {
+        "default": "textures/entity/zombie/mimic/wood"
+      },
+      "geometry": {
+        "default": "geometry.mimic_wood"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "idle": "animation.mimic_wood.idle",
+        "move": "animation.mimic_wood.move"
+      },
+      "animation_controllers": [
+        {
+          "reveal": "controller.animation.mimic.reveal"
+        }
+	  ],
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

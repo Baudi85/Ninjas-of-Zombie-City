@@ -1,0 +1,33 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.trap_blades",
+      "textures": {
+        "default": "textures/entity/traps/blades"
+      },
+      "geometry": {
+        "default": "geometry.trap_blades"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "on": "animation.trap_blades.on",
+        "off": "animation.trap_blades.off",
+        "sound": "animation.trap_blades.sound"
+      },
+      "animation_controllers": [
+        {
+          "on": "controller.animation.trap_blades.on"
+        }
+      ],
+      "sound_effects": {
+        "saw_loop": "saw_loop"
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

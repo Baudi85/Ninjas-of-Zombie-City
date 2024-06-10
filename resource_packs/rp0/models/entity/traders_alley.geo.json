@@ -1,0 +1,24 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.traders_alley",
+				"texture_width": 512,
+				"texture_height": 64,
+				"visible_bounds_width": 10,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [24, 4, 0],
+					"cubes": [
+						{"origin": [-64, 1, -1.4], "size": [128, 48, 1], "inflate": 0.1, "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

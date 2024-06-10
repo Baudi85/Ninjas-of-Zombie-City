@@ -1,0 +1,22 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.tutorial_boss_death": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "dead": "query.variant == 1"
+                        }
+                    ],
+                    "on_exit": [
+                        "/function tutorial/functions/boss"
+                    ]
+                },
+                "dead": {
+                    "on_entry": []
+                }
+            }
+        }
+    }
+}

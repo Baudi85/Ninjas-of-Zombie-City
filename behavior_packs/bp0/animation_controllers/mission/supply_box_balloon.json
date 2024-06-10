@@ -1,0 +1,31 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.supply_box_balloon": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ballooning": "query.is_baby"
+                        }
+                    ]
+                },
+                "ballooning": {
+                    "transitions": [
+                        {
+                            "popping": "query.is_tamed"
+                        }
+                    ],
+                    "on_entry": [
+                        "/function quests/missionSuccess"
+                    ]
+                },
+                "popping": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_cache"
+                    ]
+                }
+            }
+        }
+    }
+}

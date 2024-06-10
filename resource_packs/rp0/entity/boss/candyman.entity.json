@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.candyman",
+      "textures": {
+        "default": "textures/entity/zombie/candyman/candyman"
+      },
+      "geometry": {
+        "default": "geometry.candyman"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "particle_effects": {
+        "candyman_stick": "noxcrew:zcn.candyman_stick"
+      },
+      "animations": {
+        "idle": "animation.candyman.idle",
+        "walk": "animation.candyman.walk",
+        "attack": "animation.candyman.attack",
+        "spin": "animation.candyman.spinattack",
+        "dizzy": "animation.candyman.dizzy",
+        "dizzy_sound": "animation.candyman.dizzy_sound",
+        "spin_sound": "animation.candyman.spin_sound",
+        "look_at_target": "animation.candyman.look_at_target",
+        "move": "controller.animation.candyman.move",
+        "particle": "controller.animation.candyman.particle"
+      },
+      "sound_effects": {
+        "candyman_spin": "candyman_spin",
+        "candyman_dizzy": "candyman_dizzy"
+      },
+      "scripts": {
+        "animate": [
+          "move", "particle"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.base_fix"
+      ]
+    }
+  }
+}

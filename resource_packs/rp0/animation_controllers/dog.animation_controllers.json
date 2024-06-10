@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.dog.move": {
+	 "initial_state": "spawn",
+      "states": {
+        "spawn": {
+          "animations": [ "spawn" ],
+          "transitions": [
+            { "idle": "query.anim_time >= 0.75" }
+          ],
+          "blend_transition": 0.2 
+        },
+        "idle": {
+          "animations": [ "idle" ],
+          "transitions": [
+            { "run": "query.has_target && query.modified_move_speed > 0.01" },
+			{ "walk": "!query.has_target && query.modified_move_speed > 0.01" }
+          ],
+          "blend_transition": 0.2 
+        },
+		"walk": {
+          "animations": [ "walk", "tail" ],
+          "transitions": [
+			{ "run": "query.has_target && query.modified_move_speed > 0.01" },
+            { "idle": "query.modified_move_speed <= 0.01" }
+          ] ,
+          "blend_transition": 0.2 
+        },
+		"run": {
+          "animations": [ "run", "look_at_target", "tail" ],
+          "transitions": [
+			{ "walk": "!query.has_target && query.modified_move_speed > 0.01" },
+            { "idle": "query.modified_move_speed <= 0.01" }
+          ] ,
+          "blend_transition": 0.2 
+        }
+      }
+    }
+  }
+}

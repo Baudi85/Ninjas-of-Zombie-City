@@ -1,0 +1,114 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.bug_bear_poison",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": []
+            },
+            "animations": {}
+        },
+        "component_groups": {
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "poison"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 1,
+                "height": 0.5
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:scale": {
+                "value": 1
+            },
+            "minecraft:attack": {
+                "damage": 0
+            },
+            "minecraft:movement": {
+                "value": 0
+            },
+            "minecraft:area_attack": {
+                "damage_range": 0.9,
+                "damage_per_tick": 1,
+                "cause": "contact",
+                "entity_filter": {
+                    "any_of": [
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }
+                    ]
+                }
+            },
+            "minecraft:mob_effect": {
+                "effect_range": 0.9,
+                "mob_effect": "poison",
+                "effect_time": 3,
+                "entity_filter": {
+                    "any_of": [
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }
+                    ]
+                }
+            },
+            "minecraft:timer": {
+                "looping": false,
+                "time": [
+                    5,
+                    7
+                ],
+                "time_down_event": {
+                    "event": "noxcrew:to_despawn",
+                    "target": "self"
+                }
+            },
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "despawn"
+                        },
+                        "event": "noxcrew:to_despawn"
+                    }
+                ]
+            },
+            "minecraft:push_through": {
+                "value": 0
+            },
+            "minecraft:pushable": {
+                "is_pushable": true
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

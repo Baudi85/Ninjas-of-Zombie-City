@@ -1,0 +1,30 @@
+{
+    "tiers": [
+        {
+            "total_exp_required": 0,
+            "groups": [
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "noxcrew:zcn.metal",
+                                    "quantity": 3
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:snowball",
+                                    "quantity": 6
+                                }
+                            ],
+                            "max_uses": 9999,
+                            "reward_exp": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

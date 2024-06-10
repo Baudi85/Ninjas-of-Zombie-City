@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.base_sign",
+      "textures": {
+        "default": "textures/entity/signs/base_sign"
+      },
+      "geometry": {
+        "default": "geometry.base_sign"
+      },
+      "materials": {
+        "default": "transparency"
+      },  
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

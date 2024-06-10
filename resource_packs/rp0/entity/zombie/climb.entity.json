@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.climb",
+      "textures": {
+        "default": "textures/entity/zombie/climb",
+        "shield": "textures/entity/zombie/shield"
+      },
+      "geometry": {
+        "default": "geometry.climb",
+        "shield": "geometry.climb_shield"
+      },
+      "materials": {
+        "default": "transparency",
+        "shield": "shield"
+      },
+      "animations": {
+        "walk": "animation.climb.walk",
+        "idle": "animation.climb.idle",
+        "wall_climb": "animation.climb.wall_climb",
+        "mouthidle": "animation.climb.mouthidle",
+        "bite": "animation.climb.bite",
+        "spawn": "animation.climb.spawn",
+        "step_sounds": "animation.climb.step_sounds",
+		"move": "controller.animation.climb.move",
+		"mouth": "controller.animation.climb.mouth"
+        },
+      "scripts": {
+        "animate": [
+          "move", "mouth"
+        ]
+      },
+      "sound_effects": {
+        "climb_step": "climb_step"
+      },
+      "render_controllers": [
+        "controller.render.base",
+        "controller.render.shield"
+      ]
+    }
+  }
+}

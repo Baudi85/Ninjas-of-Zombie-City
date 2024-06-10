@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.tutorial_metal",
+      "textures": {
+        "default": "textures/entity/resource/metal" 
+      },
+      "geometry": {
+        "default": "geometry.resource_metal" 
+      },
+      "materials": {
+        "default": "base"
+      },
+      "particle_effects": {
+        "objective": "noxcrew:zcn.objective"
+      },
+      "animations": {
+        "objective": "controller.animation.tutorial_resource.particle"
+      },
+      "scripts": {
+        "animate": [
+          "objective"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

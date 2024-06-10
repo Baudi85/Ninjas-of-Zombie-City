@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.smoke_attractor.smoke": {
+      "states": {
+        "default": {
+          "animations": [ "smoke_sound" ],
+          "particle_effects": [
+            {
+              "effect": "smoke_attractor",
+              "locator": "smoke_attractor_locator"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+      "description": {
+        "identifier": "noxcrew:zcn.fuelcan_empty",
+        "category": "Equipment"
+      },
+  
+      "components": {
+        "minecraft:icon": "zcn.fuelcan_empty"
+  
+      }
+    }
+  }

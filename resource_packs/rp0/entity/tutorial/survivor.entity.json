@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.tutorial_survivor",
+      "textures": {
+        "default": "textures/entity/tutorial/survivor"
+      },
+      "geometry": {
+        "default": "geometry.tutorial_survivor"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "particle_effects": {
+        "objective": "noxcrew:zcn.objective"
+      },
+      "animations": {
+        "fall": "animation.tutorial_survivor.fall",
+        "fallen": "animation.tutorial_survivor.fallen"
+        },
+      "animation_controllers": [
+        { "falldown": "controller.animation.tutorial_survivor.falldown" } 
+      ],
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

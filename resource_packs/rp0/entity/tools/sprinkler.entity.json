@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.sprinkler", 
+      "textures": { "default": "textures/entity/invisible" },
+      "materials": { "default": "invisible" },
+      "geometry": { "default": "geometry.invisible" }, 
+      "particle_effects": { "sprinkler": "noxcrew:zcn.sprinkler" },
+      "animations": { "particle": "controller.animation.sprinkler.particle" },
+      "scripts": { "animate": [ "particle"]},
+      "render_controllers": ["controller.render.base"]
+    }
+  }
+}

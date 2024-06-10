@@ -1,0 +1,4 @@
+clone 840 77 137 840 83 142 840 78 137 replace force
+clone 854 77 137 854 83 142 854 78 137 replace force
+clone 840 77 147 840 83 152 840 78 147 replace force
+clone 854 77 147 854 83 152 854 78 147 replace force

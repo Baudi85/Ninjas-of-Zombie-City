@@ -1,0 +1,47 @@
+tellraw @a {"rawtext": [{"translate" : "txt.misc.msg23"}]}
+playsound objective @a
+execute @a ~ ~ ~ function gameplay/objective/clear
+execute @e[type=noxcrew:counter,scores={selectedBranch=11,randomMission=1}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.111
+execute @e[type=noxcrew:counter,scores={selectedBranch=11,randomMission=2}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.112
+execute @e[type=noxcrew:counter,scores={selectedBranch=11,randomMission=3}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.113
+execute @e[type=noxcrew:counter,scores={selectedBranch=11,randomMission=4}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.114
+execute @e[type=noxcrew:counter,scores={selectedBranch=12,randomMission=1}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.121
+execute @e[type=noxcrew:counter,scores={selectedBranch=12,randomMission=2}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.122
+execute @e[type=noxcrew:counter,scores={selectedBranch=12,randomMission=3}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.123
+execute @e[type=noxcrew:counter,scores={selectedBranch=12,randomMission=4}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.124
+execute @e[type=noxcrew:counter,scores={selectedBranch=13,randomMission=1}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.131
+execute @e[type=noxcrew:counter,scores={selectedBranch=13,randomMission=2}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.132
+execute @e[type=noxcrew:counter,scores={selectedBranch=13,randomMission=3}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.133
+execute @e[type=noxcrew:counter,scores={selectedBranch=13,randomMission=4}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.134
+execute @e[type=noxcrew:counter,scores={selectedBranch=21,randomMission=1}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.211
+execute @e[type=noxcrew:counter,scores={selectedBranch=21,randomMission=2}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.212
+execute @e[type=noxcrew:counter,scores={selectedBranch=21,randomMission=3}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.213
+execute @e[type=noxcrew:counter,scores={selectedBranch=21,randomMission=4}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.214
+execute @e[type=noxcrew:counter,scores={selectedBranch=22,randomMission=1}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.221
+execute @e[type=noxcrew:counter,scores={selectedBranch=22,randomMission=2}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.222
+execute @e[type=noxcrew:counter,scores={selectedBranch=22,randomMission=3}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.223
+execute @e[type=noxcrew:counter,scores={selectedBranch=22,randomMission=4}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.224
+execute @e[type=noxcrew:counter,scores={selectedBranch=23,randomMission=1}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.231
+execute @e[type=noxcrew:counter,scores={selectedBranch=23,randomMission=2}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.232
+execute @e[type=noxcrew:counter,scores={selectedBranch=23,randomMission=3}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.233
+execute @e[type=noxcrew:counter,scores={selectedBranch=23,randomMission=4}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.234
+execute @e[type=noxcrew:counter,scores={selectedBranch=31,randomMission=1}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.311
+execute @e[type=noxcrew:counter,scores={selectedBranch=31,randomMission=2}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.312
+execute @e[type=noxcrew:counter,scores={selectedBranch=31,randomMission=3}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.313
+execute @e[type=noxcrew:counter,scores={selectedBranch=31,randomMission=4}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.314
+execute @e[type=noxcrew:counter,scores={selectedBranch=32,randomMission=1}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.321
+execute @e[type=noxcrew:counter,scores={selectedBranch=32,randomMission=2}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.322
+execute @e[type=noxcrew:counter,scores={selectedBranch=32,randomMission=3}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.323
+execute @e[type=noxcrew:counter,scores={selectedBranch=32,randomMission=4}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.324
+execute @e[type=noxcrew:counter,scores={selectedBranch=33,randomMission=1}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.331
+execute @e[type=noxcrew:counter,scores={selectedBranch=33,randomMission=2}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.332
+execute @e[type=noxcrew:counter,scores={selectedBranch=33,randomMission=3}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.333
+execute @e[type=noxcrew:counter,scores={selectedBranch=33,randomMission=4}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.334
+execute @e[type=noxcrew:counter,scores={selectedBranch=41,randomMission=1}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.411
+execute @e[type=noxcrew:counter,scores={selectedBranch=41,randomMission=2}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.412
+execute @e[type=noxcrew:counter,scores={selectedBranch=41,randomMission=3}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.413
+execute @e[type=noxcrew:counter,scores={selectedBranch=41,randomMission=4}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.414
+execute @e[type=noxcrew:counter,scores={selectedBranch=42,randomMission=1}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.421
+execute @e[type=noxcrew:counter,scores={selectedBranch=42,randomMission=2}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.422
+execute @e[type=noxcrew:counter,scores={selectedBranch=42,randomMission=3}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.423
+execute @e[type=noxcrew:counter,scores={selectedBranch=42,randomMission=4}] ~ ~ ~ give @a[scores={playerLoc=0..}] noxcrew:zcn.424

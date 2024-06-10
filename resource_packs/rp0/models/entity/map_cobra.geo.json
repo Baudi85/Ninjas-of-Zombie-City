@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.map_cobra",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "map",
+					"pivot": [-16, -18, 6],
+					"cubes": [
+						{"origin": [-24, 0, 6], "size": [48, 48, 2], "uv": [0, 48]},
+						{"origin": [-24, 0, 6], "size": [48, 48, 0], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

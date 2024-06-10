@@ -1,0 +1,32 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.tag_candy_man": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "tag": "query.is_sheared"
+                        }
+                    ]
+                },
+                "tag": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_sheared"
+                        }
+                    ],
+                    "animations": [
+                        "spawn_ads"
+                    ],
+                    "on_entry": [
+                        "/tag @e[type=noxcrew:zcn.candyman] add pick_next_attack"
+                    ],
+                    "on_exit": [
+                        "/tag @e[type=noxcrew:zcn.candyman] remove pick_next_attack"
+                    ]
+                }
+            }
+        }
+    }
+}

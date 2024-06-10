@@ -1,0 +1,68 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.tutorial_sign_dragon",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "tutorial_sign"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0,
+                "height": 0
+            },
+            "minecraft:scale": {
+                "value": 1
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:environment_sensor": {
+                "triggers": {
+                    "filters": {
+                        "test": "has_tag",
+                        "subject": "self",
+                        "operator": "equals",
+                        "value": "despawn"
+                    },
+                    "event": "noxcrew:to_despawn"
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {
+                "has_gravity": true
+            }
+        },
+        "events": {
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

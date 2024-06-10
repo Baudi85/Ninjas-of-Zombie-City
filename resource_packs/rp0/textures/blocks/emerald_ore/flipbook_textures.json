@@ -1,0 +1,57 @@
+[
+   {
+    "flipbook_texture": "textures/blocks/coal_ore",
+    "atlas_tile": "coal_ore",
+    "ticks_per_frame": 10 
+  },
+   {
+    "flipbook_texture": "textures/blocks/lapis_ore",
+    "atlas_tile": "lapis_ore",
+    "ticks_per_frame": 10 
+  },
+   {
+    "flipbook_texture": "textures/blocks/quartz_ore",
+    "atlas_tile": "quartz_ore",
+    "ticks_per_frame": 10 
+  },
+   {
+    "flipbook_texture": "textures/blocks/redstone_ore",
+    "atlas_tile": "redstone_ore",
+    "ticks_per_frame": 10 
+  },
+  {
+    "flipbook_texture": "textures/blocks/emerald_block",
+    "atlas_tile": "emerald_block",
+    "ticks_per_frame": 5,
+    "blend_frames": false 
+  },
+   {
+    "flipbook_texture": "textures/blocks/glazed_terracotta_blue",
+    "atlas_tile": "blue_glazed_terracotta",
+    "ticks_per_frame": 2,
+    "frames": [ 0, 1, 2, 3, 4, 5]
+  }, 
+   { "flipbook_texture": "textures/blocks/glazed_terracotta_black",
+    "atlas_tile": "black_glazed_terracotta",
+    "ticks_per_frame": 1,
+    "frames": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  }, 
+      {
+    "flipbook_texture": "textures/blocks/glazed_terracotta_cyan",
+    "atlas_tile": "cyan_glazed_terracotta",
+    "ticks_per_frame": 1,
+    "frames": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  },    
+  {
+    "flipbook_texture": "textures/blocks/glazed_terracotta_brown",
+    "atlas_tile": "brown_glazed_terracotta",
+    "ticks_per_frame": 1,
+    "frames": [ 0, 1, 2, 3]
+  }, 
+   {
+    "flipbook_texture": "textures/blocks/glazed_terracotta_pink",
+    "atlas_tile": "pink_glazed_terracotta",
+    "ticks_per_frame": 1,
+    "frames": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  }    
+]

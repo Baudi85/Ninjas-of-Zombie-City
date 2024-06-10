@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.traders_alley",
+      "textures": {
+        "default": "textures/entity/signs/traders_alley"
+      },
+      "geometry": {
+        "default": "geometry.traders_alley"
+      },
+      "materials": {
+        "default": "base"
+      },  
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

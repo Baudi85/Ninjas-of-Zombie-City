@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.armor_rack",
+      "textures": {
+        "default": "textures/entity/armor_rack"
+      },
+      "geometry": {
+        "default": "geometry.armor_rack"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "render_controllers": [
+        "controller.render.armor_rack"
+      ]
+    }
+  }
+}

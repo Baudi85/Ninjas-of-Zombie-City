@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sprinkler": {
+			"loop": false,
+			"animation_length": 6,
+			"timeline": {
+				"0.0": [
+					"/fill 106 67 140 115 67 157 air 0 replace fire"
+				],
+				"2.0": [
+					"/fill 118 69 135 129 69 142 air 0 replace fire"
+				],
+				"4.0": [
+					"/fill 127 69 143 146 69 151 air 0 replace fire"
+				],
+				"5.0": [
+					"/fill 127 69 152 142 69 162 air 0 replace fire"
+				]
+			}
+		}
+	}
+}

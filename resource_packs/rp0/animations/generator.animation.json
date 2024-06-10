@@ -1,0 +1,53 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.generator.on": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"position": [0, "Math.cos(query.anim_time * 1500 +200) * 0.05 -0.2", 0]
+				},
+				"pointything": {
+					"rotation": [0, 0, "Math.cos(query.anim_time * 1500) * 3 "]
+				},
+				"green": {
+					"position": [0, 0, 0]
+				},
+				"red": {
+					"scale": 0
+				},
+				"exhaust": {
+					"rotation": ["Math.cos(query.anim_time * 1500) * 1", "Math.cos(query.anim_time * 1500 +600) * 1", "Math.cos(query.anim_time * 1500 +400) * 1"]
+				},
+				"sticky": {
+					"rotation": ["Math.cos(query.anim_time * 500) * 10", 0, 0]
+				},
+				"engine": {
+					"rotation": ["Math.cos(query.anim_time * 1500 +400) * 1", "Math.cos(query.anim_time * 1500 +800) * 1", "Math.cos(query.anim_time * 1500 +200) * 1"]
+				}
+			}
+		},
+		"animation.generator.off": {
+			"loop": true,
+			"bones": {
+				"pointything": {
+					"rotation": [0, 0, 145]
+				},
+				"green": {
+					"scale": 0
+				},
+				"red": {
+					"position": [0, 2, 0],
+					"scale": 1
+				}
+			}
+		},
+		"animation.generator.sound": {
+			"loop": true,
+			"animation_length": 1.7,
+			"sound_effects": {
+				"0.0": [{"effect": "generator_loop"}]
+			}
+		}
+	}
+}

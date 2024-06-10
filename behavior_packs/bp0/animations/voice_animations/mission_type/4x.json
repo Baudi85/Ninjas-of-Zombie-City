@@ -1,0 +1,77 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.missionVar41": {
+			"loop": false,
+			"animation_length": 12.0,
+			"timeline": {
+				"0.0": [
+					"/function voices/debriefer/comm/commIntro"
+				],
+				"1.5": [
+					"/function voices/debriefer/greetings/greetings"
+				],
+				"4.3": [
+					"/function voices/debriefer/mission/missionVar41"
+				],
+				"11.7": [
+					"@s noxcrew:to_talk2"
+				]
+			}
+		},
+		"animation.missionVar42": {
+			"loop": false,
+			"animation_length": 12.0,
+			"timeline": {
+				"0.0": [
+					"/function voices/debriefer/comm/commIntro"
+				],
+				"1.5": [
+					"/function voices/debriefer/greetings/greetings"
+				],
+				"4.3": [
+					"/function voices/debriefer/mission/missionVar42"
+				],
+				"10.6": [
+					"@s noxcrew:to_talk2"
+				]
+			}
+		},
+		"animation.missionVar43": {
+			"loop": false,
+			"animation_length": 11.0,
+			"timeline": {
+				"0.0": [
+					"/function voices/debriefer/comm/commIntro"
+				],
+				"1.5": [
+					"/function voices/debriefer/greetings/greetings"
+				],
+				"4.3": [
+					"/function voices/debriefer/mission/missionVar43"
+				],
+				"10.9": [
+					"@s noxcrew:to_talk2"
+				]
+			}
+		},
+		"animation.missionVar44": {
+			"loop": false,
+			"animation_length": 11.0,
+			"timeline": {
+				"0.0": [
+					"/function voices/debriefer/comm/commIntro"
+				],
+				"1.5": [
+					"/function voices/debriefer/greetings/greetings"
+				],
+				"4.3": [
+					"/function voices/debriefer/mission/missionVar44"
+				],
+				"10.5": [
+					"@s noxcrew:to_talk2"
+				]
+			}
+		}
+	}
+}

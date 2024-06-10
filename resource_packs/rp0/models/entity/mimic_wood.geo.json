@@ -1,0 +1,60 @@
+{
+	"format_version": "1.8.0",
+	"geometry.mimic_wood": {
+		"texturewidth": 128,
+		"textureheight": 64,
+		"visible_bounds_width": 3,
+		"visible_bounds_height": 1,
+		"visible_bounds_offset": [0, 0, 0],
+		"bones": [
+			{
+				"name": "body",
+				"pivot": [2, 0, 1]
+			},
+			{
+				"name": "bottom_goo_scale_able",
+				"parent": "body",
+				"pivot": [-1, 3, 4],
+				"cubes": [
+					{"origin": [-14, 0.3, -14], "size": [28, 0, 30], "uv": [0, 24]}
+				]
+			},
+			{
+				"name": "stretch_a",
+				"parent": "body",
+				"pivot": [-1, 3, 6.7],
+				"rotation": [0, -35, 0],
+				"cubes": [
+					{"origin": [-4.70534, 3, 6.71024], "size": [6, 8, 0], "uv": [0, 0], "mirror": true}
+				]
+			},
+			{
+				"name": "plank1",
+				"parent": "body",
+				"pivot": [2, 0, 1],
+				"rotation": [0, 20, 0],
+				"cubes": [
+					{"origin": [-8.22141, 0, -10.74435], "size": [9, 3, 21], "uv": [0, 0], "mirror": true}
+				]
+			},
+			{
+				"name": "plank2",
+				"parent": "plank1",
+				"pivot": [9.5, 0.5, -8.5],
+				"rotation": [25, -55, 5],
+				"cubes": [
+					{"origin": [7.53818, 0.16191, -8.3132], "size": [9, 3, 21], "uv": [0, 0]}
+				]
+			},
+			{
+				"name": "head",
+				"parent": "body",
+				"pivot": [-2, 5.6, -2.2],
+				"rotation": [-30, 45, -5],
+				"cubes": [
+					{"origin": [-4.58579, 0.66031, -5.85798], "size": [9, 9, 7], "uv": [39, 0]}
+				]
+			}
+		]
+	}
+}

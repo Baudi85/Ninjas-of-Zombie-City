@@ -1,0 +1,32 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.player_sprinting": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "sprinting": "query.is_sprinting"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s remove has_sprinting"
+                    ]
+                },
+                "sprinting": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_sprinting"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s add has_sprinting"
+                    ],
+                    "on_exit": [
+                        "/tag @s remove has_sprinting"
+                    ]
+                }
+            }
+        }
+    }
+}

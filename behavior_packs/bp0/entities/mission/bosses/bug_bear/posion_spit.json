@@ -1,0 +1,45 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "minecraft:dragon_fireball",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.31,
+                "height": 0.31
+            },
+            "minecraft:projectile": {
+                "on_hit": {
+                    "spawn_chance": {
+                        "first_spawn_percent_chance": 100,
+                        "first_spawn_count": 1,
+                        "spawn_definition": "noxcrew:zcn.bug_bear_poison"
+                    },
+                    "remove_on_hit": {}
+                },
+                "power": 1,
+                "gravity": 0,
+                "inertia": 1,
+                "anchor": 2,
+                "offset": [
+                    0,
+                    1.5,
+                    0
+                ],
+                "semi_random_diff_damage": true,
+                "uncertainty_base": 10,
+                "reflect_on_hurt": true,
+                "hit_sound": "explode"
+            }
+        },
+        "minecraft:physics": {},
+        "minecraft:pushable": {
+            "is_pushable": true,
+            "is_pushable_by_piston": true
+        }
+    }
+}

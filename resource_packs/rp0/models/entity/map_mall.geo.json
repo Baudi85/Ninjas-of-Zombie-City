@@ -1,0 +1,40 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.map_mall",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [24, 4, 0],
+					"cubes": [
+						{"origin": [-40, 3, 0], "size": [80, 46, 0], "uv": [0, 0]},
+						{"origin": [0, 3, 0], "size": [40, 46, 4], "uv": [0, 46]},
+						{"origin": [-40, 0, 0], "size": [4, 3, 4], "uv": [88, 46]},
+						{"origin": [36, 0, 0], "size": [4, 3, 4], "uv": [88, 46], "mirror": true},
+						{"origin": [36, 49, 0], "size": [4, 3, 4], "uv": [88, 46], "mirror": true},
+						{"origin": [36, 68, 0], "size": [4, 3, 4], "uv": [88, 46], "mirror": true},
+						{"origin": [-17, 0, 0], "size": [4, 3, 4], "uv": [88, 46]},
+						{"origin": [13, 0, 0], "size": [4, 3, 4], "uv": [88, 46], "mirror": true},
+						{"origin": [-40, 3, 0], "size": [40, 46, 4], "uv": [0, 46], "mirror": true}
+					]
+				},
+				{
+					"name": "Cube",
+					"parent": "body",
+					"pivot": [38, 52, 2],
+					"cubes": [
+						{"origin": [30, 52, -6], "size": [16, 16, 16], "uv": [0, 96]}
+					]
+				}
+			]
+		}
+	]
+}

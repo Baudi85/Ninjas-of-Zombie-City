@@ -1,0 +1,19 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.trap_wires": {
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        { "meter_1": "query.variant == 1 ? 1 : 0" },
+        { "meter_1a": "query.variant == 1 ? 1 : 0" },
+        { "meter_1b": "query.variant == 1 ? 1 : 0" },
+        { "meter_1c": "query.variant == 1 ? 1 : 0" },
+        { "meter_2": "query.variant == 1 ? 1 : 0" },
+        { "meter_2a": "query.variant == 1 ? 1 : 0" },
+        { "meter_2b": "query.variant == 1 ? 1 : 0" } 
+      ],
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Texture.default"]
+    }
+  }
+}

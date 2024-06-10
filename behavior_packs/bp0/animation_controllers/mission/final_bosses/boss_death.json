@@ -1,0 +1,28 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.finalboss_death": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/execute @s[type=noxcrew:zcn.final_mask] ~ ~ ~ /tag @e[type=noxcrew:counter] add mask",
+                        "/execute @s[type=noxcrew:zcn.final_bug_bear] ~ ~ ~ /tag @e[type=noxcrew:counter] add bugBear"
+                    ]
+                },
+                "dead": {
+                    "on_entry": [
+                        "/scoreboard players add @e[type=noxcrew:counter] finalBossOutput 1",
+                        "/execute @e[type=noxcrew:counter,scores={finalBossOutput=4..}] ~ ~ ~ /function quests/miscellaneous/final_boss_congrats",
+                        "/execute @e[type=noxcrew:counter,scores={finalBossOutput=4..}] ~ ~ ~ /scoreboard players reset @e[type=noxcrew:counter] finalBossOutput",
+                        "/execute @e[type=noxcrew:counter,tag=splitter,tag=bugBear,tag=mask,tag=candyman] ~ ~ ~ /setblock 208 27 224 redstone_block"
+                    ]
+                }
+            }
+        }
+    }
+}

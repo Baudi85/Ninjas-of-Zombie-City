@@ -1,0 +1,123 @@
+{
+	"format_version": "1.8.0",
+	"geometry.trap_wires": {
+		"texturewidth": 256,
+		"textureheight": 128,
+		"visible_bounds_width": 4,
+		"visible_bounds_height": 1,
+		"visible_bounds_offset": [0, 0, 0],
+		"bones": [
+			{
+				"name": "bone",
+				"pivot": [0, 0, 0],
+				"cubes": [
+					{"origin": [-14, 0, -16], "size": [28, 1, 32], "uv": [0, 32], "inflate": -0.1},
+					{"origin": [-17, -1, -17], "size": [34, 4, 34], "uv": [0, 218], "inflate": -0.1},
+					{"origin": [16, 0.2, -16], "size": [7, 0, 23], "uv": [31, 65]},
+					{"origin": [-23, 0.2, -9], "size": [7, 0, 23], "uv": [17, 65]},
+					{"origin": [-14, 1, 14], "size": [28, 1, 2], "uv": [80, 65]},
+					{"origin": [-16, 0, -18], "size": [2, 2, 36], "uv": [40, 67]},
+					{"origin": [14, 0, -18], "size": [2, 2, 36], "uv": [0, 65]},
+					{"origin": [-14, 1, -16], "size": [28, 1, 2], "uv": [80, 80]}
+				]
+			},
+			{
+				"name": "wire",
+				"parent": "bone",
+				"pivot": [8, 1.5, 7],
+				"cubes": [
+					{"origin": [-16, 1.1, -16], "size": [30, 0, 32], "uv": [0, 0]}
+				]
+			},
+			{
+				"name": "meters",
+				"parent": "bone",
+				"pivot": [0, 0, 0]
+			},
+			{
+				"name": "meter_1",
+				"parent": "meters",
+				"pivot": [1.45016, 1.7113, -20.25339],
+				"rotation": [0, -5, 0],
+				"cubes": [
+					{"origin": [-1.77482, -0.06418, -25.72414], "size": [7, 2, 5], "uv": [0, 40]},
+					{"origin": [-0.27482, 1.13582, -25.22414], "size": [0, 2, 1], "uv": [8, 40]},
+					{"origin": [1.02518, 1.13582, -25.22414], "size": [0, 2, 1], "uv": [0, 52]},
+					{"origin": [2.42518, 1.13582, -25.22414], "size": [0, 2, 1], "uv": [0, 52]},
+					{"origin": [3.92518, 1.13582, -25.22414], "size": [0, 2, 1], "uv": [0, 52]},
+					{"origin": [-1.77482, 0, -21.15299], "size": [7, 5, 3], "uv": [0, 24]}
+				]
+			},
+			{
+				"name": "meter_1a",
+				"parent": "meter_1",
+				"pivot": [1.72518, 2, -21.95299],
+				"rotation": [-40, 0, 0],
+				"cubes": [
+					{"origin": [-1.77482, 0.81236, -23.26852], "size": [7, 4, 2], "uv": [0, 33]}
+				]
+			},
+			{
+				"name": "meter_1b",
+				"parent": "meter_1a",
+				"pivot": [1.51647, 2.14612, -23.27199],
+				"rotation": [0, 0, -65],
+				"cubes": [
+					{"origin": [1.01647, 1.84612, -23.27199], "size": [1, 2, 0], "uv": [0, 53]}
+				]
+			},
+			{
+				"name": "meter_2",
+				"parent": "meters",
+				"pivot": [-8.5, 2.5, -20.5],
+				"rotation": [0, 15, 0],
+				"cubes": [
+					{"origin": [-12, 0, -23], "size": [7, 5, 5], "uv": [0, 0]}
+				]
+			},
+			{
+				"name": "meter_2a",
+				"parent": "meters",
+				"pivot": [-8, 3.3, -16],
+				"rotation": [-30, 0, 0],
+				"cubes": [
+					{"origin": [-10.4, 3.22321, -19.53301], "size": [6, 0, 7], "uv": [0, 10]}
+				]
+			},
+			{
+				"name": "meter_2b",
+				"parent": "meter_2a",
+				"pivot": [-10.8, 3.14474, -12.86891],
+				"rotation": [0, -15, 0],
+				"cubes": [
+					{"origin": [-13.82588, 3.31795, -14.9655], "size": [6, 0, 4], "uv": [0, 10]}
+				]
+			},
+			{
+				"name": "meter_1c",
+				"parent": "meters",
+				"pivot": [-0.6, 3.32321, -16.65929],
+				"rotation": [-10, 10, 10],
+				"cubes": [
+					{"origin": [1.29574, 3.56657, -17.46626], "size": [6, 0, 7], "uv": [94, 0]}
+				]
+			}
+		]
+	},
+	"geometry.trap_wires_charged": {
+		"texturewidth": 128,
+		"textureheight": 64,
+		"visible_bounds_width": 4,
+		"visible_bounds_height": 1,
+		"visible_bounds_offset": [0, 0, 0],
+		"bones": [
+			{
+				"name": "electricity",
+				"pivot": [0, 0, 0],
+				"cubes": [
+					{"origin": [-17, -1, -17], "size": [34, 4, 34], "uv": [0, 0], "inflate": -0.1}
+				]
+			}
+		]
+	}
+}

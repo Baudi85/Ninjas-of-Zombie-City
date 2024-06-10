@@ -1,0 +1,33 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.final_splitter",
+      "textures": {
+        "big": "textures/entity/zombie/splitter/big",
+        "medium": "textures/entity/zombie/splitter/medium",
+        "small": "textures/entity/zombie/splitter/small"
+      },
+      "geometry": {
+        "big": "geometry.splitter_big",
+        "medium": "geometry.splitter_medium",
+        "small": "geometry.splitter_small"
+      }, 
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "move": "animation.splitter.move",
+        "idle": "animation.splitter.idle"
+      },
+      "animation_controllers": [
+        {
+          "move": "controller.animation.boss_splitter.move"
+        }
+      ],
+      "render_controllers": [
+        "controller.render.splitter"
+      ]
+    }
+  }
+}

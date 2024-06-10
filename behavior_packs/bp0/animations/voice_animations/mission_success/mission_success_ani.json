@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.success_message": {
+			"loop": false,
+			"animation_length": 10.0,
+			"timeline": {
+				"0.0": [
+					"/function quests/button/lock",
+					"/function quests/miscellaneous/congratulations"
+				],
+				"3.0": [
+					"/function voices/debriefer/congrats/congrats"
+				],
+				"9.0": [
+					"/function quests/button/unlock",
+					"@s noxcrew:to_talkupgrade"
+				]
+			}
+		}
+	}
+}

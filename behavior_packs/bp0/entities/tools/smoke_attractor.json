@@ -1,0 +1,55 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.smoke_attractor",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "width": 1,
+                "height": 1
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "smoke_attractor"
+                ]
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:timer": {
+                "looping": false,
+                "time": 10,
+                "time_down_event": {
+                    "event": "noxcrew:to_despawn",
+                    "target": "self"
+                }
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            }
+        },
+        "events": {
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

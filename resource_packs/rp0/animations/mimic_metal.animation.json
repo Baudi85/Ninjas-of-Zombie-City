@@ -1,0 +1,120 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.mimic_metal.idle": {
+			"loop": true,
+			"bones": {
+				"bottom_goo_scale_able": {
+					"scale": ["Math.cos(query.anim_time * 50 +100) * 0.05 +1.1", 1, "Math.cos(query.anim_time * 50 +100) * 0.05 +1"]
+				},
+				"stretch_a": {
+					"scale": [1, "Math.cos(query.anim_time * 50) * 0.1 +0.44", 1]
+				},
+				"stretch_b": {
+					"scale": [1, "Math.cos(query.anim_time * 50 +50) * 0.1 +0.6", 1]
+				},
+				"sheet3": {
+					"rotation": ["Math.cos(query.anim_time * 50) * 5 +5", 0, 0]
+				},
+				"sheet4": {
+					"rotation": [0, 0, "Math.cos(query.anim_time * 50 +50) * 5 +5"]
+				},
+				"head": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.mimic_metal.move": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"bottom_goo_scale_able": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.75": [2, 0, 0],
+						"1.0": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.75": [1.3, 1, 1],
+						"1.0": [1, 1, 1]
+					}
+				},
+				"stretch_a": {
+					"scale": [1, 0.4, 1]
+				},
+				"stretch_b": {
+					"scale": [1, 0.6, 1]
+				},
+				"sheet1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.6": [0, 10, 0],
+						"1.0": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.6": [1, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"sheet2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.6": [0, 10, 0],
+						"1.0": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.6": [1, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"sheet3": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.6": [0, 10, 0],
+						"1.0": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.6": [2, 0, 1],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"sheet4": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.6": [0, 20, 0],
+						"1.0": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.6": [2, 0, -2],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.6": [0, -20, -15],
+						"1.0": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.6": [1, 1, 1.3],
+						"1.0": [1, 1, 1]
+					}
+				},
+				"body": {
+					"rotation": [0, -90, 0],
+					"position": [6, 0, 8]
+				}
+			}
+		}
+	}
+}

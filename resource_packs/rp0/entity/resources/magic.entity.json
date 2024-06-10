@@ -1,0 +1,31 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.resource_magic",
+      "textures": {
+        "default": "textures/entity/resource/magic",
+        "mimic": "textures/entity/zombie/mimic/magic"
+      },
+      "geometry": {
+        "default": "geometry.resource_magic",
+        "mimic": "geometry.mimic_magic"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "idle": "animation.mimic_magic.idle",
+        "move": "animation.mimic_magic.move"
+      },
+      "animation_controllers": [
+        {
+          "reveal": "controller.animation.mimic.reveal"
+        }
+	  ],
+      "render_controllers": [
+        "controller.render.resource"
+      ]
+    }
+  }
+}

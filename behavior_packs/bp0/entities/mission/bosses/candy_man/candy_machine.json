@@ -1,0 +1,153 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.gumball_machine",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    "machine_tag"
+                ]
+            },
+            "animations": {
+                "machine_tag": "controller.animation.tag_candy_man",
+                "spawn_ads": "animation.candy_machine_spawn_ads"
+            }
+        },
+        "component_groups": {
+            "noxcrew:check_candyman_hit": {
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "on_damage": {
+                                "filters": {
+                                    "any_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "candy_man"
+                                        },
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        }
+                                    ]
+                                },
+                                "event": "noxcrew:to_shoot_gumballs"
+                            },
+                            "deals_damage": false,
+                            "on_damage_sound_event": "conduit.ambient"
+                        },
+                        {
+                            "cause": "all",
+                            "deals_damage": false
+                        }
+                    ]
+                }
+            },
+            "noxcrew:shoot_gumballs": {
+                "minecraft:damage_sensor": {
+                    "triggers": {
+                        "cause": "all",
+                        "deals_damage": false
+                    }
+                },
+                "minecraft:is_sheared": {}
+            },
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "zombie",
+                    "candy_machine",
+                    "boss"
+                ]
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "width": 2,
+                        "height": 4.6,
+                        "pivot": [
+                            0,
+                            2.3,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "minecraft:scale": {
+                "value": 1
+            },
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "despawn"
+                        },
+                        "event": "noxcrew:to_despawn"
+                    }
+                ]
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:check_candyman_hit"
+                    ]
+                }
+            },
+            "noxcrew:to_check_candyman_hit": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:shoot_gumballs"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:check_candyman_hit"
+                    ]
+                }
+            },
+            "noxcrew:to_shoot_gumballs": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:check_candyman_hit"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:shoot_gumballs"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

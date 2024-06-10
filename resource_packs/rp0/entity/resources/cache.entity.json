@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.resource_cache",
+      "textures": {
+        "default": "textures/entity/resource/cache"
+      },
+      "geometry": {
+        "default": "geometry.resource_cache"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "particle_effects": {
+        "cache_stars": "noxcrew:zcn.cache_stars",
+        "objective": "noxcrew:zcn.objective"
+      },
+      "animations": {
+        "idle": "animation.resource_cache.idle",
+        "open": "animation.resource_cache.open",
+        "open_controller": "controller.animation.resource_cashe.open",
+        "objective": "controller.animation.resource_cashe.objective"
+      },
+      "scripts": {
+        "animate": [
+          "open_controller", "objective"
+        ]
+      },
+      "sound_effects": {
+        "resource_cache_jiggle": "resource_cache_jiggle"
+      },
+      "render_controllers": [
+        "controller.render.base_lit"
+      ]
+    }
+  }
+}

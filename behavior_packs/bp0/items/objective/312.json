@@ -1,0 +1,12 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "noxcrew:zcn.312",
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:max_stack_size": 1
+        }
+    }
+}

@@ -1,0 +1,154 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.store_counter.spawn": {
+			"loop": true,
+			"bones": {
+				"counter_a": {
+					"scale": [1, 0.02, 1]
+				},
+				"counter_b": {
+					"scale": [1, 0.02, 1]
+				},
+				"completed_a": {
+					"scale": [0, 0, 0]
+				},
+				"completed_b": {
+					"scale": [0, 0, 0]
+				} 
+			}
+		},
+		"animation.store_counter.metal_wood_tutorial": {
+			"loop": true,
+			"bones": {
+				"counter_a": {
+					"scale": [1, "query.variant * 1", 1]
+				},
+				"counter_b": {
+					"scale": [1, "query.mark_variant * 1", 1]
+				},
+				"completed_a": {
+					"scale": ["query.variant >= 1", "query.variant >= 1", "query.variant >= 1"]
+				},
+				"completed_b": {
+					"scale": ["query.mark_variant >= 1", "query.mark_variant >= 1", "query.mark_variant >= 1"]
+				} 
+			}
+		},
+		"animation.store_counter.metal": {
+			"loop": true,
+			"bones": {
+				"counter_a": {
+					"scale": [1, "query.variant * 0.1", 1]
+				},
+				"completed_a": {
+					"scale": ["query.variant >= 10", "query.variant >= 10", "query.variant >= 10"]
+				}
+			}
+		},
+		"animation.store_counter.cloth_wood": {
+			"loop": true,
+			"bones": {
+				"counter_a": {
+					"scale": [1, "query.variant * 0.1", 1]
+				},
+				"counter_b": {
+					"scale": [1, "query.mark_variant * 0.2", 1]
+				},
+				"completed_a": {
+					"scale": ["query.variant >= 10", "query.variant >= 10", "query.variant >= 10"]
+				},
+				"completed_b": {
+					"scale": ["query.mark_variant >= 5", "query.mark_variant >= 5", "query.mark_variant >= 5"]
+				} 
+			}
+		},
+		"animation.store_counter.metal_wood": {
+			"loop": true,
+			"bones": {
+				"counter_a": {
+					"scale": [1, "query.variant * 0.1", 1]
+				},
+				"counter_b": {
+					"scale": [1, "query.mark_variant * 0.2", 1]
+				},
+				"completed_a": {
+					"scale": ["query.variant >= 10", "query.variant >= 10", "query.variant >= 10"]
+				},
+				"completed_b": {
+					"scale": ["query.mark_variant >= 5", "query.mark_variant >= 5", "query.mark_variant >= 5"]
+				} 
+			}
+		},
+		"animation.store_counter.cloth_magic": {
+			"loop": true,
+			"bones": {
+				"counter_a": {
+					"scale": [1, "query.variant * 0.1", 1]
+				},
+				"counter_b": {
+					"scale": [1, "query.mark_variant * 0.2", 1]
+				},
+				"completed_a": {
+					"scale": ["query.variant >= 10", "query.variant >= 10", "query.variant >= 10"]
+				},
+				"completed_b": {
+					"scale": ["query.mark_variant >= 5", "query.mark_variant >= 5", "query.mark_variant >= 5"]
+				} 
+			}
+		},
+		"animation.store_counter.metal_magic": {
+			"loop": true,
+			"bones": {
+				"counter_a": {
+					"scale": [1, "query.variant * 0.1", 1]
+				},
+				"counter_b": {
+					"scale": [1, "query.mark_variant * 0.2", 1]
+				},
+				"completed_a": {
+					"scale": ["query.variant >= 10", "query.variant >= 10", "query.variant >= 10"]
+				},
+				"completed_b": {
+					"scale": ["query.mark_variant >= 5", "query.mark_variant >= 5", "query.mark_variant >= 5"]
+				} 
+			}
+		},
+		"animation.store_counter.magic": {
+			"loop": true,
+			"bones": {
+				"counter_a": {
+					"scale": [1, "query.variant * 0.2", 1]
+				},
+				"completed_a": {
+					"scale": ["query.variant >= 5", "query.variant >= 5", "query.variant >= 5"]
+				}
+			}
+		},
+		"animation.store_counter.complete": {
+			"loop": true,
+			"bones": {
+				"counter_a": {
+					"scale": [1, 1, 1]
+				},
+				"counter_b": {
+					"scale": [1, 1, 1]
+				},
+				"completed_a": {
+					"scale": [1, 1, 1]
+				},
+				"completed_b": {
+					"scale": [1, 1, 1]
+				} 
+			}
+		},
+		"animation.store_counter.disapear": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"scale": [0, 0, 0]
+				}
+			}
+		}
+	}
+}

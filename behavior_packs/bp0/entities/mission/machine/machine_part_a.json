@@ -1,0 +1,191 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.machine_part_a",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "replace": "controller.animation.machine_part_replacement",
+                "light": "controller.animation.light"
+            },
+            "scripts": {
+                "animate": [
+                    "replace",
+                    "light"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:interact": {
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "operator": "equals",
+                                    "value": "player"
+                                },
+                                "target": "self",
+                                "event": "noxcrew:to_replacementpart"
+                            },
+                            "add_items": {
+                                "table": "loot_tables/mission/machine/part_a.json"
+                            },
+                            "play_sounds": "block.turtle_egg.break",
+                            "interact_text": "action.interact.pickup_coolant"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:tutorial": {
+                "minecraft:spell_effects": {
+                    "remove_effects": "invisibility"
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "operator": "equals",
+                                    "value": "player"
+                                },
+                                "target": "self",
+                                "event": "noxcrew:to_invisible"
+                            },
+                            "add_items": {
+                                "table": "loot_tables/mission/machine/part_a.json"
+                            },
+                            "play_sounds": "block.turtle_egg.break",
+                            "interact_text": "action.interact.pickup_coolant"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:invisible": {
+                "minecraft:spell_effects": {
+                    "add_effects": [
+                        {
+                            "effect": "invisibility",
+                            "duration": 100000,
+                            "amplifier": 0,
+                            "visible": false
+                        }
+                    ]
+                },
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": [
+                        5,
+                        8
+                    ],
+                    "time_down_event": {
+                        "event": "noxcrew:to_tutorial",
+                        "target": "self"
+                    }
+                }
+            },
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            },
+            "noxcrew:replacementpart": {
+                "minecraft:is_sheared": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "machine_part"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.7,
+                "height": 0.5
+            },
+            "minecraft:nameable": {
+                "always_show": true
+			},
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "cause": "all",
+                        "deals_damage": false
+                    }
+                ]
+            },
+            "minecraft:environment_sensor": {
+                "triggers": {
+                    "filters": {
+                        "test": "has_tag",
+                        "subject": "self",
+                        "operator": "equals",
+                        "value": "despawn"
+                    },
+                    "event": "noxcrew:to_despawn"
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:interact"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            },
+            "noxcrew:to_replacementpart": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:replacementpart"
+                    ]
+                }
+            },
+            "noxcrew:to_tutorial": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:invisible"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:tutorial"
+                    ]
+                }
+            },
+            "noxcrew:to_invisible": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:tutorial"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:invisible"
+                    ]
+                }
+            }
+        }
+    }
+}

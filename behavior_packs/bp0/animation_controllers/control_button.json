@@ -1,0 +1,46 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.control_button": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "pressed": "query.variant == 1"
+                        },
+                        {
+                            "locked": "query.is_sheared"
+                        }
+                    ]
+                },
+                "pressed": {
+                    "transitions": [
+                        {
+                            "default": "query.variant == 0"
+                        },
+                        {
+                            "locked": "query.is_sheared"
+                        }
+                    ],
+                    "on_entry":[
+                        "/function quests/button/button"
+                       
+                    ]
+                },
+                "locked": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_sheared"
+                        }
+                    ],
+                    "on_entry":[
+                        "/tag @s remove lock"
+                    ],
+                    "on_exit":[
+                        "/tag @s remove unlock"
+                    ]
+                }
+            }
+        }
+    }
+}

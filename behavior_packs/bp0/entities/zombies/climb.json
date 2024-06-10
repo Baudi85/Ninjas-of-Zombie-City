@@ -1,0 +1,625 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.climb",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    "zombie_tag",
+                    "shield",
+                    "branch_manager",
+                    "dead"
+                ]
+            },
+            "animations": {
+                "zombie_tag": "controller.animation.zombie_tag",
+                "shield": "controller.animation.zombie_shield",
+                "branch_manager": "controller.animation.branch_manager",
+                "dead": "controller.animation.zombie_dead"
+            }
+        },
+        "component_groups": {
+            "noxcrew:shield_off": {
+                "minecraft:skin_id": {
+                    "value": 0
+                },
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "cause": "fall",
+                            "deals_damage": false
+                        }
+                    ]
+                }
+            },
+            "noxcrew:shield_3": {
+                "minecraft:skin_id": {
+                    "value": 3
+                },
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "on_damage": {
+                                "filters": {
+                                    "other_with_families": "player"
+                                },
+                                "event": "noxcrew:to_shield_2"
+                            },
+                            "deals_damage": false,
+							"on_damage_sound_event": "conduit.attack"
+                        },
+                        {
+                            "cause": "fall",
+                            "deals_damage": false
+                        }
+                    ]
+                }
+            },
+            "noxcrew:shield_2": {
+                "minecraft:skin_id": {
+                    "value": 2
+                },
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "on_damage": {
+                                "filters": {
+                                    "other_with_families": "player"
+                                },
+                                "event": "noxcrew:to_shield_1"
+                            },
+                            "deals_damage": false,
+							"on_damage_sound_event": "conduit.attack"
+                        },
+                        {
+                            "cause": "fall",
+                            "deals_damage": false
+                        }
+                    ]
+                }
+            },
+            "noxcrew:shield_1": {
+                "minecraft:skin_id": {
+                    "value": 1
+                },
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "on_damage": {
+                                "filters": {
+                                    "other_with_families": "player"
+                                },
+                                "event": "noxcrew:remove_shield"
+                            },
+                            "deals_damage": false,
+							"on_damage_sound_event": "conduit.attack"
+                        },
+                        {
+                            "cause": "fall",
+                            "deals_damage": false
+                        }
+                    ]
+                }
+            },
+            "noxcrew:branch_110": {
+                "minecraft:mark_variant": {
+                    "value": 110
+                }
+            },
+            "noxcrew:branch_120": {
+                "minecraft:mark_variant": {
+                    "value": 120
+                }
+            },
+            "noxcrew:branch_130": {
+                "minecraft:mark_variant": {
+                    "value": 130
+                }
+            },
+            "noxcrew:branch_210": {
+                "minecraft:mark_variant": {
+                    "value": 210
+                }
+            },
+            "noxcrew:branch_220": {
+                "minecraft:mark_variant": {
+                    "value": 220
+                }
+            },
+            "noxcrew:branch_230": {
+                "minecraft:mark_variant": {
+                    "value": 230
+                }
+            },
+            "noxcrew:branch_310": {
+                "minecraft:mark_variant": {
+                    "value": 310
+                }
+            },
+            "noxcrew:branch_320": {
+                "minecraft:mark_variant": {
+                    "value": 320
+                }
+            },
+            "noxcrew:branch_330": {
+                "minecraft:mark_variant": {
+                    "value": 330
+                }
+            },
+            "noxcrew:branch_410": {
+                "minecraft:mark_variant": {
+                    "value": 410
+                }
+            },
+            "noxcrew:branch_420": {
+                "minecraft:mark_variant": {
+                    "value": 420
+                }
+            },
+            "noxcrew:naturalspawned": {
+                "minecraft:despawn": {
+                    "filters": {
+                        "all_of": [
+                            {
+                                "test": "is_daytime",
+                                "value": true
+                            },
+                            {
+                                "test": "distance_to_nearest_player",
+                                "operator": ">",
+                                "value": 32
+                            }
+                        ]
+                    }
+                }
+            },
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "zombie"
+                ]
+            },
+            "minecraft:breathable": {
+                "total_supply": 15,
+                "suffocate_time": 0
+            },
+            "minecraft:collision_box": {
+                "width": 1,
+                "height": 1
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "width": 1.8,
+                        "height": 2.2,
+                        "pivot": [
+                            0,
+                            1.1,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/coin/elite.json"
+            },
+            "minecraft:health": {
+                "value": 35,
+                "max": 35
+            },
+            "minecraft:movement": {
+                "value": 0.4
+            },
+            "minecraft:navigation.climb": {
+                "can_path_over_water": true
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:attack": {
+                "damage": 4
+            },
+            "minecraft:follow_range": {
+                "value": 96
+            },
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "shield"
+                        },
+                        "event": "noxcrew:to_add_shield"
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "despawn"
+                        },
+                        "event": "noxcrew:to_despawn"
+                    }
+                ]
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 2,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        },
+                        "max_dist": 80
+                    }
+                ],
+                "attack_interval": 5,
+                "must_see": true
+            },
+            "minecraft:behavior.leap_at_target": {
+                "priority": 4,
+                "yd": 0.4,
+                "must_be_on_ground": false
+            },
+            "minecraft:behavior.melee_attack": {
+                "priority": 3,
+                "speed_multiplier": 1,
+                "track_target": true,
+                "reach_multiplier": 0.8
+            },
+            "minecraft:behavior.float": {
+                "priority": 1
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 6,
+                "speed_multiplier": 0.8
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 7,
+                "look_distance": 45,
+                "probability": 0.02
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 7
+            },
+            "minecraft:behavior.hurt_by_target": {
+                "priority": 1,
+                "entity_types": {
+                    "filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "operator": "==",
+                        "value": "player"
+                    }
+                }
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:shield_off"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 6
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 9
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch_110"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 10
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 13
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch_120"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 14
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 17
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch_130"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 18
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 21
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch_210"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 22
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 25
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch_220"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 26
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 29
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch_230"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 30
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 33
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch_310"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 34
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 37
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch_320"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 38
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 41
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch_330"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 42
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 45
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch_410"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 46
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 49
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:branch_420"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_naturalspawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:shield_off",
+                        "noxcrew:naturalspawned"
+                    ]
+                }
+            },
+            "noxcrew:to_add_shield": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:shield_off",
+                        "noxcrew:shield_3",
+                        "noxcrew:shield_2",
+                        "noxcrew:shield_1"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:shield_3"
+                    ]
+                }
+            },
+            "noxcrew:to_shield_2": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:shield_3"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:shield_2"
+                    ]
+                }
+            },
+            "noxcrew:to_shield_1": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:shield_2"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:shield_1"
+                    ]
+                }
+            },
+            "noxcrew:remove_shield": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:shield_3",
+                        "noxcrew:shield_2",
+                        "noxcrew:shield_1"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:shield_off"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

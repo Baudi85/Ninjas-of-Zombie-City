@@ -1,0 +1,56 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.control_button.press": {
+            "initial_state": "ready",
+            "states": {
+                "ready": {
+                    "animations": [
+                        "ready"
+                    ],
+                    "transitions": [
+                        {
+                            "press": "query.variant == 1"
+                        }
+                    ]
+                },
+                "press": {
+                    "animations": [
+                        "press"
+                    ],
+                    "transitions": [
+                        {
+                            "ready": "query.any_animation_finished" 
+                        }
+                    ]
+                } 
+            }
+        },
+        
+        "controller.animation.control_button.color": {
+            "initial_state": "red",
+            "states": {
+                "red": {
+                    "animations": [
+                        "red"
+                    ],
+                    "transitions": [
+                        {
+                            "grey": "query.is_sheared"
+                        }
+                    ]
+                }, 
+                "grey": {
+                    "animations": [
+                        "grey"
+                    ],
+                    "transitions": [
+                        {
+                            "red": "!query.is_sheared"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

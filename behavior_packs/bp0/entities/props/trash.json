@@ -1,0 +1,128 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.trash",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {},
+            "scripts": {
+                "animate": []
+            }
+        },
+        "component_groups": {
+            "noxcrew:0": {
+                "minecraft:variant": {
+                    "value": 0
+                }
+            },
+            "noxcrew:1": {
+                "minecraft:variant": {
+                    "value": 1
+                }
+            },
+            "noxcrew:2": {
+                "minecraft:variant": {
+                    "value": 2
+                }
+            },
+            "noxcrew:3": {
+                "minecraft:variant": {
+                    "value": 3
+                }
+            },
+            "noxcrew:4": {
+                "minecraft:variant": {
+                    "value": 4
+                }
+            },
+            "noxcrew:5": {
+                "minecraft:variant": {
+                    "value": 5
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "ambient"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0,
+                "height": 0
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "randomize": [
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:0"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:1"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:2"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:3"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:4"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:5"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

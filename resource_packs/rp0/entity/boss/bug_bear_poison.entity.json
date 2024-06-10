@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.bug_bear_poison",
+      "textures": {
+        "default": "textures/entity/zombie/bug_bear/poison_puddle" 
+      },
+      "geometry": {
+        "default": "geometry.bug_bear_poison"
+      },
+      "materials": {
+        "default": "transparency"
+      }, 
+      "particle_effects": {
+        "poison_particle": "noxcrew:zcn.poison_particle"
+      },
+      "animations": {
+        "particle": "controller.animation.poison_puddle.particle"
+      },
+      "scripts": {
+        "animate": [
+          "particle"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.base_lit"
+      ]
+    }
+  }
+}

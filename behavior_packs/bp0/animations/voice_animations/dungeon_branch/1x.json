@@ -1,0 +1,42 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.branch11": {
+			"loop": false,
+			"animation_length": 6.0,
+			"timeline": {
+				"0.0": [
+					"/function voices/debriefer/branch/branch11"
+				],
+				"5.4": [
+					"@s noxcrew:to_talk3"
+					
+				]
+			}
+		},
+		"animation.branch12": {
+			"loop": false,
+			"animation_length": 7.0,
+			"timeline": {
+				"0.0": [
+					"/function voices/debriefer/branch/branch12"
+				],
+				"6.2": [
+					"@s noxcrew:to_talk3"
+				]
+			}
+		},
+		"animation.branch13": {
+			"loop": false,
+			"animation_length": 7.0,
+			"timeline": {
+				"0.0": [
+					"/function voices/debriefer/branch/branch13"
+				],
+				"6.0": [
+					"@s noxcrew:to_talk3"
+				]
+			}
+		}
+	}
+}

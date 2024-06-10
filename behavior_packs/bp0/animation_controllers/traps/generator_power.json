@@ -1,0 +1,27 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.generator_power": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "powered": "query.is_baby"
+                        }
+                    ]
+                },
+                "powered": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_baby"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @e[tag=trap,r=32] add powerTrap",
+						"/playsound generator_start @a ~ ~ ~ 3 1 0"
+                    ]
+                }
+            }
+        }
+    }
+}

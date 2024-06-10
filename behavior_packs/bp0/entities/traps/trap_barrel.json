@@ -1,0 +1,156 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.trap_barrel",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "barrel": "animation.trap_barrel"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "barrel" : "query.mark_variant == 1 && query.is_sheared"
+                    }
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:explode": {
+                "minecraft:explode": {
+                    "fuseLength": 2,
+                    "fuseLit": true,
+                    "power": 6,
+                    "causesFire": false,
+                    "destroyAffectedByGriefing": true
+                },
+                "minecraft:is_sheared": {},
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "on_damage": {
+                                "filters": {
+                                    "other_with_families": "barrel"
+                                }
+                            },
+                            "deals_damage": false
+                        }
+                    ]
+                }
+            },
+            "noxcrew:waiting": {
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "on_damage": {
+                                "filters": {
+                                    "other_with_families": "barrel"
+                                }
+                            },
+                            "deals_damage": false
+                        },
+                        {
+                            "on_damage": {
+                                "event": "noxcrew:barrel_ignite"
+                            },
+                            "deals_damage": true,
+							"on_damage_sound_event": "conduit.activate"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:tutorial":{
+                "minecraft:mark_variant": {
+                    "value": 1
+                }
+            },
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "barrel"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.85,
+                "height": 1.2
+            },
+            "minecraft:environment_sensor": {
+                "triggers": {
+                    "filters": {
+                        "test": "has_tag",
+                        "subject": "self",
+                        "operator": "equals",
+                        "value": "despawn"
+                    },
+                    "event": "noxcrew:to_despawn"
+                }
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "width": 1.2,
+                        "height": 1.8,
+                        "pivot": [
+                            0,
+                            0.9,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "minecraft:friction_modifier": {
+                "value": 1.15
+            },
+            "minecraft:health": {
+                "value": 100,
+                "max": 100
+            },
+            "minecraft:pushable": {
+                "is_pushable": true
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting"
+                    ]
+                }
+            },
+            "noxcrew:to_tutorial": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting",
+                        "noxcrew:tutorial"
+                    ]
+                }
+            },
+            "noxcrew:barrel_ignite": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:waiting"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:explode"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

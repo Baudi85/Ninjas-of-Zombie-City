@@ -1,0 +1,36 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.tutorial_machine",
+      "textures": {
+        "default": "textures/entity/machine"
+      },
+      "geometry": {
+        "default": "geometry.machine"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "particle_effects": {
+        "machine_smoke": "noxcrew:zcn.machine_smoke"
+      },
+      "animations": {
+        "on": "animation.machine.on",
+        "off": "animation.machine.off",
+        "sound": "animation.machine.sound"
+      },
+      "animation_controllers": [
+        {
+          "on": "controller.animation.machine.on"
+        }
+      ],
+      "sound_effects": {
+        "machine_loop": "machine_loop"
+      },
+      "render_controllers": [
+        "controller.render.machine"
+      ]
+    }
+  }
+}

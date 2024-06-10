@@ -1,0 +1,15 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.tutorial_store": {
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "part_visibility": [
+        { "sign_a": "query.variant == 0" },
+        { "sign_b": "query.variant == 1" }
+      ],
+      "textures": [ "Texture.default" ],
+      "ignore_lighting": true
+    }
+  }
+}

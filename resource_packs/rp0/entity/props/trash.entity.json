@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.trash",
+      "textures": {
+        "a": "textures/entity/trash/a",
+        "b": "textures/entity/trash/b",
+        "c": "textures/entity/trash/c",
+        "d": "textures/entity/trash/d",
+        "e": "textures/entity/trash/e",
+        "f": "textures/entity/trash/f"
+      },
+      "geometry": {
+        "a": "geometry.trash_a", 
+        "b": "geometry.trash_b",
+        "c": "geometry.trash_c",
+        "d": "geometry.trash_d",
+        "e": "geometry.trash_e",
+        "f": "geometry.trash_f"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "render_controllers": [
+        "controller.render.trash"
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.smoke_attractor",
+      "textures": {
+        "default": "textures/entity/smoke_attractor"
+      },
+      "geometry": {
+        "default": "geometry.smoke_attractor"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "particle_effects": {
+        "smoke_attractor": "noxcrew:zcn.smoke_attractor"
+      },
+      "animations": { 
+        "smoke_sound": "animation.smoke_attractor.smoke_sound",
+        "smoke": "controller.animation.smoke_attractor.smoke"
+      },
+      "scripts": {
+        "animate": [
+          "smoke"
+        ]
+      },
+      "sound_effects": {
+        "smoke_attractor": "smoke_attractor"
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

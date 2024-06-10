@@ -1,0 +1,77 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.van",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 14,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [8, -1, 8],
+					"cubes": [
+						{"origin": [-24, 4, -8], "size": [48, 28, 16], "inflate": -0.015, "uv": [0, 134]},
+						{"origin": [0, 47, 31], "size": [21, 3, 3], "uv": [0, 0]},
+						{"origin": [0, 47, 71], "size": [21, 3, 3], "uv": [0, 0]},
+						{"origin": [-21, 47, 31], "size": [21, 3, 3], "uv": [0, 0], "mirror": true},
+						{"origin": [-21, 47, 71], "size": [21, 3, 3], "uv": [0, 0], "mirror": true},
+						{"origin": [18, 0, -4], "size": [5, 10, 10], "uv": [0, 30]},
+						{"origin": [18, 0, 86], "size": [5, 10, 10], "uv": [0, 30]},
+						{"origin": [-23, 0, -4], "size": [5, 10, 10], "uv": [0, 30], "mirror": true},
+						{"origin": [-23, 0, 86], "size": [5, 10, 10], "uv": [0, 30], "mirror": true},
+						{"origin": [18, 4, -6], "size": [6, 7, 14], "inflate": -0.015, "uv": [2, 9]},
+						{"origin": [18, 4, 84], "size": [6, 7, 14], "inflate": -0.015, "uv": [2, 9]},
+						{"origin": [-24, 4, -6], "size": [6, 7, 14], "inflate": -0.015, "uv": [2, 9], "mirror": true},
+						{"origin": [-24, 4, 84], "size": [6, 7, 14], "inflate": -0.015, "uv": [2, 9], "mirror": true},
+						{"origin": [-24, 4, 98], "size": [48, 44, 6], "uv": [138, 27]},
+						{"origin": [0, 4, 8], "size": [24, 44, 90], "uv": [0, 0]},
+						{"origin": [-24, 4, 8], "size": [24, 44, 90], "uv": [0, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "left_light",
+					"parent": "body",
+					"pivot": [24, 23, 11],
+					"rotation": [0, -35, 0],
+					"cubes": [
+						{"origin": [24.55854, 30, 6.08509], "size": [5, 8, 3], "uv": [0, 6]},
+						{"origin": [20.55854, 30, 8.08509], "size": [4, 3, 0], "uv": [13, 6]}
+					]
+				},
+				{
+					"name": "right_light",
+					"parent": "body",
+					"pivot": [-24, 23, 11],
+					"rotation": [0, 35, 0],
+					"cubes": [
+						{"origin": [-29.55854, 30, 6.08509], "size": [5, 8, 3], "uv": [0, 6], "mirror": true},
+						{"origin": [-24.55854, 30, 8.08509], "size": [4, 3, 0], "uv": [13, 6], "mirror": true}
+					]
+				},
+				{
+					"name": "windshield",
+					"parent": "body",
+					"pivot": [-1, 48, 8],
+					"rotation": [-20, 0, 0],
+					"cubes": [
+						{"origin": [-24, 30, 8], "size": [48, 18, 9], "inflate": -0.04, "uv": [138, 0]}
+					]
+				},
+				{
+					"name": "antena",
+					"parent": "body",
+					"pivot": [8, 48, 11],
+					"rotation": [-20, 0, 0],
+					"cubes": [
+						{"origin": [4, 48, 11], "size": [10, 16, 0], "uv": [0, 51]}
+					]
+				}
+			]
+		}
+	]
+}

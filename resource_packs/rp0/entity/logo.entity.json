@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:logo",
+      "textures": {
+        "default": "textures/entity/nox_logo"
+      },
+      "geometry": {
+        "default": "geometry.nox_logo"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "render_controllers": [
+        "controller.render.base_lit"
+      ]
+    }
+  }
+}

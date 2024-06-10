@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.tutorial_suvivor_rescued": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "dead": "query.variant == 1"
+                        }
+                    ],
+                    "on_exit": [
+                        "/function tutorial/functions/survivor"
+                    ]
+                },
+                "dead": {}
+            }
+        }
+    }
+}

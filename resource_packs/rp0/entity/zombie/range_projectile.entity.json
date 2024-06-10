@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.projectile_skull",
+      "textures": {
+        "default": "textures/entity/zombie/range/projectile" 
+      },
+      "geometry": {
+        "default": "geometry.range_projectile" 
+      },
+      "materials": {
+        "default": "transparency" 
+      },
+      "animations": {
+        "laugh": "animation.range_projectile.laugh",
+        "look_at_target": "animation.range_projectile.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          "laugh", "look_at_target"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.base" 
+      ]
+    }
+  }
+}

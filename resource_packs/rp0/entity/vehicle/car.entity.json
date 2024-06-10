@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.car",
+      "textures": {
+        "default": "textures/entity/vehicle/car"
+      },
+      "geometry": {
+        "default": "geometry.car"
+      },
+      "materials": {
+        "default": "vehical"
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

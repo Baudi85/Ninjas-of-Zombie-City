@@ -1,0 +1,15 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.animate_resourcecache": {
+			"loop": false,
+			"animation_length": 8.0,
+			"timeline": {
+				"7.0": [
+					"/function gameplay/resCacheCounter",
+					"@s noxcrew:to_despawn"
+				]
+			}
+		}
+	}
+}

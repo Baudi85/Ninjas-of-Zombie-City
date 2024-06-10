@@ -1,0 +1,146 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.gear_unlock1": {
+            "loop": false,
+            "animation_length": 7,
+            "timeline": {
+                "0.0": [
+                    "/function quests/button/lock",
+                    "/function voices/debriefer/gear_upgrade/upgradeWSounds"
+                ],
+                "0.3": [
+                    "/function voices/debriefer/gear_upgrade/upgradeW1"
+                ],
+                "1.2": [
+                    "/function voices/debriefer/gear_upgrade/upgradeW2"
+                ],
+                "4.8": [
+                    "/function voices/debriefer/gear_upgrade/upgradeW3"
+                ],
+                "6.0": [
+                    "/function quests/button/unlock",
+                    "@s noxcrew:to_talk99"
+                ]
+            }
+        },
+        "animation.gear_unlock2": {
+            "loop": false,
+            "animation_length": 7,
+            "timeline": {
+                "0.0": [
+                    "/function quests/button/lock",
+                    "/function voices/debriefer/gear_upgrade/upgradeASounds"
+                ],
+                "0.2": [
+                    "/function voices/debriefer/gear_upgrade/upgradeA1"
+                ],
+                "1.1": [
+                    "/function voices/debriefer/gear_upgrade/upgradeA2"
+                ],
+                "4.8": [
+                    "/function voices/debriefer/gear_upgrade/upgradeA3"
+                ],
+                "6.0": [
+                    "/function quests/button/unlock",
+                    "@s noxcrew:to_talk99"
+                ]
+            }
+        },
+        "animation.gear_unlock3": {
+            "loop": false,
+            "animation_length": 7,
+            "timeline": {
+                "0.0": [
+                    "/function quests/button/lock",
+                    "/function voices/debriefer/gear_upgrade/upgradeWSounds"
+                ],
+                "0.3": [
+                    "/function voices/debriefer/gear_upgrade/upgradeW1"
+                ],
+                "1.2": [
+                    "/function voices/debriefer/gear_upgrade/upgradeW2"
+                ],
+                "4.8": [
+                    "/function voices/debriefer/gear_upgrade/upgradeW3"
+                ],
+                "6.0": [
+                    "/function quests/button/unlock",
+                    "@s noxcrew:to_talk99"
+                ]
+            }
+        },
+        "animation.gear_unlock4": {
+            "loop": false,
+            "animation_length": 7,
+            "timeline": {
+                "0.0": [
+                    "/function quests/button/lock",
+                    "/function voices/debriefer/gear_upgrade/upgradeASounds"
+                ],
+                "0.2": [
+                    "/function voices/debriefer/gear_upgrade/upgradeA1"
+                ],
+                "1.1": [
+                    "/function voices/debriefer/gear_upgrade/upgradeA2"
+                ],
+                "4.8": [
+                    "/function voices/debriefer/gear_upgrade/upgradeA3"
+                ],
+                "6.0": [
+                    "/function quests/button/unlock",
+                    "@s noxcrew:to_talk99"
+                ]
+            }
+        },
+        "animation.gear_unlock5": {
+            "loop": false,
+            "animation_length": 7,
+            "timeline": {
+                "0.0": [
+                    "/function quests/button/lock",
+                    "/function voices/debriefer/gear_upgrade/upgradeWSounds"
+                ],
+                "0.3": [
+                    "/function voices/debriefer/gear_upgrade/upgradeW1"
+                ],
+                "1.2": [
+                    "/function voices/debriefer/gear_upgrade/upgradeW2"
+                ],
+                "4.8": [
+                    "/function voices/debriefer/gear_upgrade/upgradeW3"
+                ],
+                "6.0": [
+                    "/function quests/button/unlock",
+                    "@s noxcrew:to_talk99"
+                ]
+            }
+        },
+        "animation.gear_unlock6": {
+            "loop": false,
+            "animation_length": 11,
+            "timeline": {
+                "0.0": [
+                    "/function quests/button/lock",
+                    "/function voices/debriefer/gear_upgrade/upgradeSSounds"
+                ],
+                "0.2": [
+                    "/function voices/debriefer/gear_upgrade/upgradeS1"
+                ],
+                "1": [
+                    "/function voices/debriefer/gear_upgrade/upgradeS2"
+                ],
+                "5": [
+                    "/function voices/debriefer/gear_upgrade/upgradeS3"
+                ],
+                "8.1": [
+                    "/function voices/debriefer/gear_upgrade/upgradeS4"
+                ],
+                "10.0": [
+                    "/function quests/button/unlock",
+                    "@s noxcrew:to_talk99"
+                ]
+            }
+        }
+    }
+}

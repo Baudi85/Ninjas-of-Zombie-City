@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.wet_floor",
+      "textures": {
+        "default": "textures/entity/wet_floor"
+      },
+      "geometry": {
+        "default": "geometry.wet_floor"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

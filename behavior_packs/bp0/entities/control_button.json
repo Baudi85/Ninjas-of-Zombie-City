@@ -1,0 +1,170 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.control_button",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "control": "controller.animation.control_button"
+            },
+            "scripts": {
+                "animate": [
+                    "control"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:ready": {
+                "minecraft:variant": {
+                    "value": 0
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "operator": "equals",
+                                    "value": "player"
+                                },
+                                "target": "self",
+                                "event": "noxcrew:to_pressed"
+                            },
+                            "play_sounds": "shear",
+                            "interact_text": "action.interact.new_mission"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:pressed": {
+                "minecraft:variant": {
+                    "value": 1
+                },
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": 1,
+                    "time_down_event": {
+                        "event": "noxcrew:to_ready",
+                        "target": "self"
+                    }
+                }
+            },
+            "noxcrew:locked": {
+                "minecraft:variant": {
+                    "value": 0
+                },
+                "minecraft:is_sheared": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "control"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 1.2
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "lock"
+                        },
+                        "event": "noxcrew:to_locked"
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "unlock"
+                        },
+                        "event": "noxcrew:remove_locked"
+                    }
+                ]
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:ready"
+                    ]
+                }
+            },
+            "noxcrew:to_pressed": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:ready"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:pressed"
+                    ]
+                }
+            },
+            "noxcrew:to_ready": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:pressed"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:ready"
+                    ]
+                }
+            },
+            "noxcrew:to_locked": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:ready",
+                        "noxcrew:pressed"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:locked"
+                    ]
+                }
+            },
+            "noxcrew:remove_locked": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:locked"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:ready"
+                    ]
+                }
+            }
+        }
+    }
+}

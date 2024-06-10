@@ -1,0 +1,14 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.movetool_spawn": {
+            "states": {
+                "default": {
+                    "on_entry": [
+						"/function movetool/spawn"
+                    ]
+                }
+            }
+        }
+    }
+}

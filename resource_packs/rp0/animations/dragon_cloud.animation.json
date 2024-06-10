@@ -1,0 +1,168 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dragon_cloud.idle": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"position": [0, "Math.cos(query.anim_time * 150) * 1", 0]
+				},
+				"rotateystuff": {
+					"rotation": [0, "query.anim_time * -35", 0]
+				},
+				"rotateytinycloud": {
+					"position": [0, "Math.cos(query.anim_time * 250 +25) * -1", 0]
+				},
+				"rotateytinycloud2": {
+					"position": [0, "Math.cos(query.anim_time * 250 +50) * 1", 0]
+				},
+				"dragon1": {
+					"position": [0, "Math.sin(query.anim_time * 150 +100) * 2", 0]
+				},
+				"upperbody": {
+					"rotation": ["Math.sin(query.anim_time * 150 -50) * 5", 0, "Math.sin(query.anim_time * 150 -50) * 10"]
+				},
+				"middlebody": {
+					"rotation": ["Math.sin(query.anim_time * 150 -75) * 15", 0, 0]
+				},
+				"tail": {
+					"rotation": ["Math.sin(query.anim_time * 150 -125) * 15", 0, 0]
+				},
+				"head": {
+					"rotation": [0, 0, "Math.sin(query.anim_time * 150) * 10"],
+					"position": [0, "Math.sin(query.anim_time * 150) * -1", 0]
+				},
+				"dragon2": {
+					"position": [0, "Math.sin(query.anim_time * 150 +100) * 2", 0]
+				},
+				"upperbody2": {
+					"rotation": ["Math.sin(query.anim_time * 150) * 5", 0, "Math.sin(query.anim_time * 150) * 10"]
+				},
+				"middlebody2": {
+					"rotation": ["Math.sin(query.anim_time * 150 -50) * 15", 0, 0]
+				},
+				"tail2": {
+					"rotation": ["Math.sin(query.anim_time * 150 -100) * 15", 0, 0]
+				},
+				"head2": {
+					"rotation": [0, 0, "Math.sin(query.anim_time * 150 +50) * 10"],
+					"position": [0, "Math.sin(query.anim_time * 150 +50) * -1", 0]
+				}
+			}
+		},
+		"animation.dragon_cloud.blink": {
+			"animation_length": 9,
+			"bones": {
+				"bone": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"6.0": [1, 1, 1],
+						"6.01": [0, 0, 0],
+						"6.05": [0, 0, 0],
+						"6.06": [1, 1, 1],
+						"6.5": [1, 1, 1],
+						"6.51": [0, 0, 0],
+						"6.55": [0, 0, 0],
+						"6.56": [1, 1, 1],
+						"6.9": [1, 1, 1],
+						"6.91": [0, 0, 0],
+						"6.95": [0, 0, 0],
+						"6.96": [1, 1, 1],
+						"7.25": [1, 1, 1],
+						"7.26": [0, 0, 0],
+						"7.3": [0, 0, 0],
+						"7.31": [1, 1, 1],
+						"7.55": [1, 1, 1],
+						"7.56": [0, 0, 0],
+						"7.6": [0, 0, 0],
+						"7.61": [1, 1, 1],
+						"7.75": [1, 1, 1],
+						"7.76": [0, 0, 0],
+						"7.8": [0, 0, 0],
+						"7.81": [1, 1, 1],
+						"7.99": [1, 1, 1],
+						"8.0": [0, 0, 0]
+					}
+				},
+				"rotateytinycloud": {
+					"rotation": [0, -15, 0],
+					"position": [0, 0, 0],
+					"scale": {
+						"6.0": [1, 1, 1],
+						"7.0": [0.8, 0.8, 0.8],
+						"7.95": [0.5, 0.5, 0.5]
+					}
+				},
+				"rotateytinycloud2": {
+					"rotation": {
+						"6.0": [0, 0, 0],
+						"7.0": [0, -15, 0]
+					},
+					"scale": {
+						"6.0": [1, 1, 1],
+						"7.0": [0.8, 0.8, 0.8],
+						"7.95": [0.5, 0.5, 0.5]
+					}
+				},
+				"body": {
+					"rotation": {
+						"6.0": [0, 0, 0],
+						"7.0": [0, -65.9, 0],
+						"8.0": [0, -150, 0]
+					},
+					"position": {
+						"6.0": [0, 0, 0],
+						"6.75": [5.77, -2.15, -2.94],
+						"7.0": [7.69, -2.54, -3.92],
+						"8.0": [18, -1, 11]
+					},
+					"scale": {
+						"6.0": [1, 1, 1],
+						"8.0": [0.5, 0.5, 0.5]
+					}
+				},
+				"upperbody": {
+					"rotation": {
+						"7.0": [0, 0, 0],
+						"8.0": [0, -35, 0]
+					}
+				},
+				"middlebody": {
+					"rotation": {
+						"7.2": [0, 0, 0],
+						"7.95": [0, 40, 0]
+					},
+					"position": [0, 0, 0]
+				},
+				"body2": {
+					"rotation": {
+						"6.0": [0, 0, 0],
+						"7.0": [0, -65.9, 0],
+						"8.0": [0, -150, 0]
+					},
+					"position": {
+						"6.0": [0, 0, 0],
+						"7.0": [7.69, -1.54, -3.92],
+						"8.0": [18, -1.5, 11]
+					},
+					"scale": {
+						"6.0": [1, 1, 1],
+						"8.0": [0.5, 0.5, 0.5]
+					}
+				},
+				"scales3": {
+					"rotation": {
+						"7.0": [0, 0, 0],
+						"7.95": [0, -40, 0]
+					}
+				},
+				"middlebody2": {
+					"rotation": {
+						"7.2": [0, 0, 0],
+						"7.95": [0, -40, 0]
+					}
+				}
+			}
+		}
+	}
+}

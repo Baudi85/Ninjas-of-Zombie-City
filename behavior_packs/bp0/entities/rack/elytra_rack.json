@@ -1,0 +1,97 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.elytra_rack",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "equip": "controller.animation.elytra_equipper"
+            },
+            "scripts": {
+                "animate": [
+                    "equip"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:waiting": {
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "event": "noxcrew:to_equip",
+                                "target": "self"
+                            },
+                            "interact_text": "action.interact.elytra"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:equip": {
+                "minecraft:is_tamed": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "elytra_rack"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.7,
+                "height": 1.8
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting"
+                    ]
+                }
+            },
+            "noxcrew:to_equip": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:waiting"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:equip"
+                    ]
+                }
+            },
+            "noxcrew:to_waiting": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:equip"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting"
+                    ]
+                }
+            }
+        }
+    }
+}

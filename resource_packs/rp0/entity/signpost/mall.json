@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.map_mall",
+      "textures": {
+        "default": "textures/entity/signs/map_mall"
+      },
+      "geometry": {
+        "default": "geometry.map_mall"
+      },
+      "materials": {
+        "default": "transparency"
+      },  
+      "animations": {
+        "spin": "animation.map_mall.spin"
+      },
+      "scripts": {
+        "animate": [
+          "spin"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

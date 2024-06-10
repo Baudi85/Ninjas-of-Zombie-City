@@ -1,0 +1,58 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.grunt": {
+      "arrays": {
+        "geometries": {
+          "Array.geos": [
+            "Geometry.a",
+            "Geometry.a",
+            "Geometry.b",
+            "Geometry.b",
+            "Geometry.b",
+            "Geometry.c",
+            "Geometry.d",
+            "Geometry.d",
+            "Geometry.e",
+            "Geometry.f",
+            "Geometry.f",
+            "Geometry.g",
+            "Geometry.h",
+            "Geometry.i",
+            "Geometry.j",
+            "Geometry.k",
+            "Geometry.k",
+            "Geometry.l",
+            "Geometry.m"
+          ]
+        },
+        "textures": {
+          "Array.skins": [
+            "Texture.a",
+            "Texture.a_a",
+            "Texture.b",
+            "Texture.b_a",
+            "Texture.b_b",
+            "Texture.c",
+            "Texture.d", 
+            "Texture.d_a", 
+            "Texture.e",
+            "Texture.f",
+            "Texture.f_a",
+            "Texture.g",
+            "Texture.h",
+            "Texture.i",
+            "Texture.j",
+            "Texture.k",
+            "Texture.k_a",
+            "Texture.l",
+            "Texture.m"
+          ]
+        }
+      },
+      "geometry": "Array.geos[query.variant]",
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Array.skins[query.variant]"]
+    }
+  }
+}

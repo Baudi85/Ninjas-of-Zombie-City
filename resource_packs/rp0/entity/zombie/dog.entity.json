@@ -1,0 +1,38 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.dog",
+      "textures": {
+        "blue": "textures/entity/zombie/dog/blue",
+        "green": "textures/entity/zombie/dog/green",
+        "shield": "textures/entity/zombie/shield"
+      },
+      "geometry": {
+        "default": "geometry.dog",
+        "shield": "geometry.dog_shield"
+      },
+      "materials": {
+        "default": "transparency",
+        "shield": "shield"
+      },
+      "animations": {
+        "walk": "animation.dog.walk",
+        "run": "animation.dog.run",
+        "idle": "animation.dog.idle",
+        "spawn": "animation.dog.spawn",
+        "tail": "animation.dog.tail",
+        "look_at_target": "animation.dog.look_at_target"
+      },
+      "animation_controllers": [
+        {
+          "move": "controller.animation.dog.move"
+        }
+      ],
+      "render_controllers": [
+        "controller.render.dog",
+        "controller.render.shield"
+      ]
+    }
+  }
+}

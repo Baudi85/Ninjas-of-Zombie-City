@@ -1,0 +1,15 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.trap_timer": {
+			"loop": false,
+			"animation_length": 16,
+			"timeline": {
+				"15.0": [
+					"/tag @s remove powerTrap",
+					"@s noxcrew:to_unpowered"
+				]
+			}
+		}
+	}
+}

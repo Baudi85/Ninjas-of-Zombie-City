@@ -1,0 +1,50 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.training_dummy.hit": {
+            "initial_state": "hit1",
+            "states": {
+                "hit1": {
+                    "animations": [
+                        "hit1"
+                    ],
+                    "transitions": [
+                        {
+                            "hit1transition": "query.is_sheared"
+                        }
+                    ]
+                },
+                "hit1transition": {
+                    "animations": [
+                        "hit1transition"
+                    ],
+                    "transitions": [
+                        {
+                            "hit2": "query.anim_time >= 0.3"
+                        }
+                    ]
+                },
+                "hit2": {
+                    "animations": [
+                        "hit2"
+                    ],
+                    "transitions": [
+                        {
+                            "hit2transition": "query.is_sheared"
+                        }
+                    ]
+                },
+                "hit2transition": {
+                    "animations": [
+                        "hit2transition"
+                    ],
+                    "transitions": [
+                        {
+                            "hit1": "query.anim_time >= 0.3"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

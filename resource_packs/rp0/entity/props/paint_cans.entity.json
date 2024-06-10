@@ -1,0 +1,22 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.paint_cans",
+      "textures": {
+        "a": "textures/entity/paint_cans/a",
+        "b": "textures/entity/paint_cans/b"
+      },
+      "geometry": {
+        "a": "geometry.paint_cans_a",
+        "b": "geometry.paint_cans_b"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "render_controllers": [
+        "controller.render.paint_cans"
+      ]
+    }
+  }
+}

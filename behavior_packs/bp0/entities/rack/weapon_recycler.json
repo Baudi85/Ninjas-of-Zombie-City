@@ -1,0 +1,578 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.weapon_recycler",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {},
+            "scripts": {
+                "animate": []
+            }
+        },
+        "component_groups": {
+            "noxcrew:animate": {
+                "minecraft:is_tamed": {},
+                "minecraft:ageable": {
+                    "duration": 0.1,
+                    "grow_up": {
+                        "event": "noxcrew:remove_animate",
+                        "target": "self"
+                    }
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "weapon_recycler"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 1.4,
+                "height": 1.4
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:interact": {
+                "interactions": [
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:stone_sword"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:iron_sword"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:diamond_sword"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:netherite_sword"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:leather_boots"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:leather_leggings"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:leather_chestplate"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:leather_helmet"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:iron_boots"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:iron_leggings"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:iron_chestplate"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:iron_helmet"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:chainmail_boots"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:chainmail_leggings"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:chainmail_chestplate"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:chainmail_helmet"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:diamond_boots"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:diamond_leggings"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:diamond_chestplate"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:diamond_helmet"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    },
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "minecraft:elytra"
+                                    }
+                                ]
+                            },
+                            "event": "noxcrew:to_animate",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "play_sounds": "milk",
+                        "interact_text": "action.interact.recycle"
+                    }
+                ]
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "noxcrew:to_animate": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:animate"
+                    ]
+                }
+            },
+            "noxcrew:remove_animate": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:animate"
+                    ]
+                }
+            }
+        }
+    }
+}

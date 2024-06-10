@@ -1,0 +1,45 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.store_counter",
+      "textures": {
+        "me": "textures/entity/store_counter/metal",
+        "cw": "textures/entity/store_counter/cloth_wood",
+        "mw": "textures/entity/store_counter/metal_wood",
+        "cm": "textures/entity/store_counter/cloth_magic",
+        "mm": "textures/entity/store_counter/metal_magic",
+        "ma": "textures/entity/store_counter/magic"
+      },
+      "geometry": {
+        "default": "geometry.store_counter",
+        "solo": "geometry.store_counter_solo"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "particle_effects": {
+        "poof_particle": "noxcrew:zcn.poof_particle"
+      },
+      "animation_controllers": [
+        {
+          "scale": "controller.animation.store_counter.scale"
+        }
+      ],
+      "animations": {
+        "spawn": "animation.store_counter.spawn",
+        "metal": "animation.store_counter.metal",
+        "cloth_wood": "animation.store_counter.cloth_wood",
+        "metal_wood": "animation.store_counter.metal_wood",
+        "cloth_magic": "animation.store_counter.cloth_magic",
+        "metal_magic": "animation.store_counter.metal_magic",
+        "magic": "animation.store_counter.magic",
+        "completed": "animation.store_counter.complete",
+        "disapear": "animation.store_counter.disapear"
+      },
+      "render_controllers": [
+        "controller.render.store_counter"
+      ]
+    }
+  }
+}

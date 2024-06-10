@@ -1,0 +1,415 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.gumball_warrior",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    "zombie_tag",
+                    "shield"
+                ]
+            },
+            "animations": {
+                "zombie_tag": "controller.animation.zombie_tag",
+                "shield": "controller.animation.zombie_shield"
+            }
+        },
+        "component_groups": {
+            "npc:type_1": {
+                "minecraft:variant": {
+                    "value": 0
+                },
+                "minecraft:scale": {
+                    "value": 0.8
+                }
+            },
+            "npc:type_2": {
+                "minecraft:variant": {
+                    "value": 1
+                },
+                "minecraft:scale": {
+                    "value": 0.73
+                }
+            },
+            "npc:type_3": {
+                "minecraft:variant": {
+                    "value": 2
+                },
+                "minecraft:scale": {
+                    "value": 0.77
+                }
+            },
+            "npc:type_4": {
+                "minecraft:variant": {
+                    "value": 3
+                },
+                "minecraft:scale": {
+                    "value": 0.83
+                }
+            },
+            "npc:type_5": {
+                "minecraft:variant": {
+                    "value": 4
+                },
+                "minecraft:scale": {
+                    "value": 0.87
+                }
+            },
+            "noxcrew:shield_check": {
+                "minecraft:is_sheared": {}
+            },
+            "noxcrew:shield_3": {
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "on_damage": {
+                                "filters": {
+                                    "other_with_families": "player"
+                                },
+                                "event": "noxcrew:to_shield_2"
+                            },
+                            "deals_damage": false
+                        }
+                    ]
+                }
+            },
+            "noxcrew:shield_2": {
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "on_damage": {
+                                "filters": {
+                                    "other_with_families": "player"
+                                },
+                                "event": "noxcrew:to_shield_1"
+                            },
+                            "deals_damage": false
+                        }
+                    ]
+                }
+            },
+            "noxcrew:shield_1": {
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "on_damage": {
+                                "filters": {
+                                    "other_with_families": "player"
+                                },
+                                "event": "noxcrew:remove_shield"
+                            },
+                            "deals_damage": false
+                        }
+                    ]
+                }
+            },
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "zombie",
+                    "gumball"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.7,
+                "height": 1.3
+            },
+            "minecraft:movement": {
+                "value": 0.3
+            },
+            "minecraft:health": {
+                "value": 35,
+                "max": 35
+            },
+            "minecraft:attack": {
+                "damage": 4
+            },
+            "minecraft:navigation.walk": {
+                "is_amphibious": true,
+                "can_pass_doors": true,
+                "can_walk": true,
+                "can_break_doors": true
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:despawn": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "distance_to_nearest_player",
+                            "operator": ">",
+                            "value": 16
+                        }
+                    ]
+                }
+            },
+            "minecraft:timer": {
+                "looping": false,
+                "time": [
+                    15,
+                    20
+                ],
+                "time_down_event": {
+                    "event": "noxcrew:to_despawn",
+                    "target": "self"
+                }
+            },
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "shield"
+                        },
+                        "event": "noxcrew:to_add_shield"
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "despawn"
+                        },
+                        "event": "noxcrew:to_despawn"
+                    }
+                ]
+            },
+            "minecraft:behavior.melee_attack": {
+                "priority": 3,
+                "speed_multiplier": 1,
+                "track_target": false
+            },
+            "minecraft:behavior.move_towards_restriction": {
+                "priority": 5,
+                "speed_multiplier": 1
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 6,
+                "speed_multiplier": 1
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 7,
+                "look_distance": 6,
+                "probability": 0.02
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 7
+            },
+            "minecraft:behavior.hurt_by_target": {
+                "priority": 1
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 2,
+                "within_radius": 25,
+                "reselect_targets": true,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                },
+                                {
+                                    "test": "is_sneaking",
+                                    "subject": "other",
+                                    "value": false
+                                },
+                                {
+                                    "test": "has_tag",
+                                    "subject": "other",
+                                    "operator": "equals",
+                                    "value": "has_sprinting"
+                                }
+                            ]
+                        },
+                        "max_dist": 35
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                },
+                                {
+                                    "test": "is_sneaking",
+                                    "subject": "other",
+                                    "value": false
+                                },
+                                {
+                                    "test": "has_tag",
+                                    "subject": "other",
+                                    "operator": "!=",
+                                    "value": "has_sprinting"
+                                }
+                            ]
+                        },
+                        "max_dist": 25
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                },
+                                {
+                                    "test": "is_sneaking",
+                                    "subject": "other",
+                                    "value": true
+                                },
+                                {
+                                    "test": "has_tag",
+                                    "subject": "other",
+                                    "operator": "!=",
+                                    "value": "has_sprinting"
+                                }
+                            ]
+                        },
+                        "max_dist": 15
+                    }
+                ],
+                "must_see": true,
+                "must_see_forget_duration": 17
+            },
+            "minecraft:push_through": {
+                "value": 0
+            },
+            "minecraft:pushable": {
+                "is_pushable": true
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "sequence": [
+                    {
+                        "filters": {
+                            "test": "has_component",
+                            "operator": "!=",
+                            "value": "minecraft:variant"
+                        },
+                        "randomize": [
+                            {
+                                "weight": 10,
+                                "add": {
+                                    "component_groups": [
+                                        "npc:type_1"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 10,
+                                "add": {
+                                    "component_groups": [
+                                        "npc:type_2"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 10,
+                                "add": {
+                                    "component_groups": [
+                                        "npc:type_3"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 10,
+                                "add": {
+                                    "component_groups": [
+                                        "npc:type_4"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 10,
+                                "add": {
+                                    "component_groups": [
+                                        "npc:type_5"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "noxcrew:to_add_shield": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:shield_3",
+                        "noxcrew:shield_2",
+                        "noxcrew:shield_1"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:shield_3",
+                        "noxcrew:shield_check"
+                    ]
+                }
+            },
+            "noxcrew:to_shield_2": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:shield_3"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:shield_2"
+                    ]
+                }
+            },
+            "noxcrew:to_shield_1": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:shield_2"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:shield_1"
+                    ]
+                }
+            },
+            "noxcrew:remove_shield": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:shield_3",
+                        "noxcrew:shield_2",
+                        "noxcrew:shield_1"
+                    ]
+                }
+            },
+            "noxcrew:remove_shield_check": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:shield_check"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

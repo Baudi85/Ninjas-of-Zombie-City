@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.map_kobra",
+      "textures": {
+        "default": "textures/entity/signs/map_cobra"
+      },
+      "geometry": {
+        "default": "geometry.map_cobra"
+      },
+      "materials": {
+        "default": "transparency"
+      },  
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

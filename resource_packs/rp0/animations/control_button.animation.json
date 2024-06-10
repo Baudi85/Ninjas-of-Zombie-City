@@ -1,0 +1,49 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.control_button.ready": { 
+			"bones": {
+				"button": {
+				}
+			}
+		},
+		"animation.control_button.press": {
+			"animation_length": 1.5,
+			"bones": {
+				"button": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.2": [0, -0.5, 0],
+						"0.85": [0, -1.5, 0],
+						"1.5": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.control_button.grey": {
+			"loop": true,
+			"bones": {
+				"button": {
+					"position": [0, 0, 0],
+					"scale": 1
+				},
+				"grey": {
+					"position": [0, 0, 0],
+					"scale": [1.01, 1.01, 1.02]
+				}
+			}
+		},
+		"animation.control_button.red": {
+			"loop": true,
+			"bones": {
+				"button": {
+					"scale": 1
+				},
+				"grey": {
+					"position": [0, 0, 0],
+					"scale": 0
+				}
+			}
+		}
+	}
+}

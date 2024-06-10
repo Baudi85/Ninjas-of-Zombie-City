@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.truck",
+      "textures": {
+        "default": "textures/entity/vehicle/truck"
+      },
+      "geometry": {
+        "default": "geometry.truck"
+      },
+      "materials": {
+        "default": "vehical"
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

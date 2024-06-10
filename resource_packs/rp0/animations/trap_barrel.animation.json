@@ -1,0 +1,21 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.trap_barrel.idle": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"scale": 1
+				}
+			}
+		},
+		"animation.trap_barrel.swell": {
+			"animation_length": 2,
+			"bones": {
+				"bone": {
+					"scale": ["(Math.cos(query.anim_time * 100) * -0.15 +1.55) + (Math.cos(query.anim_time * 300) * -0.2 -0.2)", "(Math.cos(query.anim_time * 100) * -0.05 +1.05)", "(Math.cos(query.anim_time * 100) * -0.15 +1.55) + (Math.cos(query.anim_time * 300) * -0.2 -0.2)"]
+				}
+			}
+		}
+	}
+}

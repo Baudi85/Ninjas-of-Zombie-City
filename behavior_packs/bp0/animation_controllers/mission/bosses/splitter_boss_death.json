@@ -1,0 +1,30 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.boss_splitter_death": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive && query.variant == 2"
+                        }
+                    ],
+                    "on_exit":[
+                        "/summon noxcrew:zcn.splitter_anchor",
+                        "/scoreboard players add @e[type=noxcrew:counter] splitBossOutput 1"
+                    ]
+                },
+                "dead": {
+                    "on_entry": [
+                        "/execute @e[type=noxcrew:counter,scores={splitBossOutput=6..}] ~ ~ ~ /tag @s add splitter",
+                        "/execute @e[type=noxcrew:counter,scores={splitBossOutput=6..}] ~ ~ ~ /summon noxcrew:zcn.resource_cache ~ ~ ~",
+                        "/execute @e[type=noxcrew:counter] ~ ~ ~ tp @e[type=noxcrew:zcn.resource_cache,r=5] @e[type=noxcrew:zcn.splitter_anchor,c=1]",
+                        "/execute @e[type=noxcrew:counter,scores={splitBossOutput=6..}] ~ ~ ~ /function quests/missionSuccess",
+                        "/execute @e[type=noxcrew:counter,scores={splitBossOutput=6..}] ~ ~ ~ /scoreboard players reset @e[type=noxcrew:counter] splitBossOutput",
+                        "/execute @e[type=noxcrew:counter,tag=splitter,tag=bugBear,tag=mask,tag=candyman] ~ ~ ~ /setblock 208 27 224 redstone_block"
+                    ]
+                }
+            }
+        }
+    }
+}

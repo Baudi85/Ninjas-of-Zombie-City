@@ -1,0 +1,141 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.vomit.move": {
+	 "initial_state": "spawn",
+      "states": {
+        "spawn": {
+          "animations": [
+            "spawn"
+          ],
+          "transitions": [
+            {
+              "walk": "query.anim_time >= 0.65 && query.modified_move_speed > 0.01"
+            },
+            {
+              "idle": "query.anim_time >= 0.65"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "idle": {
+          "animations": [
+            "idle",
+            "trunk",
+            "snot"
+          ],
+          "particle_effects": [
+            {
+              "effect": "drip",
+              "locator": "nose"
+            }
+          ],
+          "transitions": [
+            {
+              "walk": "query.modified_move_speed > 0.01"
+            },
+            {
+              "spit": "query.is_sheared"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "walk": {
+          "animations": [
+            "walk",
+            "trunk",
+            "snot"
+          ],
+          "transitions": [
+            {
+              "idle": "query.modified_move_speed <= 0.01"
+            },
+            {
+              "spit": "query.is_sheared"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "spit": {
+          "animations": [
+            "spit"
+          ],
+          "transitions": [
+            {
+              "walk": "query.modified_move_speed > 0.01 && query.anim_time >= 0.75"
+            },
+            {
+              "idle": "query.modified_move_speed <= 0.01 && query.anim_time >= 0.75"
+            }
+          ],
+          "blend_transition": 0.2
+        }
+      }
+    },
+    "controller.animation.vomit.move2": {
+	 "initial_state": "spawn",
+      "states": {
+        "spawn": {
+          "transitions": [
+            {
+              "walk": "query.anim_time >= 0.65 && query.modified_move_speed > 0.01"
+            },
+            {
+              "idle": "query.anim_time >= 0.65"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "idle": {
+          "animations": ["snot"],
+          "transitions": [
+            {
+              "walk": "query.modified_move_speed > 0.01"
+            },
+            {
+              "wait": "query.is_sheared"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "walk": {
+          "animations": ["snot"],
+          "transitions": [
+            {
+              "idle": "query.modified_move_speed <= 0.01"
+            },
+            {
+              "wait": "query.is_sheared"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "wait": {
+          "animations": ["wait"],
+          "transitions": [
+            {
+              "spit": "query.anim_time >= 0.75"
+            }
+          ]
+        },
+        "spit": {
+          "particle_effects": [
+            {
+              "effect": "spray",
+              "locator": "nose"
+            }
+          ],
+          "transitions": [
+            {
+              "walk": "query.modified_move_speed > 0.01 && query.anim_time >= 0.75"
+            },
+            {
+              "idle": "query.modified_move_speed <= 0.01 && query.anim_time >= 0.75"
+            }
+          ],
+          "blend_transition": 0.2
+        }
+      }
+    }
+  }
+}

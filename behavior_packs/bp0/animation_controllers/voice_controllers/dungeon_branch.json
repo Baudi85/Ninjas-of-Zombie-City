@@ -1,0 +1,101 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.voice_dungeon_branch": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "branch11": "query.skin_id == 11"
+                        },
+                        {
+                            "branch12": "query.skin_id == 12"
+                        },
+                        {
+                            "branch13": "query.skin_id == 13"
+                        },
+                        {
+                            "branch21": "query.skin_id == 21"
+                        },
+                        {
+                            "branch22": "query.skin_id == 22"
+                        },
+                        {
+                            "branch23": "query.skin_id == 23"
+                        },
+                        {
+                            "branch31": "query.skin_id == 31"
+                        },
+                        {
+                            "branch32": "query.skin_id == 32"
+                        },
+                        {
+                            "branch33": "query.skin_id == 33"
+                        },
+                        {
+                            "branch41": "query.skin_id == 41"
+                        },
+                        {
+                            "branch42": "query.skin_id == 42"
+                        }
+                    ]
+                },
+                "branch11": {
+                    "animations": [
+                        "branch11"
+                    ]
+                },
+                "branch12": {
+                    "animations": [
+                        "branch12"
+                    ]
+                },
+                "branch13": {
+                    "animations": [
+                        "branch13"
+                    ]
+                },
+                "branch21": {
+                    "animations": [
+                        "branch21"
+                    ]
+                },
+                "branch22": {
+                    "animations": [
+                        "branch22"
+                    ]
+                },
+                "branch23": {
+                    "animations": [
+                        "branch23"
+                    ]
+                },
+                "branch31": {
+                    "animations": [
+                        "branch31"
+                    ]
+                },
+                "branch32": {
+                    "animations": [
+                        "branch32"
+                    ]
+                },
+                "branch33": {
+                    "animations": [
+                        "branch33"
+                    ]
+                },
+                "branch41": {
+                    "animations": [
+                        "branch41"
+                    ]
+                },
+                "branch42": {
+                    "animations": [
+                        "branch42"
+                    ]
+                }
+            }
+        }
+    }
+}

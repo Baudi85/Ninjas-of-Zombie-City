@@ -1,0 +1,3 @@
+fill 836 76 182 836 78 185 wool 8
+fill 836 75 182 836 75 185 stained_glass 8
+fill 836 79 182 836 82 185 air

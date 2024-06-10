@@ -1,0 +1,134 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.tutorial_survivor",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "rescued": "controller.animation.tutorial_suvivor_rescued",
+                "light": "controller.animation.light"
+            },
+            "scripts": {
+                "animate": [
+                    "rescued",
+                    "light"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:stranded": {
+                "minecraft:variant": {
+                    "value": 0
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "event": "noxcrew:to_rescued",
+                                "target": "self"
+                            },
+                            "play_sounds": "glass",
+                            "interact_text": "action.interact.rescue_friend"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:rescued": {
+                "minecraft:variant": {
+                    "value": 1
+                }
+            },
+            "noxcrew:escaping": {
+                "minecraft:variant": {
+                    "value": 2
+                }
+            },
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "survivor",
+                    "npc"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 2
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "width": 1.2,
+                        "height": 2,
+                        "pivot": [
+                            0,
+                            1,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:stranded"
+                    ]
+                }
+            },
+            "noxcrew:to_rescued": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:stranded"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:rescued"
+                    ]
+                }
+            },
+            "noxcrew:to_escaping": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:rescued"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:escaping"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

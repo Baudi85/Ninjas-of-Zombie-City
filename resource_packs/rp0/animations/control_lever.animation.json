@@ -1,0 +1,108 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.control_lever.ninja": {
+			"loop": true,
+			"bones": {
+				"spinny": {
+					"rotation": [0, 0, 0]
+				},
+				"ninja": {
+					"scale": 1
+				},
+				"normal": {
+					"scale": 0
+				},
+				"text": {
+					"position": [0, 0, 0]
+				}
+			}
+		},
+		"animation.control_lever.normal_transition": {
+			"animation_length": 1,
+			"bones": {
+				"spinny": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 195, 0],
+						"0.4": [0, 170, 0],
+						"0.5": [0, 190, 0],
+						"0.6": [0, 175, 0],
+						"0.7": [0, 180, 0]
+					}
+				},
+				"ninja": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.5": [0, 0, 0]
+					}
+				},
+				"normal": {
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.6": [1, 1, 1]
+					}
+				},
+				"text": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 180, 0]
+					}
+				}
+			}
+		},
+		"animation.control_lever.normal": {
+			"loop": true,
+			"bones": {
+				"spinny": {
+					"rotation": [0, 180, 0]
+				},
+				"ninja": {
+					"scale": 0
+				},
+				"normal": {
+					"scale": 1
+				},
+				"text": {
+					"rotation": [0, 180, 0],
+					"position": [0, 0, 0]
+				}
+			}
+		},
+		"animation.control_lever.ninja_transition": {
+			"animation_length": 1,
+			"bones": {
+				"spinny": {
+					"rotation": {
+						"0.0": [0, 180, 0],
+						"0.25": [0, 375, 0],
+						"0.4": [0, 350, 0],
+						"0.5": [0, 370, 0],
+						"0.6": [0, 355, 0],
+						"0.7": [0, 360, 0],
+						"0.701": [0, 0, 0]
+					}
+				},
+				"ninja": {
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.6": [1, 1, 1]
+					}
+				},
+				"normal": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.5": [0, 0, 0]
+					}
+				},
+				"text": {
+					"rotation": {
+						"0.0": [0, 180, 0],
+						"0.5": [0, 360, 0],
+						"0.501": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

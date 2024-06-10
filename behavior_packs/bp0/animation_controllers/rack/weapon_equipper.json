@@ -1,0 +1,69 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.weapon_equipper": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "weapon_1": "query.variant == 1"
+                        },
+                        {
+                            "weapon_2": "query.variant == 2"
+                        },
+                        {
+                            "weapon_3": "query.variant == 3"
+                        },
+                        {
+                            "weapon_4": "query.variant == 4"
+                        }
+                    ]
+                },
+                "weapon_1": {
+                    "transitions": [
+                        {
+                            "default": "query.is_tamed"
+                        }
+                    ],
+                    "on_exit":[
+                        "/execute @p ~ ~ ~ function gameplay/rack/weapon_1",
+						"@s noxcrew:remove_equip"
+                    ]
+                },
+                "weapon_2": {
+                    "transitions": [
+                        {
+                            "default": "query.is_tamed"
+                        }
+                    ],
+                    "on_exit":[
+                        "/execute @p ~ ~ ~ function gameplay/rack/weapon_2",
+						"@s noxcrew:remove_equip"
+                    ]
+                },
+                "weapon_3": {
+                    "transitions": [
+                        {
+                            "default": "query.is_tamed"
+                        }
+                    ],
+                    "on_exit":[
+                        "/execute @p ~ ~ ~ function gameplay/rack/weapon_3",
+						"@s noxcrew:remove_equip"
+                    ]
+                },
+                "weapon_4": {
+                    "transitions": [
+                        {
+                            "default": "query.is_tamed"
+                        }
+                    ],
+                    "on_exit":[
+                        "/execute @p ~ ~ ~ function gameplay/rack/weapon_4",
+						"@s noxcrew:remove_equip"
+                    ]
+                }
+            }
+        }
+    }
+}

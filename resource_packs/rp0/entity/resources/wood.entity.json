@@ -1,0 +1,31 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.resource_wood",
+      "textures": {
+        "default": "textures/entity/resource/wood",
+        "mimic": "textures/entity/zombie/mimic/wood"
+      },
+      "geometry": {
+        "default": "geometry.resource_wood",
+        "mimic": "geometry.mimic_wood"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "idle": "animation.mimic_wood.idle",
+        "move": "animation.mimic_wood.move"
+      },
+      "animation_controllers": [
+        {
+          "reveal": "controller.animation.mimic.reveal"
+        }
+	  ],
+      "render_controllers": [
+        "controller.render.resource"
+      ]
+    }
+  }
+}

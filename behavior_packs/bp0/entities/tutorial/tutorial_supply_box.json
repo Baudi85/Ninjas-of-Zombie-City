@@ -1,0 +1,182 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.tutorial_supply_box",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "balloon": "controller.animation.tutorial_supply_box_balloon",
+                "light": "controller.animation.light"
+            },
+            "scripts": {
+                "animate": [
+                    "balloon",
+                    "light"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:waiting": {
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "operator": "equals",
+                                    "value": "player"
+                                },
+                                "target": "self",
+                                "event": "noxcrew:to_balloon"
+                            },
+                            "play_sounds": "raid.horn",
+                            "interact_text": "action.interact.collectsupplies"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:balloon": {
+                "minecraft:is_baby": {}
+            },
+            "noxcrew:pop": {
+                "minecraft:is_tamed": {}
+            },
+            "noxcrew:0": {
+                "minecraft:variant": {
+                    "value": 0
+                }
+            },
+            "noxcrew:1": {
+                "minecraft:variant": {
+                    "value": 1
+                }
+            },
+            "noxcrew:2": {
+                "minecraft:variant": {
+                    "value": 2
+                }
+            },
+            "noxcrew:3": {
+                "minecraft:variant": {
+                    "value": 3
+                }
+            },
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "supply"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 1.45,
+                "height": 0.85
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:environment_sensor": {
+                "triggers": {
+                    "filters": {
+                        "test": "has_tag",
+                        "subject": "self",
+                        "operator": "equals",
+                        "value": "despawn"
+                    },
+                    "event": "noxcrew:to_despawn"
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting"
+                    ]
+                }
+            },
+            "noxcrew:to_0": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting",
+                        "noxcrew:0"
+                    ]
+                }
+            },
+            "noxcrew:to_1": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting",
+                        "noxcrew:1"
+                    ]
+                }
+            },
+            "noxcrew:to_2": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting",
+                        "noxcrew:2"
+                    ]
+                }
+            },
+            "noxcrew:to_3": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting",
+                        "noxcrew:3"
+                    ]
+                }
+            },
+            "noxcrew:to_balloon": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:waiting"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:balloon"
+                    ]
+                }
+            },
+            "noxcrew:to_pop": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:balloon"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:pop"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

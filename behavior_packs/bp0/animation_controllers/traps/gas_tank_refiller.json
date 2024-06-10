@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.gas_tank_refiller": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "refill": "query.is_tamed"
+                        }
+                    ]
+                },
+                "refill": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_tamed"
+                        }
+                    ],
+                    "on_entry": [
+                        "/execute @p ~ ~ ~ function gameplay/traps/gas_tank_refiller"
+                    ]
+                }
+            }
+        }
+    }
+}

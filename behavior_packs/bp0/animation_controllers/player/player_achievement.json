@@ -1,0 +1,21 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.player_achievement": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "to_unlock": "query.is_baby"
+                        }
+                    ],
+                    "on_exit": [
+                        "/setblock 208 27 236 redstone_block"
+                    ]
+                },
+                "to_unlock": {
+                }
+            }
+        }
+    }
+}

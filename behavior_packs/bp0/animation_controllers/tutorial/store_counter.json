@@ -1,0 +1,24 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.tutorial_store_counter": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "store_open": "query.skin_id == 2 && query.variant == 1 && query.mark_variant == 1 && !query.is_tamed"
+                        }
+                    ]
+                },
+                "store_open": {
+                    "on_entry": [
+                        "/function tutorial/functions/counter",
+                        "/tag @e[type=noxcrew:zcn.tutorial_sign_store] add Transition",
+                        "/playsound store_open @a",
+                        "@s noxcrew:to_store_open"
+                    ]
+                }
+            }
+        }
+    }
+}

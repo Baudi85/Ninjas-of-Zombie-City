@@ -1,0 +1,34 @@
+{
+    "tiers": [
+        {
+            "total_exp_required": 0,
+            "groups": [
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "noxcrew:zcn.metal",
+                                    "quantity": 2
+                                },
+                                {
+                                    "item": "noxcrew:zcn.magic_powder",
+                                    "quantity": 1
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:splash_potion",
+                                    "quantity": 1
+                                }
+                            ],
+                            "max_uses": 9999,
+                            "reward_exp": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

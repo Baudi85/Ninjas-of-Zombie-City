@@ -1,0 +1,20 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.voicemanager",
+            "materials": {
+                "default": "invisible"
+            },
+            "textures": {
+                "default": "textures/entity/invisible"
+            },
+            "render_controllers": [
+                "controller.render.base"
+            ],
+            "geometry": {
+                "default": "geometry.invisible"
+            }
+        }
+    }
+}

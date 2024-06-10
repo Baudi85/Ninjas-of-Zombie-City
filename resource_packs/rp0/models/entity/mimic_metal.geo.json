@@ -1,0 +1,93 @@
+{
+	"format_version": "1.8.0",
+	"geometry.mimic_metal": {
+		"texturewidth": 128,
+		"textureheight": 64,
+		"visible_bounds_width": 3,
+		"visible_bounds_height": 1,
+		"visible_bounds_offset": [0, 0, 0],
+		"bones": [
+			{
+				"name": "body",
+				"pivot": [0, 0, -7]
+			},
+			{
+				"name": "bottom_goo_scale_able",
+				"parent": "body",
+				"pivot": [0, 0, -7],
+				"cubes": [
+					{"origin": [-14, 0.3, -14], "size": [28, 0, 28], "uv": [28, 0]}
+				]
+			},
+			{
+				"name": "stretch_a",
+				"parent": "body",
+				"pivot": [-4.13397, -0.5, -3.13397],
+				"rotation": [10, 25, 0],
+				"cubes": [
+					{"origin": [-7.3529, -0.88619, -3.66703], "size": [7, 10, 1], "uv": [0, 43]}
+				]
+			},
+			{
+				"name": "stretch_b",
+				"parent": "body",
+				"pivot": [-0.73869, 0.60137, 1.02042],
+				"rotation": [25, -130, 5],
+				"cubes": [
+					{"origin": [-3.95761, 0.21519, 0.48736], "size": [7, 10, 1], "uv": [0, 43]}
+				]
+			},
+			{
+				"name": "metal",
+				"parent": "body",
+				"pivot": [0, 0, 0],
+				"rotation": [0, -15, 0]
+			},
+			{
+				"name": "sheet1",
+				"parent": "metal",
+				"pivot": [0, 0, -7],
+				"rotation": [0, -15, 0],
+				"cubes": [
+					{"origin": [-6.18827, 0, -9.23852], "size": [14, 1, 14], "uv": [0, 15]}
+				]
+			},
+			{
+				"name": "sheet2",
+				"parent": "metal",
+				"pivot": [-3.44709, 0.3, 10.79555],
+				"rotation": [-15, -15, 0],
+				"cubes": [
+					{"origin": [-8.6972, 0.02761, 0.41527], "size": [11, 1, 11], "uv": [36, 30]}
+				]
+			},
+			{
+				"name": "sheet3",
+				"parent": "metal",
+				"pivot": [-10, -0.5, -9],
+				"rotation": [20, 40, 0],
+				"cubes": [
+					{"origin": [-17.14976, -0.37032, -8.95862], "size": [14, 1, 14], "uv": [0, 0]}
+				]
+			},
+			{
+				"name": "sheet4",
+				"parent": "metal",
+				"pivot": [8.60027, 0.2, 5.64674],
+				"rotation": [-13, -20, 35],
+				"cubes": [
+					{"origin": [-3.31743, -0.04874, -0.45233], "size": [12, 1, 12], "uv": [0, 30]}
+				]
+			},
+			{
+				"name": "head",
+				"parent": "body",
+				"pivot": [-9.32721, 3.21025, 0.75441],
+				"rotation": [30, -40, -10],
+				"cubes": [
+					{"origin": [-13.32721, 0.21025, -1.24559], "size": [8, 6, 6], "uv": [16, 43]}
+				]
+			}
+		]
+	}
+}

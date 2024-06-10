@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.gumball_machine",
+      "textures": {
+        "default": "textures/entity/zombie/candyman/gumball_machine"
+      },
+      "geometry": {
+        "default": "geometry.gumball_machine"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": { 
+        "drop": "animation.gumball_machine.drop"
+      },
+      "animation_controllers": [
+        { "drop": "controller.animation.gumball_machine.drop" } 
+      ],
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

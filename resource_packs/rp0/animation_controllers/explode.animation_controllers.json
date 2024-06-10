@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.explode.move": {
+	 "initial_state": "spawn",
+      "states": {
+        "spawn": {
+          "animations": [ "spawn", "cysts" ],
+          "transitions": [
+	        { "idle": "query.anim_time >= 1.25" }
+          ],
+          "blend_transition": 0.2 
+        },
+        "idle": {
+          "animations": [ "idle", "cysts" ],
+          "transitions": [
+	        { "walk": "query.modified_move_speed > 0.01" },
+            { "explode": "query.is_baby" }
+          ],
+          "blend_transition": 0.2 
+        },
+	    	"walk": {
+          "animations": [ "walk", "cysts" ],
+          "transitions": [
+            { "idle": "query.modified_move_speed <= 0.01" },
+	        { "explode": "query.is_baby" }
+          ] ,
+          "blend_transition": 0.2
+        },
+	      "explode": {
+          "animations": [ "explode", "walk" ],
+          "transitions": [
+		    { "walk": "query.modified_move_speed > 0.01 && query.anim_time >= 1.48" },
+            { "idle": "query.modified_move_speed <= 0.01 && query.anim_time >= 1.48" }
+          ],
+          "blend_transition": 0.2 
+        }
+      }
+    }
+  }
+}

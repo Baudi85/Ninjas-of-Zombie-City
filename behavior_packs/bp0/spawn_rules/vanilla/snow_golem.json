@@ -1,0 +1,20 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:spawn_rules": {
+        "description": {
+            "identifier": "minecraft:snow_golem",
+            "population_control": "monster"
+        },
+        "conditions": [
+            {
+                "minecraft:weight": {
+                    "default": 0
+                },
+                "minecraft:herd": {
+                    "min_size": 0,
+                    "max_size": 0
+                }
+            }
+        ]
+    }
+}

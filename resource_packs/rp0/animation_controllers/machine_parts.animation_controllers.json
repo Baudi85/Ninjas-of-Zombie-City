@@ -1,0 +1,16 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.machine_parts.particle": {
+      "states": {
+        "default": {
+          "particle_effects": [
+            {
+              "effect": "objective"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.supply_box",
+      "textures": {
+        "crafting": "textures/entity/supply_box/crafting",
+        "food": "textures/entity/supply_box/food",
+        "fuel": "textures/entity/supply_box/fuel",
+        "medicine": "textures/entity/supply_box/medicine"
+      },
+      "geometry": {
+        "default": "geometry.supply_box"
+      },
+      "materials": {
+        "default": "base"
+      },
+      "particle_effects": {
+        "objective": "noxcrew:zcn.objective"
+      },
+      "animations": {
+        "idle": "animation.supply_box.idle",
+        "interact": "animation.supply_box.interact",
+        "fly": "animation.supply_box.fly",
+        "shrink": "animation.supply_box.shrink"
+        },
+      "animation_controllers": [
+        { "fly": "controller.animation.supplybox.fly" } 
+      ],
+      "render_controllers": [
+        "controller.render.supply_box"
+      ]
+    }
+  }
+}

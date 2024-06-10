@@ -1,0 +1,29 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.training_dummy",
+      "textures": {
+        "default": "textures/entity/tutorial/boss"
+      },
+      "geometry": {
+        "default": "geometry.tutorial_boss"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "hit1": "animation.tutorial_boss.hit1",
+        "hit1transition": "animation.tutorial_boss.hit1transition",
+        "hit2": "animation.tutorial_boss.hit2",
+        "hit2transition": "animation.tutorial_boss.hit2transition"
+        },
+      "animation_controllers": [
+        { "hit": "controller.animation.training_dummy.hit" } 
+      ],
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

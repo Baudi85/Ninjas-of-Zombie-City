@@ -1,0 +1,90 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.citizen.idle": {
+			"loop": true,
+			"bones": {
+				"Head": {
+					"position": [0, "Math.cos(query.anim_time * 50) * 0.3 -0.3", "Math.cos(query.anim_time * 50) * 0.5"]
+				},
+				"Body": {
+					"rotation": ["Math.cos(query.anim_time * 50) * -3", 0, 0],
+					"position": [0, "Math.cos(query.anim_time * 50) * 0.3 -0.3", "Math.cos(query.anim_time * 50) * 0.5 "]
+				},
+				"RightArm": {
+					"rotation": [0, 0, "Math.cos(query.anim_time * 100 +135) * 3 +3"],
+					"position": [0, "Math.cos(query.anim_time * 50) * 0.3 -0.3", "Math.cos(query.anim_time * 50) * 0.5"]
+				},
+				"LeftArm": {
+					"rotation": [0, 0, "Math.cos(query.anim_time * 100) * 3 -3"],
+					"position": [0, "Math.cos(query.anim_time * 50) * 0.3 -0.3", "Math.cos(query.anim_time * 50) * 0.5"]
+				},
+				"RightLeg": {
+					"rotation": [-10, 0, 0]
+				},
+				"LeftLeg": {
+					"rotation": [10, 0, 0]
+				}
+			}
+		},
+		"animation.citizen.look_at_target": {
+			"loop": true,
+			"bones": {
+				"Head": {
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				}
+			}
+		},
+		"animation.citizen.walk": {
+			"loop": true,
+			"bones": {
+				"Head": {
+					"position": [0, "Math.cos(query.anim_time * 500) * -0.5 -1", 0]
+				},
+				"Body": {
+					"rotation": [0, "Math.cos(query.anim_time * 250) * -10", 0],
+					"position": [0, "Math.cos(query.anim_time * 500) * -0.5 -1", 0]
+				},
+				"RightArm": {
+					"rotation": ["Math.cos(query.anim_time * 250) * 30 +10", 0, 0],
+					"position": [0, "Math.cos(query.anim_time * 500) * -0.5 -1", "Math.cos(query.anim_time * 250) * -1"]
+				},
+				"LeftArm": {
+					"rotation": ["Math.cos(query.anim_time * 250) * -30 -10", 0, 0],
+					"position": [0, "Math.cos(query.anim_time * 500) * -0.5 -1", "Math.cos(query.anim_time * 250) * 1"]
+				},
+				"RightLeg": {
+					"rotation": ["Math.cos(query.anim_time * 250) * -30 -10", 0, 0],
+					"position": [0, "math.clamp(Math.cos(query.anim_time * 250 -250) * 1.5, -0.5, 1.5)", "Math.cos(query.anim_time * 250) * -0.25 +0.35"]
+				},
+				"LeftLeg": {
+					"rotation": ["Math.cos(query.anim_time * 250) * 30 +10", 0, 0],
+					"position": [0, "math.clamp(Math.cos(query.anim_time * 250 +250) * 1.5, -0.5, 1.5)", "Math.cos(query.anim_time * 250) * 0.25 +0.35"]
+				}
+			}
+		},
+		"animation.citizen.poof": {
+			"loop": true,
+			"bones": {
+				"Head": {
+					"scale": 0
+				},
+				"Body": {
+					"scale": 0
+				},
+				"RightArm": {
+					"scale": 0
+				},
+				"LeftArm": {
+					"scale": 0
+				},
+				"RightLeg": {
+					"scale": 0
+				},
+				"LeftLeg": {
+					"scale": 0
+				}
+			}
+		}
+	}
+}

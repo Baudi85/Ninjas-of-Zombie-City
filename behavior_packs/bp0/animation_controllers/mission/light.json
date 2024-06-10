@@ -1,0 +1,30 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.light": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "set_light": "query.is_on_ground"
+                        }
+                    ]
+                },
+                "set_light": {
+                    "transitions": [
+                        {
+                            "remove_light": "query.is_sheared"
+                        }
+                    ],
+                    "on_entry": [
+                        "/fill ~ ~ ~ ~ ~ ~ light_block 15 replace air"
+                    ],
+                    "on_exit": [
+                        "/fill ~ ~ ~ ~ ~ ~ air 0 replace light_block"
+                    ]
+                },
+                "remove_light": {}
+            }
+        }
+    }
+}

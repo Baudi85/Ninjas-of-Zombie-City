@@ -1,0 +1,98 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.trap_doorpower",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "activator": "controller.animation.trap_activator_doorpower",
+                "timer": "animation.trap_timer"
+            },
+            "scripts": {
+                "animate": [
+                    "activator"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:unpowered": {
+                "minecraft:environment_sensor": {
+                    "triggers": {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "powerTrap"
+                        },
+                        "event": "noxcrew:to_powered"
+                    }
+                }
+            },
+            "noxcrew:powered": {
+                "minecraft:is_sheared": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "trap"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0,
+                "height": 0
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:unpowered"
+                    ]
+                }
+            },
+            "noxcrew:to_unpowered": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:powered"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:unpowered"
+                    ]
+                }
+            },
+            "noxcrew:to_powered": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:unpowered"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:powered"
+                    ]
+                }
+            }
+        }
+    }
+}

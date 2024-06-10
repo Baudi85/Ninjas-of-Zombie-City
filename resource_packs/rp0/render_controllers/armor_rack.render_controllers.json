@@ -1,0 +1,16 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.armor_rack": {
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        { "armor1_unlocked": "query.variant >= 1" }, 
+        { "armor2_unlocked": "query.variant >= 2" }, 
+        { "armor3_unlocked": "query.variant >= 3" }, 
+        { "armor4_unlocked": "query.variant == 4" } 
+      ],
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Texture.default"]
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.trap_wires",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "activator": "controller.animation.trap_activator_wires",
+                "timer": "animation.trap_timer"
+            },
+            "scripts": {
+                "animate": [
+                    "activator"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:unpowered": {
+                "minecraft:environment_sensor": {
+                    "triggers": {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "powerTrap"
+                        },
+                        "event": "noxcrew:to_powered"
+                    }
+                }
+            },
+            "noxcrew:powered": {
+                "minecraft:is_sheared": {},
+                "minecraft:area_attack": {
+                    "damage_range": 0.9,
+                    "damage_per_tick": 6,
+                    "cause": "contact",
+                    "entity_filter": {
+                        "any_of": [
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "player"
+                            },
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "zombie"
+                            }
+                        ]
+                    }
+                }
+            },
+            "noxcrew:0": {
+                "minecraft:variant": {
+                    "value": 0
+                }
+            },
+            "noxcrew:1": {
+                "minecraft:variant": {
+                    "value": 1
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "trap"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0,
+                "height": 0
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "width": 1.9,
+                        "height": 0.2,
+                        "pivot": [
+                            0,
+                            0.1,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:unpowered"
+                            ]
+                        }
+                    },
+                    {
+                        "randomize": [
+                            {
+                                "weight": 9,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:0"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 1,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:1"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "noxcrew:to_unpowered": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:powered"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:unpowered"
+                    ]
+                }
+            },
+            "noxcrew:to_powered": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:unpowered"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:powered"
+                    ]
+                }
+            }
+        }
+    }
+}

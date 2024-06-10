@@ -1,0 +1,29 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.control_lever",
+      "textures": {
+        "default": "textures/entity/control_lever"
+      },
+      "geometry": {
+        "default": "geometry.control_lever"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "ninja": "animation.control_lever.ninja",
+        "ninja_transition": "animation.control_lever.ninja_transition",
+        "normal": "animation.control_lever.normal",
+        "normal_transition": "animation.control_lever.normal_transition"
+        },
+      "animation_controllers": [
+        { "transition": "controller.animation.control_lever.transition" } 
+      ],
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

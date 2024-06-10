@@ -1,0 +1,209 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.resource_main": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "respawn": "query.variant == 99"
+                        },
+                        {
+                            "wood": "query.skin_id >= 11 && query.skin_id <= 14"
+                        },
+                        {
+                            "cloth": "query.skin_id >= 21 && query.skin_id <= 24"
+                        },
+                        {
+                            "magic": "query.skin_id >= 31 && query.skin_id <= 34"
+                        },
+                        {
+                            "metal": "query.skin_id >= 41 && query.skin_id <= 44"
+                        }
+                    ]
+                },
+                "wood": {
+                    "transitions": [
+                        {
+                            "respawn": "query.variant == 99"
+                        },
+                        {
+                            "police": "query.skin_id == 11"
+                        },
+                        {
+                            "hospital": "query.skin_id == 12"
+                        },
+                        {
+                            "mall": "query.skin_id == 13"
+                        },
+                        {
+                            "tower": "query.skin_id == 14"
+                        }
+                    ],
+                    "on_exit": [
+                        "/tag @s add wood"
+                    ]
+                },
+                "cloth": {
+                    "transitions": [
+                        {
+                            "respawn": "query.variant == 99"
+                        },
+                        {
+                            "police": "query.skin_id == 21"
+                        },
+                        {
+                            "hospital": "query.skin_id == 22"
+                        },
+                        {
+                            "mall": "query.skin_id == 23"
+                        },
+                        {
+                            "tower": "query.skin_id == 24"
+                        }
+                    ],
+                    "on_exit": [
+                        "/tag @s add cloth"
+                    ]
+                },
+                "magic": {
+                    "transitions": [
+                        {
+                            "respawn": "query.variant == 99"
+                        },
+                        {
+                            "police": "query.skin_id == 31"
+                        },
+                        {
+                            "hospital": "query.skin_id == 32"
+                        },
+                        {
+                            "mall": "query.skin_id == 33"
+                        },
+                        {
+                            "tower": "query.skin_id == 34"
+                        }
+                    ],
+                    "on_exit": [
+                        "/tag @s add magic"
+                    ]
+                },
+                "metal": {
+                    "transitions": [
+                        {
+                            "respawn": "query.variant == 99"
+                        },
+                        {
+                            "police": "query.skin_id == 41"
+                        },
+                        {
+                            "hospital": "query.skin_id == 42"
+                        },
+                        {
+                            "mall": "query.skin_id == 43"
+                        },
+                        {
+                            "tower": "query.skin_id == 44"
+                        }
+                    ],
+                    "on_exit": [
+                        "/tag @s add metal"
+                    ]
+                },
+                "police": {
+                    "transitions": [
+                        {
+                            "respawn": "query.variant == 99"
+                        },
+                        {
+                            "block_check": "query.variant == 1"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s add police",
+                        "/function resource/zspread",
+                        "@s noxcrew:to_block_check"
+                    ]
+                },
+                "hospital": {
+                    "transitions": [
+                        {
+                            "respawn": "query.variant == 99"
+                        },
+                        {
+                            "block_check": "query.variant == 1"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s add hospital",
+                        "/function resource/zspread",
+                        "@s noxcrew:to_block_check"
+                    ]
+                },
+                "mall": {
+                    "transitions": [
+                        {
+                            "respawn": "query.variant == 99"
+                        },
+                        {
+                            "block_check": "query.variant == 1"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s add mall",
+                        "/function resource/zspread",
+                        "@s noxcrew:to_block_check"
+                    ]
+                },
+                "tower": {
+                    "transitions": [
+                        {
+                            "respawn": "query.variant == 99"
+                        },
+                        {
+                            "block_check": "query.variant == 1"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s add tower",
+                        "/function resource/zspread",
+                        "@s noxcrew:to_block_check"
+                    ]
+                },
+                "block_check":{
+                    "transitions": [
+                        {
+                            "respawn": "query.variant == 99"
+                        },
+                        {
+                            "nearby_check": "query.variant == 2"
+                        }
+                    ],
+                    "animations": [
+                        "block_check"
+                    ]
+                },
+                "nearby_check":{
+                    "transitions": [
+                        {
+                            "respawn": "query.variant == 99"
+                        },
+                        {
+                            "success": "query.variant == 3"
+                        }
+                    ]
+                },
+                "respawn":{
+                    "on_entry": [
+                        "/function resource/zrespawn"
+                    ]
+                },
+                "success":{
+                    "on_entry": [
+                        "/function resource/zspawn"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+tag @e[type=noxcrew:counter] add coin

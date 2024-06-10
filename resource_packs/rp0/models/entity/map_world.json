@@ -1,0 +1,67 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.map_world",
+				"texture_width": 128,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "map",
+					"pivot": [-0.5, 27.5, 0.5],
+					"cubes": [
+						{"origin": [-20, 0, 7], "size": [40, 40, 1], "uv": [0, 0]},
+						{"origin": [-21, 0, 7], "size": [1, 40, 1], "uv": [82, 0]},
+						{"origin": [20, 0, 7], "size": [1, 40, 1], "uv": [82, 0]},
+						{"origin": [-21, 40, 7], "size": [42, 1, 1], "uv": [0, 42]}
+					]
+				},
+				{
+					"name": "pointer_a",
+					"pivot": [-1.15, 16.9, 7],
+					"rotation": [10, 0, 0],
+					"cubes": [
+						{"origin": [-2.5, 16.5076, 6.91318], "size": [3, 4, 1], "uv": [86, 0]}
+					]
+				},
+				{
+					"name": "pointer_b",
+					"pivot": [-11.15, 31.4, 7],
+					"rotation": [10, 0, 0],
+					"cubes": [
+						{"origin": [-12.5, 31.00759, 6.91317], "size": [3, 4, 1], "uv": [86, 0]}
+					]
+				},
+				{
+					"name": "pointer_c",
+					"pivot": [10.85, 31.4, 7],
+					"rotation": [10, 0, 0],
+					"cubes": [
+						{"origin": [9.5, 31.00759, 6.91318], "size": [3, 4, 1], "uv": [86, 0]}
+					]
+				},
+				{
+					"name": "pointer_d",
+					"pivot": [-11.65, 10.4, 7],
+					"rotation": [10, 0, 0],
+					"cubes": [
+						{"origin": [-13, 10.00759, 6.91317], "size": [3, 4, 1], "uv": [86, 0]}
+					]
+				},
+				{
+					"name": "pointer_e",
+					"pivot": [6.35, 10.45, 7],
+					"rotation": [10, 0, 0],
+					"cubes": [
+						{"origin": [5, 10.00836, 6.9045], "size": [3, 4, 1], "uv": [86, 0]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,31 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.resource_cloth",
+      "textures": {
+        "default": "textures/entity/resource/cloth",
+        "mimic": "textures/entity/zombie/mimic/cloth"
+      },
+      "geometry": {
+        "default": "geometry.resource_cloth",
+        "mimic": "geometry.mimic_cloth"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "idle": "animation.mimic_cloth.idle",
+        "move": "animation.mimic_cloth.move"
+      },
+      "animation_controllers": [
+        {
+          "reveal": "controller.animation.mimic.reveal"
+        }
+	  ],
+      "render_controllers": [
+        "controller.render.resource"
+      ]
+    }
+  }
+}

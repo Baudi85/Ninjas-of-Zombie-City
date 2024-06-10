@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.map_world.pulse": {
+			"loop": true,
+			"bones": {
+				"pointer_a": {
+					"scale": ["math.clamp(math.sin(query.anim_time *  350) * -2 -1.8, 0, 0.15) +1", "math.clamp(math.sin(query.anim_time *  350) * -2 -1.8, 0, 0.15) +1", 1]
+				},
+				"pointer_b": {
+					"scale": ["math.clamp(math.sin(query.anim_time *  350) * -2 -1.8, 0, 0.15) +1", "math.clamp(math.sin(query.anim_time *  350) * -2 -1.8, 0, 0.15) +1", 1]
+				},
+				"pointer_c": {
+					"scale": ["math.clamp(math.sin(query.anim_time *  350) * -2 -1.8, 0, 0.15) +1", "math.clamp(math.sin(query.anim_time *  350) * -2 -1.8, 0, 0.15) +1", 1]
+				},
+				"pointer_d": {
+					"scale": ["math.clamp(math.sin(query.anim_time *  350) * -2 -1.8, 0, 0.15) +1", "math.clamp(math.sin(query.anim_time *  350) * -2 -1.8, 0, 0.15) +1", 1]
+				},
+				"pointer_e": {
+					"scale": ["math.clamp(math.sin(query.anim_time *  350) * -2 -1.8, 0, 0.15) +1", "math.clamp(math.sin(query.anim_time *  350) * -2 -1.8, 0, 0.15) +1", 1]
+				}
+			}
+		}
+	}
+}

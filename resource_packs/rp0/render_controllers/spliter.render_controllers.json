@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.splitter": {
+      "arrays": {
+        "geometries": {
+          "Array.geos": [
+            "Geometry.big",
+            "Geometry.medium",
+            "Geometry.small"
+          ]
+        },
+        "textures": {
+          "Array.skins": [
+            "Texture.big",
+            "Texture.medium",
+            "Texture.small"
+          ]
+        }
+      },
+      "geometry": "Array.geos[query.variant]",
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Array.skins[query.variant]"]
+    }
+  }
+}

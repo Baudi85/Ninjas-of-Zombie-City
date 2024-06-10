@@ -1,0 +1,23 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.citizen.move": {
+      "states": {
+        "default": {
+          "animations": [ "idle", "look_at_target" ],
+          "transitions": [
+            { "walk": "query.modified_move_speed > 0.01" }
+          ],
+          "blend_transition": 0.2 
+        },
+		"walk": {
+          "animations": [ "walk", "look_at_target" ],
+          "transitions": [
+            { "default": "query.modified_move_speed <= 0.01" }
+          ] ,
+          "blend_transition": 0.2 
+        }
+      }
+    }
+  }
+}

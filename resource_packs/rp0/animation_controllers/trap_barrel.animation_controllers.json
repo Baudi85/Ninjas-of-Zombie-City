@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.barrel.explode": {
+      "states": {
+        "default": {
+          "animations": [ "idle" ],
+          "transitions": [
+		    	  { "swell": "query.is_sheared" }
+          ]
+        },
+	    "swell": {
+          "animations": [ "swell" ]
+        }
+      }
+    }
+  }
+}

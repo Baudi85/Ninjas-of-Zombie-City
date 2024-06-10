@@ -1,0 +1,6 @@
+summon noxcrew:zcn.store_counter 242 64 272 "noxcrew:to_store_0"
+summon noxcrew:zcn.store_counter 234 64 268 "noxcrew:to_store_1"
+summon noxcrew:zcn.store_counter 235 67 283 "noxcrew:to_store_2"
+summon noxcrew:zcn.store_counter 244 61 262 "noxcrew:to_store_3"
+summon noxcrew:zcn.store_counter 231 67 282 "noxcrew:to_store_4"
+summon noxcrew:zcn.store_counter 237 61 265 "noxcrew:to_store_5"

@@ -1,0 +1,29 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.tutorial_survivor.falldown": {
+            "initial_state": "normal",
+            "states": {
+                "normal": {
+					"particle_effects": [
+						{
+						"effect": "objective"
+						}
+					],
+                    "transitions": [
+                        {"fall": "query.variant == 1"}
+                    ]
+                },
+                "fall": {
+                    "animations": ["fall"],
+                    "transitions": [
+                        {"fallen": "query.anim_time >= 0.75"}
+                    ]
+                },
+                "fallen": {
+                    "animations": ["fallen"]
+                }
+            }
+        }
+    }
+}

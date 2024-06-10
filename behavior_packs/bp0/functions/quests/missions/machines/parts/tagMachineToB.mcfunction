@@ -1,0 +1,1 @@
+tag @e[type=noxcrew:zcn.machine,c=1] add to_missing_b

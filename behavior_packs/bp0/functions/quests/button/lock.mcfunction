@@ -1,0 +1,1 @@
+tag @e[type=noxcrew:zcn.control_button] add lock

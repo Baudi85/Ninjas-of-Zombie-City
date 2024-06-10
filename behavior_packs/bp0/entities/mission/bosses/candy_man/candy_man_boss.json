@@ -1,0 +1,438 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.candyman",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    "zombie_tag",
+                    "to_death"
+                ]
+            },
+            "animations": {
+                "to_death": "controller.animation.candy_boss_death",
+                "zombie_tag": "controller.animation.zombie_tag"
+            }
+        },
+        "component_groups": {
+            "noxcrew:attack_normal": {
+                "minecraft:attack": {
+                    "damage": 14
+                },
+                "minecraft:movement": {
+                    "value": 0.3
+                },
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": [
+                        10,
+                        15
+                    ],
+                    "time_down_event": {
+                        "event": "noxcrew:to_pick_attack",
+                        "target": "self"
+                    }
+                }
+            },
+            "noxcrew:attack_charge": {
+                "minecraft:is_baby": {},
+                "minecraft:attack": {
+                    "damage": 17
+                },
+                "minecraft:movement": {
+                    "value": 0.38
+                },
+				"minecraft:knockback_resistance": {
+					"value": 100,
+					"max": 100
+				},
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": [
+                        10,
+                        15
+                    ],
+                    "time_down_event": {
+                        "event": "noxcrew:to_dizzy",
+                        "target": "self"
+                    }
+                }
+            },
+            "noxcrew:dizzy": {
+                "minecraft:is_tamed": {},
+                "minecraft:movement": {
+                    "value": 0
+                },
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": [
+                        4,
+                        6
+                    ],
+                    "time_down_event": {
+                        "event": "noxcrew:to_pick_attack",
+                        "target": "self"
+                    }
+                }
+            },
+            "noxcrew:return_to_spawner": {
+                "minecraft:is_sheared": {},
+                "minecraft:attack": {
+                    "damage": 1
+                },
+                "minecraft:environment_sensor": {
+                    "triggers": [
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "pick_next_attack"
+                            },
+                            "event": "noxcrew:to_pick_attack"
+                        },
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "despawn"
+                            },
+                            "event": "noxcrew:to_despawn"
+                        }
+                    ]
+                },
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": [
+                        10,
+                        10
+                    ],
+                    "time_down_event": {
+                        "event": "noxcrew:to_pick_attack",
+                        "target": "self"
+                    }
+                }
+            },
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "zombie",
+                    "candy_man",
+                    "boss"
+                ]
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "width": 2,
+                        "height": 2.8,
+                        "pivot": [
+                            0,
+                            1.4,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "minecraft:nameable": {
+                "always_show": true
+			},
+            "minecraft:loot": {
+                "table": "loot_tables/coin/boss.json"
+            },
+            "minecraft:scale": {
+                "value": 1
+            },
+            "minecraft:health": {
+                "value": 85,
+                "max": 85
+            },
+            "minecraft:navigation.walk": {
+                "is_amphibious": true,
+                "can_pass_doors": true,
+                "can_walk": true,
+                "can_break_doors": true
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "pick_next_attack"
+                        },
+                        "event": "noxcrew:to_pick_attack"
+                    },
+                    {
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "despawn"
+                        },
+                        "event": "noxcrew:to_despawn"
+                    }
+                ]
+            },
+            "minecraft:behavior.melee_attack": {
+                "priority": 3,
+                "speed_multiplier": 1,
+                "track_target": false
+            },
+            "minecraft:behavior.move_towards_restriction": {
+                "priority": 5,
+                "speed_multiplier": 1
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 6,
+                "speed_multiplier": 1
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 7,
+                "look_distance": 6,
+                "probability": 0.02
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 7
+            },
+            "minecraft:behavior.hurt_by_target": {
+                "priority": 1,
+                "entity_types": {
+                    "filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "operator": "==",
+                        "value": "player"
+                    }
+                }
+            },
+            "minecraft:behavior.nearest_prioritized_attackable_target": {
+                "priority": 2,
+                "within_radius": 64,
+                "reselect_targets": true,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "candy_machine"
+                                },
+                                {
+                                    "test": "has_component",
+                                    "subject": "self",
+                                    "value": "minecraft:is_sheared"
+                                }
+                            ]
+                        },
+                        "max_dist": 64,
+                        "priority": 0
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                },
+                                {
+                                    "test": "is_sneaking",
+                                    "subject": "other",
+                                    "value": false
+                                },
+                                {
+                                    "test": "has_tag",
+                                    "subject": "other",
+                                    "operator": "equals",
+                                    "value": "has_sprinting"
+                                }
+                            ]
+                        },
+                        "max_dist": 64,
+                        "priority": 1
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                },
+                                {
+                                    "test": "is_sneaking",
+                                    "subject": "other",
+                                    "value": false
+                                },
+                                {
+                                    "test": "has_tag",
+                                    "subject": "other",
+                                    "operator": "!=",
+                                    "value": "has_sprinting"
+                                }
+                            ]
+                        },
+                        "max_dist": 32,
+                        "priority": 1
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                },
+                                {
+                                    "test": "is_sneaking",
+                                    "subject": "other",
+                                    "value": true
+                                },
+                                {
+                                    "test": "has_tag",
+                                    "subject": "other",
+                                    "operator": "!=",
+                                    "value": "has_sprinting"
+                                }
+                            ]
+                        },
+                        "max_dist": 16,
+                        "priority": 1
+                    }
+                ],
+                "must_see": true,
+                "must_see_forget_duration": 17
+            },
+            "minecraft:follow_range": {
+                "value": 64,
+                "max": 64
+            },
+            "minecraft:push_through": {
+                "value": 0
+            },
+            "minecraft:pushable": {
+                "is_pushable": true
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "sequence": [
+                    {
+                        "remove": {
+                            "component_groups": [
+                                "noxcrew:attack_normal",
+                                "noxcrew:attack_charge",
+                                "noxcrew:return_to_spawner",
+                                "noxcrew:dizzy"
+                            ]
+                        }
+                    },
+                    {
+                        "randomize": [
+                            {
+                                "weight": 20,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:attack_normal"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 20,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:attack_charge"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 20,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:return_to_spawner"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "noxcrew:to_pick_attack": {
+                "sequence": [
+                    {
+                        "remove": {
+                            "component_groups": [
+                                "noxcrew:attack_normal",
+                                "noxcrew:attack_charge",
+                                "noxcrew:return_to_spawner",
+                                "noxcrew:dizzy"
+                            ]
+                        }
+                    },
+                    {
+                        "randomize": [
+                            {
+                                "weight": 20,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:attack_normal"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 20,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:attack_charge"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 20,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:return_to_spawner"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "noxcrew:to_dizzy": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:attack_charge"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:dizzy"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,318 @@
+{
+	"individual_event_sounds": {
+		"events": {
+			"burp": {
+				"sound": "resource_cache_open",
+				"volume": 1.0,
+				"pitch": 1.0
+			},
+			"beacon.activate": {
+				"sound": "resource_cloth",
+				"volume": 1.0,
+				"pitch": [ 0.8, 1.2 ]
+			},
+			"beacon.ambient": {
+				"sound": "resource_magic_powder",
+				"volume": 1.0,
+				"pitch": [ 0.8, 1.2 ]
+			},
+			"beacon.deactivate": {
+				"sound": "resource_metal",
+				"volume": 1.0,
+				"pitch": [ 0.8, 1.2 ]
+			},
+			"beacon.power": {
+				"sound": "resource_wood",
+				"volume": 1.0,
+				"pitch": [ 0.8, 1.2 ]
+			},
+			"block.turtle_egg.crack": {
+				"sound": "machine_fix",
+				"volume": 1.0,
+				"pitch": 1.0
+			},
+			"block.turtle_egg.break": {
+				"sound": "machine_part",
+				"volume": 1.0,
+				"pitch": 1.0
+			},
+			"block.turtle_egg.hatch": {
+				"sound": "machine_start",
+				"volume": 1.0,
+				"pitch": 1.0
+			},
+			"block.turtle_egg.attack": {
+				"sound": "store_counter",
+				"volume": 1.0,
+				"pitch": 1.0
+			},
+			"shear": {
+				"sound": "control_button",
+				"volume": 1.0,
+				"pitch": 1.0
+			},
+			"milk": {
+				"sound": "recycler",
+				"volume": 1.0,
+				"pitch": 1.0
+			},
+			"raid.horn": {
+				"sound": "tutorial_supply_box",
+				"volume": 1.0,
+				"pitch": 1.0
+			},
+			"glass": {
+				"sound": "tutorial_survivor",
+				"volume": 1.0,
+				"pitch": 1.0
+			},
+			"bow": {
+				"sound": "tiger_claws",
+				"volume": 1.0,
+				"pitch": [ 0.8, 1.2 ]
+			},
+			"plop": {
+				"sound": "dragon_cloud",
+				"volume": 1.0,
+				"pitch": 1.0
+			},
+			"ambient.cave": {
+				"sound": "ambient.cave",
+				"volume": 0.0,
+				"pitch": 1.0
+			},
+			"conduit.activate": {
+				"sound": "barrel_hit",
+				"volume": 1.0,
+				"pitch": 1.0
+			},
+			"conduit.ambient": {
+				"sound": "candy_machine",
+				"volume": 1.0,
+				"pitch": 1.0
+			},
+			"conduit.attack": {
+				"sound": "snot_shield",
+				"volume": 1.0,
+				"pitch": 1.0
+			}
+		}
+	},
+	
+
+
+	"entity_sounds": {
+		"entities": {
+			"noxcrew:zcn.bug_bear": {
+				"volume": 3,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "bug_bear_idle",
+					"hurt": "bug_bear_hurt",
+					"death": "bug_bear_death"
+				}
+			},
+			"noxcrew:zcn.candyman": {
+				"volume": 3,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "candyman_idle",
+					"hurt": "candyman_hurt",
+					"death": "candyman_death"
+				}
+			},
+			"noxcrew:zcn.climb": {
+				"volume": 2,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "climb_idle",
+					"hurt": "climb_hurt",
+					"death": "climb_death"
+				}
+			},
+			"noxcrew:zcn.dog": {
+				"volume": 2,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "dog_idle",
+					"hurt": "dog_hurt",
+					"death": "dog_death"
+				}
+			},
+			"noxcrew:zcn.explode": {
+				"volume": 2,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "explode_idle",
+					"hurt": "explode_hurt",
+					"death": "explode_death"
+				}
+			},
+			"noxcrew:zcn.fast": {
+				"volume": 2,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "fast_idle",
+					"hurt": "fast_hurt",
+					"death": "fast_death"
+				}
+			},
+			"noxcrew:zcn.final_bug_bear": {
+				"volume": 3,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "bug_bear_idle",
+					"hurt": "bug_bear_hurt",
+					"death": "bug_bear_death"
+				}
+			},
+			"noxcrew:zcn.final_candyman": {
+				"volume": 3,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "candyman_idle",
+					"hurt": "candyman_hurt",
+					"death": "candyman_death"
+				}
+			},
+			"noxcrew:zcn.final_mask": {
+				"volume": 3,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "mask_idle",
+					"hurt": "mask_hurt",
+					"death": "mask_death"
+				}
+			},
+			"noxcrew:zcn.final_splitter": {
+				"volume": 3.0,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "splitter_idle",
+					"hurt": "splitter_hurt",
+					"death": "splitter_death",
+					"step": "splitter_walk"
+				}
+			},
+			"noxcrew:zcn.grunt": {
+				"volume": 0.8,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "grunt_idle",
+					"hurt": "grunt_hurt",
+					"death": "grunt_death"
+				}
+			},
+			"noxcrew:zcn.gumball_warrior": {
+				"volume": 1.0,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"step": "gumball_warrior_step",
+					"hurt": "gumball_warrior_hurt",
+					"death": "gumball_warrior_death"
+				}
+			},
+			"noxcrew:zcn.mask": {
+				"volume": 3.0,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "mask_idle",
+					"hurt": "mask_hurt",
+					"death": "mask_death"
+				}
+			},
+			"noxcrew:zcn.range": {
+				"volume": 2.0,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "range_idle",
+					"hurt": "range_hurt",
+					"death": "range_death"
+				}
+			},
+			"noxcrew:zcn.resource_cloth_trap": {
+				"volume": 1.0,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "mimic_idle",
+					"hurt": "mimic_hurt",
+					"death": "mimic_death",
+					"step": "mimic_walk"
+				}
+			},
+			"noxcrew:zcn.resource_magic_trap": {
+				"volume": 1.0,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "mimic_idle",
+					"hurt": "mimic_hurt",
+					"death": "mimic_death",
+					"step": "mimic_walk"
+				}
+			},
+			"noxcrew:zcn.resource_metal_trap": {
+				"volume": 1.0,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "mimic_idle",
+					"hurt": "mimic_hurt",
+					"death": "mimic_death",
+					"step": "mimic_walk"
+				}
+			},
+			"noxcrew:zcn.resource_wood_trap": {
+				"volume": 1.0,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "mimic_idle",
+					"hurt": "mimic_hurt",
+					"death": "mimic_death",
+					"step": "mimic_walk"
+				}
+			},
+			"noxcrew:zcn.splitter": {
+				"volume": 2.0,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "splitter_idle",
+					"hurt": "splitter_hurt",
+					"death": "splitter_death",
+					"step": "splitter_walk"
+				}
+			},
+			"noxcrew:zcn.tank": {
+				"volume": 3.0,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "tank_idle",
+					"hurt": "tank_hurt",
+					"death": "tank_death"
+				}
+			},
+			"noxcrew:zcn.trap_barrel": {
+				"volume": 1.0,
+				"pitch": 1.0,
+				"events": {
+					"hurt": "barrel_hit",
+					"death": "barrel_explode"
+				}
+			},
+			"noxcrew:zcn.vomit": {
+				"volume": 2.0,
+				"pitch": [ 0.8, 1.2 ],
+				"events": {
+					"ambient": "vomit_idle",
+					"hurt": "vomit_hurt",
+					"death": "vomit_death"
+				}
+			},
+			"noxcrew:zcn.citizen": {
+				"volume": 1.0,
+				"pitch": 1.0,
+				"events": {
+					"ambient": "base_talk"
+				}
+			}
+		}
+	}
+}

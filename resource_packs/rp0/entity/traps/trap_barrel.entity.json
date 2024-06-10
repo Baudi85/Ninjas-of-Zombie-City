@@ -1,0 +1,29 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.trap_barrel",
+      "textures": {
+        "default": "textures/entity/traps/barrel" 
+      },
+      "geometry": {
+        "default": "geometry.trap_barrel" 
+      },
+      "materials": {
+        "default": "base"
+      },
+      "animations": {
+        "idle": "animation.trap_barrel.idle",
+        "swell": "animation.trap_barrel.swell"
+      },
+      "animation_controllers": [
+        {
+          "explode": "controller.animation.barrel.explode"
+        }
+      ],
+      "render_controllers": [
+        "controller.render.base"  
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.final_bug_bear",
+      "textures": {
+        "melee": "textures/entity/zombie/bug_bear/melee",
+        "flying": "textures/entity/zombie/bug_bear/flying"
+      },
+      "geometry": {
+        "melee": "geometry.bug_bear_melee",
+        "flying": "geometry.bug_bear_flying"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "fly": "animation.bug_bear.fly",
+        "spit": "animation.bug_bear.spit",
+        "idle": "animation.bug_bear.idle"
+      },
+      "animation_controllers": [
+        {
+          "move": "controller.animation.bug_bear.move"
+        }
+      ],
+      "render_controllers": [
+        "controller.render.bug_bear"
+      ]
+    }
+  }
+}

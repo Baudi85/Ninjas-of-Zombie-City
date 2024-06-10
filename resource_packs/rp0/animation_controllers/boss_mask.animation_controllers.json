@@ -1,0 +1,107 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.mask.move": {
+      "states": {
+        "default": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {"run": "query.modified_move_speed > 0.01"},
+            {"attack": "query.is_delayed_attacking"}
+          ],
+          "blend_transition": 0.2
+        },
+        "run": {
+          "animations": [
+            "run"
+          ],
+          "transitions": [
+            {"default": "query.modified_move_speed <= 0.01"},
+            {"attack": "query.is_delayed_attacking"}
+          ],
+          "blend_transition": 0.2
+        },
+        "attack": {
+          "animations": [
+            "attack"
+          ],
+          "transitions": [
+            {"default": "query.anim_time >= 0.80 && query.modified_move_speed <= 0.01"},
+            {"run": "query.anim_time >= 0.80 && query.modified_move_speed > 0.01"}
+          ],
+          "blend_transition": 0.5
+        }
+      }
+    },
+    "controller.animation.mask.particles": {
+      "states": {
+        "default": {
+          "transitions": [ 
+            {"invisible": "query.is_baby"}
+          ]
+        },
+        "invisible": {
+          "animations": ["footprint", "poof"],
+          "particle_effects": [
+				{"effect": "footprint_particle", "locator": "footprint_locator"},
+				{"effect": "poof_particle"}
+			],
+          "transitions": [
+            {"default": "!query.is_baby"}
+          ] 
+        }
+      }
+    },
+    "controller.animation.mask.sword": {
+      "states": {
+        "default": {
+          "animations": [
+            "arms_idle"
+          ],
+          "transitions": [
+            {"unsheath": "query.modified_move_speed > 0.01"},
+            {"attack": "query.is_delayed_attacking"}
+          ],
+          "blend_transition": 0.1
+        },
+        "sheath": {
+          "animations": [
+            "sheath"
+          ],
+          "transitions": [
+            {"default": "query.anim_time >= 0.69"}
+          ],
+          "blend_transition": 0.1
+        },
+        "unsheath": {
+          "animations": [
+            "unsheath"
+          ],
+          "transitions": [
+            {"run": "query.anim_time >= 0.54"}
+          ],
+          "blend_transition": 0.1
+        },
+        "run": {
+          "animations": [
+            "run_arms"
+          ],
+          "transitions": [
+            {"sheath": "query.modified_move_speed <= 0.01"},
+            {"attack": "query.is_delayed_attacking"}
+          ],
+          "blend_transition": 0.1
+        },
+        "attack": {
+          "transitions": [
+            {"sheath": "query.anim_time >= 0.80 && query.modified_move_speed <= 0.01"},
+            {"run": "query.anim_time >= 0.80 && query.modified_move_speed > 0.01"}
+          ],
+          "blend_transition": 0.5
+        }
+      }
+    }
+  }
+}

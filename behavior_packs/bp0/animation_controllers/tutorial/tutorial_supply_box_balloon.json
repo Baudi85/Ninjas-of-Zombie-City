@@ -1,0 +1,21 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.tutorial_supply_box_balloon": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ballooning": "query.is_baby"
+                        }
+                    ]
+                },
+                "ballooning": {
+                    "on_entry": [
+                        "/function tutorial/functions/supplies"
+                    ]
+                }
+            }
+        }
+    }
+}

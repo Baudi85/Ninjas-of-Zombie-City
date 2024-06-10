@@ -1,0 +1,62 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": { 
+    "controller.render.shield": {
+      "geometry": "Geometry.shield",
+      "materials": [ {  "*": "Material.shield" }  ],
+      "textures": [  "Texture.shield" ],  
+      "part_visibility": [
+        {
+          "*": "query.skin_id == 0 ? 0 : 1"
+        } 
+      ],   
+      "overlay_color": {
+        "r": "0.85 - (query.skin_id/8)",
+        "g": "0.6 + (query.skin_id/10)",
+        "b": "-0.1 + (query.skin_id/3)",
+        "a": "0.6+(query.skin_id*0.05)"
+      }
+    },
+    "controller.render.shield_grunt": {
+      "arrays": {
+        "geometries": {
+          "Array.geos": [ 
+            "Geometry.a",
+            "Geometry.a",
+            "Geometry.b",
+            "Geometry.b",
+            "Geometry.b",
+            "Geometry.c",
+            "Geometry.d",
+            "Geometry.d",
+            "Geometry.e",
+            "Geometry.f",
+            "Geometry.f",
+            "Geometry.g",
+            "Geometry.h",
+            "Geometry.i",
+            "Geometry.j",
+            "Geometry.k",
+            "Geometry.k",
+            "Geometry.l",
+            "Geometry.m"
+          ]
+        }
+      },
+      "geometry": "Array.geos[query.variant]",
+      "materials": [ {  "*": "Material.shield" }  ],
+      "textures": [  "Texture.shield" ],  
+      "part_visibility": [
+        {
+          "*": "query.skin_id == 0 ? 0 : 1"
+        } 
+      ],   
+      "overlay_color": {
+        "r": "0.85 - (query.skin_id/8)",
+        "g": "0.6 + (query.skin_id/10)",
+        "b": "-0.1 + (query.skin_id/3)",
+        "a": "0.6+(query.skin_id*0.05)"
+      }
+    }
+  }
+}

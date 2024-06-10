@@ -1,0 +1,89 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.machine_logic": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "broken": "query.variant != 0"
+                        }
+                    ]
+                },
+                "broken": {
+                    "transitions": [
+                        {
+                            "fixed": "query.variant == 0"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s remove to_missing_a",
+                        "/tag @s remove to_missing_b",
+                        "/tag @s remove to_missing_c",
+                        "/tag @s remove to_missing_d"
+                    ],
+                    "on_exit": [
+                        "/tag @e[type=noxcrew:zcn.machine_part_a] add despawn",
+                        "/tag @e[type=noxcrew:zcn.machine_part_b] add despawn",
+                        "/tag @e[type=noxcrew:zcn.machine_part_c] add despawn",
+                        "/tag @e[type=noxcrew:zcn.machine_part_d] add despawn"
+                    ]
+                },
+                "fixed": {
+                    "transitions": [
+                        {
+                            "default": "query.is_sheared"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.machine_success": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "success": "query.is_baby"
+                        }
+                    ]
+                },
+                "success": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_baby"
+                        }
+                    ],
+                    "on_entry": [
+                        "/function quests/missionSuccess",
+						"/summon noxcrew:zcn.resource_cache ^ ^ ^3",
+						"@s noxcrew:remove_success"
+                    ]
+                }
+            }
+        },
+        "controller.animation.machine_repair": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "success": "query.is_tamed"
+                        }
+                    ],
+                    "on_exit": [
+                        "/tag @s remove to_fixed"
+                    ]
+                },
+                "success": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_tamed"
+                        }
+                    ],
+                    "on_entry": [
+						"@s noxcrew:remove_repair"
+                    ]
+                }
+            }
+        }
+    }
+}

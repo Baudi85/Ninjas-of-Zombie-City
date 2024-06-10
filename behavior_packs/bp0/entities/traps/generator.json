@@ -1,0 +1,121 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.generator",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "generator_power": "controller.animation.generator_power"
+            },
+            "scripts": {
+                "animate": [
+                    "generator_power"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:unpowered": {
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "noxcrew:zcn.fuelcan_full"
+                                        }
+                                    ]
+                                },
+                                "event": "noxcrew:to_powered",
+                                "target": "self"
+                            },
+                            "use_item": true,
+                            "transform_to_item": "noxcrew:zcn.fuelcan_empty",
+                            "interact_text": "action.interact.fuel_generator"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:powered": {
+                "minecraft:is_baby": {},
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": 15,
+                    "time_down_event": {
+                        "event": "noxcrew:to_unpowered"
+                    }
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "utility"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 1.4,
+                "height": 1.25
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:unpowered"
+                    ]
+                }
+            },
+            "noxcrew:to_powered": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:unpowered"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:powered"
+                    ]
+                }
+            },
+            "noxcrew:to_unpowered": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:powered"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:unpowered"
+                    ]
+                }
+            }
+        }
+    }
+}

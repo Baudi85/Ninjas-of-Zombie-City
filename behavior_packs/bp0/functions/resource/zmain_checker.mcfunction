@@ -1,0 +1,20 @@
+execute @s ~ ~ ~ detect ~ 0 ~ air 0 function resource/zspread
+execute @s ~ ~ ~ detect ~ 0 ~ wool 1 function resource/zspread
+execute @s ~ ~ ~ detect ~ 0 ~ wool 2 function resource/zspread
+execute @s ~ ~ ~ detect ~ 0 ~ wool 3 function resource/zspread
+execute @s ~ ~ ~ detect ~ 0 ~ wool 4 function resource/zspread
+
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 0 function resource/0
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 1 function resource/1
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 2 function resource/2
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 3 function resource/3
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 4 function resource/4
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 5 function resource/5
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 6 function resource/6
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 7 function resource/7
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 8 function resource/8
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 9 function resource/9
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 10 function resource/10
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 11 function resource/11
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 12 function resource/12
+execute @s ~ ~ ~ detect ~ 0 ~ concrete 13 function resource/13

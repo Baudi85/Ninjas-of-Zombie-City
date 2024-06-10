@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.final_boss_congrats": {
+			"loop": false,
+			"animation_length": 15.0,
+			"timeline": {
+				"0.0": [
+					"/function voices/debriefer/final_boss_complete/part1"
+				],
+				"0.3": [
+					"/function voices/debriefer/final_boss_complete/part2"
+				],
+				"1.4": [
+					"/function voices/debriefer/final_boss_complete/part3"
+				],
+				"3.1": [
+					"/function voices/debriefer/final_boss_complete/part4"
+				],
+				"6.1": [
+					"/function voices/debriefer/final_boss_complete/part5"
+				],
+				"10.0": [
+					"/function voices/debriefer/final_boss_complete/part6"
+				],
+				"12.2": [
+					"/function voices/debriefer/final_boss_complete/part7"
+				],
+				"14.0": [
+					"/function quests/button/unlock",
+					"@s noxcrew:to_talk99"
+				]
+			}
+		}
+	}
+}

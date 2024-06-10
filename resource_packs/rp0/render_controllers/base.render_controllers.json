@@ -1,0 +1,31 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.base": {
+      "geometry": "Geometry.default",
+      "materials": [{ "*": "Material.default" }],
+      "textures": ["Texture.default"]
+    },
+
+    "controller.render.base_fix": {
+      "arrays": {
+        "geometries": {
+          "Array.geos": [
+            "Geometry.default",
+            "Geometry.default"
+          ]
+        }
+      },
+      "geometry": "Array.geos[query.is_baby]",
+      "materials": [{ "*": "Material.default"}],
+      "textures": ["Texture.default"]
+    },
+
+      "controller.render.base_lit": {
+        "geometry": "Geometry.default",
+        "materials": [{ "*": "Material.default" }],
+        "textures": ["Texture.default"],
+        "ignore_lighting": true
+    }
+  }
+}

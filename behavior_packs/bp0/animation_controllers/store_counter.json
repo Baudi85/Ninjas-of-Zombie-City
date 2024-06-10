@@ -1,0 +1,113 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.store_counter": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "store_0_open": "query.skin_id == 0 && query.variant == 10 && !query.is_tamed"
+                        },
+                        {
+                            "store_1_open": "query.skin_id == 1 && query.variant == 10 && query.mark_variant == 5 && !query.is_tamed"
+                        },
+                        {
+                            "store_2_open": "query.skin_id == 2 && query.variant == 10 && query.mark_variant == 5 && !query.is_tamed"
+                        },
+                        {
+                            "store_3_open": "query.skin_id == 3 && query.variant == 10 && query.mark_variant == 5 && !query.is_tamed"
+                        },
+                        {
+                            "store_4_open": "query.skin_id == 4 && query.variant == 10 && query.mark_variant == 5 && !query.is_tamed"
+                        },
+                        {
+                            "store_5_open": "query.skin_id == 5 && query.variant == 5 && !query.is_tamed"
+                        }
+                    ]
+                },
+                "store_0_open": {
+                    "on_entry": [
+                        "/function gameplay/stores/store_0",
+                        "@s noxcrew:to_store_open"
+                    ]
+                },
+                "store_1_open": {
+                    "on_entry": [
+                        "/function gameplay/stores/store_1",
+                        "@s noxcrew:to_store_open"
+                    ]
+                },
+                "store_2_open": {
+                    "on_entry": [
+                        "/function gameplay/stores/store_2",
+                        "@s noxcrew:to_store_open"
+                    ]
+                },
+                "store_3_open": {
+                    "on_entry": [
+                        "/function gameplay/stores/store_3",
+                        "@s noxcrew:to_store_open"
+                    ]
+                },
+                "store_4_open": {
+                    "on_entry": [
+                        "/function gameplay/stores/store_4",
+                        "@s noxcrew:to_store_open"
+                    ]
+                },
+                "store_5_open": {
+                    "on_entry": [
+                        "/function gameplay/stores/store_5",
+                        "@s noxcrew:to_store_open"
+                    ]
+                }
+            }
+        },
+        "controller.animation.store_counter_spawn": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "rotate_180": "query.skin_id == 0"
+                        },
+                        {
+                            "rotate_0": "query.skin_id == 1"
+                        },
+                        {
+                            "rotate_180": "query.skin_id == 2"
+                        },
+                        {
+                            "rotate_90": "query.skin_id == 3"
+                        },
+                        {
+                            "rotate_270": "query.skin_id == 4"
+                        },
+                        {
+                            "rotate_180": "query.skin_id == 5"
+                        }
+                    ]
+                },
+                "rotate_0": {
+                    "on_entry": [
+                        "/tp @s ~ ~1 ~ 0 0"
+                    ]
+                },
+                "rotate_90": {
+                    "on_entry": [
+                        "/tp @s ~ ~1 ~ 90 0"
+                    ]
+                },
+                "rotate_180": {
+                    "on_entry": [
+                        "/tp @s ~ ~1 ~ 180 0"
+                    ]
+                },
+                "rotate_270": {
+                    "on_entry": [
+                        "/tp @s ~ ~1 ~ 270 0"
+                    ]
+                }
+            }
+        }
+    }
+}

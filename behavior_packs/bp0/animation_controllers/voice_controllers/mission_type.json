@@ -1,0 +1,141 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.voice_mission_type": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "missionVar11": "query.variant == 11"
+                        },
+                        {
+                            "missionVar12": "query.variant == 12"
+                        },
+                        {
+                            "missionVar13": "query.variant == 13"
+                        },
+                        {
+                            "missionVar14": "query.variant == 14"
+                        },
+                        {
+                            "missionVar21": "query.variant == 21"
+                        },
+                        {
+                            "missionVar22": "query.variant == 22"
+                        },
+                        {
+                            "missionVar23": "query.variant == 23"
+                        },
+                        {
+                            "missionVar24": "query.variant == 24"
+                        },
+                        {
+                            "missionVar31": "query.variant == 31"
+                        },
+                        {
+                            "missionVar32": "query.variant == 32"
+                        },
+                        {
+                            "missionVar33": "query.variant == 33"
+                        },
+                        {
+                            "missionVar34": "query.variant == 34"
+                        },
+                        {
+                            "missionVar41": "query.variant == 41"
+                        },
+                        {
+                            "missionVar42": "query.variant == 42"
+                        },
+                        {
+                            "missionVar43": "query.variant == 43"
+                        },
+                        {
+                            "missionVar44": "query.variant == 44"
+                        }
+                    ]
+                },
+                "missionVar11": {
+                    "animations": [
+                        "missionVar11"
+                    ]
+                },
+                "missionVar12": {
+                    "animations": [
+                        "missionVar12"
+                    ]
+                },
+                "missionVar13": {
+                    "animations": [
+                        "missionVar13"
+                    ]
+                },
+                "missionVar14": {
+                    "animations": [
+                        "missionVar14"
+                    ]
+                },
+                "missionVar21": {
+                    "animations": [
+                        "missionVar21"
+                    ]
+                },
+                "missionVar22": {
+                    "animations": [
+                        "missionVar22"
+                    ]
+                },
+                "missionVar23": {
+                    "animations": [
+                        "missionVar23"
+                    ]
+                },
+                "missionVar24": {
+                    "animations": [
+                        "missionVar24"
+                    ]
+                },
+                "missionVar31": {
+                    "animations": [
+                        "missionVar31"
+                    ]
+                },
+                "missionVar32": {
+                    "animations": [
+                        "missionVar32"
+                    ]
+                },
+                "missionVar33": {
+                    "animations": [
+                        "missionVar33"
+                    ]
+                },
+                "missionVar34": {
+                    "animations": [
+                        "missionVar34"
+                    ]
+                },
+                "missionVar41": {
+                    "animations": [
+                        "missionVar41"
+                    ]
+                },
+                "missionVar42": {
+                    "animations": [
+                        "missionVar42"
+                    ]
+                },
+                "missionVar43": {
+                    "animations": [
+                        "missionVar43"
+                    ]
+                },
+                "missionVar44": {
+                    "animations": [
+                        "missionVar44"
+                    ]
+                }
+            }
+        }
+    }
+}

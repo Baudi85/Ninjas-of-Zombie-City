@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.doorway",
+      "textures": {
+        "a": "textures/entity/signs/doorway_0",
+        "b": "textures/entity/signs/doorway_1",
+        "c": "textures/entity/signs/doorway_2",
+        "d": "textures/entity/signs/doorway_3",
+        "e": "textures/entity/signs/doorway_4",
+        "f": "textures/entity/signs/doorway_5",
+        "g": "textures/entity/signs/doorway_6",
+        "h": "textures/entity/signs/doorway_7",
+        "i": "textures/entity/signs/doorway_8",
+        "j": "textures/entity/signs/doorway_9",
+        "k": "textures/entity/signs/doorway_10"
+      },
+      "geometry": {
+        "default": "geometry.doorway"
+      },
+      "materials": {
+        "default": "transparency"
+      },  
+      "render_controllers": [
+        "controller.render.doorway"
+      ]
+    }
+  }
+}

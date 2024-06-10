@@ -1,0 +1,14 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+      "description": {
+        "identifier": "noxcrew:zcn.214",
+        "category": "Equipment"
+      },
+  
+      "components": {
+        "minecraft:icon": "zcn.mission_hospital"
+  
+      }
+    }
+  }

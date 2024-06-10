@@ -1,0 +1,1 @@
+tellraw @a[tag=!inTutorial] {"rawtext": [{"translate" : "txt.tut.scene6.2_state1_C_l1"}]}

@@ -1,0 +1,13 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.parachute": {
+      "geometry": "Geometry.parachute",
+      "materials": [ { "*": "Material.default" } ],
+      "part_visibility": [
+        { "*": "!query.is_on_ground && query.is_tamed" }
+      ],
+      "textures": [ "Texture.parachute" ]
+    }
+  }
+}

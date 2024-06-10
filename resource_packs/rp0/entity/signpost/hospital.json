@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.map_hospital",
+      "textures": {
+        "default": "textures/entity/signs/map_hospital"
+      },
+      "geometry": {
+        "default": "geometry.map_hospital"
+      },
+      "materials": {
+        "default": "transparency"
+      },  
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

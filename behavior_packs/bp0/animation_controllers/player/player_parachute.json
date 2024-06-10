@@ -1,0 +1,32 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.player_parachute": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "to_parachute": "!query.is_on_ground && query.is_tamed"
+                        }
+                    ]
+                },
+                "to_parachute": {
+                    "transitions": [
+                        {
+                            "default": "query.is_on_ground"
+                        }
+                    ],
+                    "on_entry": [
+                        "/playsound parachute @s ~ ~ ~ 1 1",
+                        "/effect @s slow_falling 100000 8 true"
+                    ],
+                    "on_exit": [
+                        "/tag @s remove to_parachute",
+                        "@s noxcrew:remove_parachute",
+                        "/effect @s clear"
+                    ]
+                }
+            }
+        }
+    }
+}

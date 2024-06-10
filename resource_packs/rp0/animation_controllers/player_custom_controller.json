@@ -1,0 +1,329 @@
+{
+   "format_version":"1.10.0",
+   "animation_controllers":{
+      "controller.animation.player.ninja":{
+         "states":{
+            "default":{
+               "animations":[
+                  "land2"
+               ],
+               "transitions":[
+                  {
+                     "sprint":"query.is_sprinting"
+                  },
+                  {
+                     "sneak":"query.is_sneaking"
+                  },
+                  {
+                     "walk":"!query.is_sneaking && query.modified_move_speed > 0.01"
+                  },
+                  {
+                     "swim":"query.is_in_water && !query.is_sprinting"
+                  },
+                  {
+                     "watersprint":"query.is_swimming"
+                  },
+                  {
+                     "jump":"!query.is_on_ground && !query.is_in_water"
+                  },
+                  {
+                     "first_person":"variable.is_first_person"
+                  }
+               ],
+               "blend_transition":0.3
+            },
+            "walk":{
+               "animations":[
+                  "walk2", "anti_move"
+               ],
+               "transitions":[
+                  {
+                     "default":"query.modified_move_speed <= 0.01"
+                  },
+                  {
+                     "sprint":"query.is_sprinting"
+                  },
+                  {
+                     "sneak":"query.is_sneaking"
+                  },
+                  {
+                     "swim":"query.is_in_water && !query.is_sprinting"
+                  },
+                  {
+                     "watersprint":"query.is_swimming"
+                  },
+                  {
+                     "jump":"!query.is_on_ground && !query.is_in_water"
+                  },
+                  {
+                     "first_person":"variable.is_first_person"
+                  }
+               ],
+               "blend_transition":0.3
+            },
+            "sneak":{
+               "animations":[
+                  "sneak2"
+               ],
+               "transitions":[
+                  {
+                     "default":"!query.is_sneaking && query.modified_move_speed <= 0.01"
+                  },
+                  {
+                     "walk":"!query.is_sneaking && !query.is_sprinting"
+                  },
+                  {
+                     "sprint":"query.is_sprinting"
+                  },
+                  {
+                     "swim":"query.is_in_water && !query.is_sprinting"
+                  },
+                  {
+                     "watersprint":"query.is_swimming"
+                  },
+                  {
+                     "jump":"!query.is_on_ground && !query.is_in_water"
+                  },
+                  {
+                     "first_person":"variable.is_first_person"
+                  }
+               ],
+               "blend_transition":0.3
+            },
+            "sprint":{
+               "animations":[
+                  "sprint2", "anti_move"
+               ],
+               "transitions":[
+                  {
+                     "default":"query.modified_move_speed <= 0.01"
+                  },
+                  {
+                     "sneak":"query.is_sneaking"
+                  },
+                  {
+                     "walk":"!query.is_sneaking && !query.is_sprinting"
+                  },
+                  {
+                     "swim":"query.is_in_water && !query.is_sprinting"
+                  },
+                  {
+                     "watersprint":"query.is_swimming"
+                  },
+                  {
+                     "jump":"!query.is_on_ground && !query.is_in_water"
+                  },
+                  {
+                     "first_person":"variable.is_first_person"
+                  }
+               ],
+               "blend_transition":0.2
+            },
+            "jump":{
+               "animations":[
+                  "jump2"
+               ],
+               "transitions":[
+                  {
+                     "air":"!query.is_on_ground && query.all_animations_finished && !query.is_in_water"
+                  },
+                  {
+                     "swim":"query.is_in_water && query.anim_time >= 0.26"
+                  },
+                  {
+                     "watersprint":"query.is_swimming && query.anim_time >= 0.26"
+                  },
+                  {
+                     "default":"query.is_on_ground && query.anim_time >= 0.26"
+                  },
+                  {
+                     "first_person":"variable.is_first_person"
+                  }
+               ],
+               "blend_transition":0.3
+            },
+            "watersprint":{
+               "transitions":[
+                  {
+                     "sprint":"query.is_on_ground && query.is_sprinting && !query.is_in_water"
+                  },
+                  {
+                     "swim":"query.is_in_water && !query.is_sprinting"
+                  },
+                  {
+                     "default":"query.is_on_ground && !query.is_in_water"
+                  },
+                  {
+                     "first_person":"variable.is_first_person"
+                  }
+               ],
+               "blend_transition":0.3
+            },
+            "swim":{
+               "animations":[
+                  "swim2"
+               ],
+               "transitions":[
+                  {
+                     "watersprint":"query.is_swimming"
+                  },
+                  {
+                     "sprint":"query.is_on_ground && query.is_sprinting && !query.is_in_water"
+                  },
+                  {
+                     "default":"query.is_on_ground && !query.is_in_water"
+                  },
+                  {
+                     "first_person":"variable.is_first_person"
+                  }
+               ],
+               "blend_transition":0.3
+            },
+            "air":{
+               "animations":[
+                  "air2"
+               ],
+               "transitions":[
+                  {
+                     "swim":"query.is_in_water && !query.is_sprinting"
+                  },
+                  {
+                     "watersprint":"query.is_swimming"
+                  },
+                  {
+                     "default":"query.is_on_ground"
+                  },
+                  {
+                     "first_person":"variable.is_first_person"
+                  }
+               ],
+               "blend_transition":0.3
+            },
+            "first_person":{
+               "transitions":[
+                  {
+                     "default":"!variable.is_first_person"
+                  }
+               ]
+            }
+         }
+      },
+      "controller.animation.player.ninja_sounds":{
+         "states":{
+            "default":{
+               "transitions":[
+                  {
+                     "sprint":"query.is_sprinting"
+                  },
+                  {
+                     "sneak":"query.is_sneaking"
+                  },
+                  {
+                     "walk":"!query.is_sneaking && query.modified_move_speed > 0.01"
+                  },
+                  {
+                     "jump":"!query.is_on_ground && !query.is_in_water"
+                  }
+               ]
+            },
+            "sprint":{
+               "transitions":[
+                  {
+                     "default":"query.modified_move_speed <= 0.01"
+                  },
+                  {
+                     "sneak":"query.is_sneaking && !query.is_sprinting"
+                  },
+                  {
+                     "walk":"!query.is_sneaking && !query.is_sprinting"
+                  },
+                  {
+                     "jump":"!query.is_on_ground && !query.is_in_water"
+                  }
+               ]
+            },
+            "walk":{
+               "transitions":[
+                  {
+                     "default":"query.modified_move_speed <= 0.01"
+                  },
+                  {
+                     "sprint":"query.is_sprinting"
+                  },
+                  {
+                     "sneak":"query.is_sneaking"
+                  },
+                  {
+                     "jump":"!query.is_on_ground && !query.is_in_water"
+                  }
+               ]
+            },
+            "sneak":{
+               "transitions":[
+                  {
+                     "default":"!query.is_sneaking && query.modified_move_speed <= 0.01"
+                  },
+                  {
+                     "walk":"!query.is_sneaking && !query.is_sprinting"
+                  },
+                  {
+                     "sprint":"query.is_sprinting && !query.is_sneaking"
+                  },
+                  {
+                     "jump":"!query.is_on_ground && !query.is_in_water"
+                  }
+               ]
+            },
+            "jump":{
+               "animations":[
+                  "jump_sounds"
+               ],
+               "transitions":[
+                  {
+                     "airtransition":"!query.is_on_ground && query.anim_time >= 0.26 && !query.is_in_water"
+                  },
+                  {
+                     "land":"query.is_on_ground && query.anim_time >= 0.26"
+                  },
+                  {
+                     "default":"query.is_in_water"
+                  }
+               ]
+            },
+            "airtransition":{
+               "animations":[
+                  "air_transition"
+               ],
+               "transitions":[
+                  {
+                     "air":"!query.is_on_ground && query.anim_time >= 0.25"
+                  },
+                  {
+                     "land":"query.is_on_ground"
+                  }
+               ]
+            },
+            "air":{
+               "animations":[
+                  "air_sounds"
+               ],
+               "transitions":[
+                  {
+                     "land":"query.is_on_ground"
+                  }
+               ]
+            },
+            "land":{
+               "animations":[
+                  "land_sounds"
+               ],
+               "transitions":[
+                  {
+                     "default":"query.is_on_ground"
+                  }
+               ]
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.map_police",
+      "textures": {
+        "default": "textures/entity/signs/map_police"
+      },
+      "geometry": {
+        "default": "geometry.map_police"
+      },
+      "materials": {
+        "default": "transparency"
+      },  
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

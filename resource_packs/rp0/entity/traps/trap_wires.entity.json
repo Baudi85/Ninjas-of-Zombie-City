@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.trap_wires",
+      "textures": {
+        "default": "textures/entity/traps/wires"
+      },
+      "geometry": {
+        "default": "geometry.trap_wires" 
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "particle_effects": {
+        "spark_a": "noxcrew:zcn.spark_a",
+        "spark_b": "noxcrew:zcn.spark_b"
+      },
+      "animations": {
+	    "electricity_sound": "animation.trap_wires.electricity_sound",
+		"sparks": "controller.animation.trap_wires.sparks"
+        },
+      "scripts": {
+        "animate": [
+          "sparks"
+        ]
+      },
+      "sound_effects": {
+        "electricity_loop": "electricity_loop"
+      },
+      "render_controllers": [
+        "controller.render.trap_wires"
+      ]
+    }
+  }
+}

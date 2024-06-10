@@ -1,0 +1,30 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.talk_npc_ambient": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "talking": "query.is_tamed"
+                        }
+                    ]
+                },
+                "talking": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_tamed"
+                        }
+                    ],
+                    "on_entry": [
+                        "/execute @s[type=noxcrew:zcn.npc_wambo] ~ ~ ~ playsound survivor1_callout @a ~ ~ ~",
+                        "/execute @s[type=noxcrew:zcn.npc_speed] ~ ~ ~ playsound survivor2_callout @a ~ ~ ~",
+                        "/execute @s[type=noxcrew:zcn.npc_robot] ~ ~ ~ playsound survivor3_callout @a ~ ~ ~",
+                        "/execute @s[type=noxcrew:zcn.npc_mad] ~ ~ ~ playsound survivor4_callout @a ~ ~ ~",
+                        "@s noxcrew:remove_talk"
+                    ]
+                }
+            }
+        }
+    }
+}

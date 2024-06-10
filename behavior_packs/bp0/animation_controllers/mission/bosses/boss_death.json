@@ -1,0 +1,27 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.boss_death": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/execute @s[type=noxcrew:zcn.mask] ~ ~ ~ /tag @e[type=noxcrew:counter] add mask",
+                        "/execute @s[type=noxcrew:zcn.bug_bear] ~ ~ ~ /tag @e[type=noxcrew:counter] add bugBear"
+                    ]
+                },
+                "dead": {
+                    "on_entry": [
+                        "/function quests/missionSuccess",
+						"/summon noxcrew:zcn.resource_cache",
+                        "/execute @e[type=noxcrew:counter,tag=splitter,tag=bugBear,tag=mask,tag=candyman] ~ ~ ~ /setblock 208 27 224 redstone_block"
+                    ]
+                }
+            }
+        }
+    }
+}

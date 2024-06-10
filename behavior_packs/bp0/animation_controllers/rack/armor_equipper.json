@@ -1,0 +1,69 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.armor_equipper": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "armor_1": "query.variant == 1"
+                        },
+                        {
+                            "armor_2": "query.variant == 2"
+                        },
+                        {
+                            "armor_3": "query.variant == 3"
+                        },
+                        {
+                            "armor_4": "query.variant == 4"
+                        }
+                    ]
+                },
+                "armor_1": {
+                    "transitions": [
+                        {
+                            "default": "query.is_tamed"
+                        }
+                    ],
+                    "on_exit":[
+                        "/execute @p ~ ~ ~ function gameplay/rack/armor_1",
+						"@s noxcrew:remove_equip"
+                    ]
+                },
+                "armor_2": {
+                    "transitions": [
+                        {
+                            "default": "query.is_tamed"
+                        }
+                    ],
+                    "on_exit":[
+                        "/execute @p ~ ~ ~ function gameplay/rack/armor_2",
+						"@s noxcrew:remove_equip"
+                    ]
+                },
+                "armor_3": {
+                    "transitions": [
+                        {
+                            "default": "query.is_tamed"
+                        }
+                    ],
+                    "on_exit":[
+                        "/execute @p ~ ~ ~ function gameplay/rack/armor_3",
+						"@s noxcrew:remove_equip"
+                    ]
+                },
+                "armor_4": {
+                    "transitions": [
+                        {
+                            "default": "query.is_tamed"
+                        }
+                    ],
+                    "on_exit":[
+                        "/execute @p ~ ~ ~ function gameplay/rack/armor_4",
+						"@s noxcrew:remove_equip"
+                    ]
+                }
+            }
+        }
+    }
+}

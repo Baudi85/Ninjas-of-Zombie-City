@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.player_dies": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "to_dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/function playerManagement/playerDies"
+                    ]
+                },
+                "to_dead": {
+                    "transitions": [
+                        {
+                            "default": "query.is_alive"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,209 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.doorway",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "noxcrew:0": {
+                "minecraft:variant": {
+                    "value": 0
+                }
+            },
+            "noxcrew:1": {
+                "minecraft:variant": {
+                    "value": 1
+                }
+            },
+            "noxcrew:2": {
+                "minecraft:variant": {
+                    "value": 2
+                }
+            },
+            "noxcrew:3": {
+                "minecraft:variant": {
+                    "value": 3
+                }
+            },
+            "noxcrew:4": {
+                "minecraft:variant": {
+                    "value": 4
+                }
+            },
+            "noxcrew:5": {
+                "minecraft:variant": {
+                    "value": 5
+                }
+            },
+            "noxcrew:6": {
+                "minecraft:variant": {
+                    "value": 6
+                },
+                "minecraft:scale": {
+                    "value": 1.5
+                }
+            },
+            "noxcrew:7": {
+                "minecraft:variant": {
+                    "value": 7
+                },
+                "minecraft:scale": {
+                    "value": 1.5
+                }
+            },
+            "noxcrew:8": {
+                "minecraft:variant": {
+                    "value": 8
+                },
+                "minecraft:scale": {
+                    "value": 1.5
+                }
+            },
+            "noxcrew:9": {
+                "minecraft:variant": {
+                    "value": 9
+                }
+            },
+            "noxcrew:10": {
+                "minecraft:variant": {
+                    "value": 10
+                }
+            },
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "sign"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0,
+                "height": 0
+            },
+            "minecraft:scale": {
+                "value": 1
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:environment_sensor": {
+                "triggers": {
+                    "filters": {
+                        "test": "has_tag",
+                        "subject": "self",
+                        "operator": "equals",
+                        "value": "despawn"
+                    },
+                    "event": "noxcrew:to_despawn"
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {
+                "has_gravity": false
+            }
+        },
+        "events": {
+            "noxcrew:to_0": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:0"
+                    ]
+                }
+            },
+            "noxcrew:to_1": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:1"
+                    ]
+                }
+            },
+            "noxcrew:to_2": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:2"
+                    ]
+                }
+            },
+            "noxcrew:to_3": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:3"
+                    ]
+                }
+            },
+            "noxcrew:to_4": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:4"
+                    ]
+                }
+            },
+            "noxcrew:to_5": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:5"
+                    ]
+                }
+            },
+            "noxcrew:to_6": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:6"
+                    ]
+                }
+            },
+            "noxcrew:to_7": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:7"
+                    ]
+                }
+            },
+            "noxcrew:to_8": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:8"
+                    ]
+                }
+            },
+            "noxcrew:to_9": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:9"
+                    ]
+                }
+            },
+            "noxcrew:to_10": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:10"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

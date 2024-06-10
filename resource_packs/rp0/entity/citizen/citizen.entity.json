@@ -1,0 +1,64 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.citizen",
+      "textures": {
+        "s1": "textures/entity/citizen/base/skin1",
+        "s2": "textures/entity/citizen/base/skin2",
+        "s3": "textures/entity/citizen/base/skin3",
+        "s4": "textures/entity/citizen/base/skin_slim",
+
+        "t0": "textures/entity/citizen/base/shirt0",
+        "t1": "textures/entity/citizen/base/shirt1",
+        "t2": "textures/entity/citizen/base/shirt2",
+        "t3": "textures/entity/citizen/base/shirt3",
+        "t4": "textures/entity/citizen/base/shirt4",
+        "t5": "textures/entity/citizen/base/shirt5",
+        "t6": "textures/entity/citizen/base/shirt6",
+        "t7": "textures/entity/citizen/base/shirt7",
+        "t8": "textures/entity/citizen/base/shirt8",
+        "t9": "textures/entity/citizen/base/shirt9",
+        "t10": "textures/entity/citizen/base/shirt10",
+        "t11": "textures/entity/citizen/base/shirt11",
+        "t12": "textures/entity/citizen/base/shirt_slim0", 
+        "t13": "textures/entity/citizen/base/shirt_slim1",
+        "t14": "textures/entity/citizen/base/shirt_slim2",
+        "t15": "textures/entity/citizen/base/shirt_slim3",
+ 
+        "p0": "textures/entity/citizen/base/pants0",
+        "p1": "textures/entity/citizen/base/pants1",
+        "p2": "textures/entity/citizen/base/pants2",
+        "p3": "textures/entity/citizen/base/pants3",
+        "p4": "textures/entity/citizen/base/pants4",
+        "p5": "textures/entity/citizen/base/pants5"
+      },
+      "geometry": {
+        "default": "geometry.citizen_default",
+        "slim": "geometry.citizen_slim"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "idle": "animation.citizen.idle",
+        "look_at_target": "animation.citizen.look_at_target",
+        "walk": "animation.citizen.walk",
+	    	"move": "controller.animation.citizen.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.slim_shirt = (query.variant >= 12) && (query.variant <= 15) ? 1 : 0 ;" 
+        ],
+        "animate": [
+          "move"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.citizen_pants",
+        "controller.render.citizen_shirt",
+        "controller.render.citizen_skin"
+      ]
+    }
+  }
+}

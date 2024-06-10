@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.van",
+      "textures": {
+        "default": "textures/entity/vehicle/van"
+      },
+      "geometry": {
+        "default": "geometry.van"
+      },
+      "materials": {
+        "default": "vehical"
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

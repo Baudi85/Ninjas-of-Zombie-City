@@ -1,0 +1,92 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.truck",
+				"texture_width": 512,
+				"texture_height": 512,
+				"visible_bounds_width": 19,
+				"visible_bounds_height": 9,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, 0, -32],
+					"cubes": [
+						{"origin": [-40, 27, -56], "size": [64, 53, 35], "uv": [190, 0]},
+						{"origin": [-38, 15, -21], "size": [60, 53, 2], "inflate": 0.02, "uv": [389, 0]},
+						{"origin": [-8, 8, -56], "size": [32, 19, 35], "uv": [56, 3]},
+						{"origin": [-40, 8, -56], "size": [32, 19, 35], "uv": [56, 3], "mirror": true},
+						{"origin": [0, 8, -21], "size": [22, 7, 88], "uv": [293, 102]},
+						{"origin": [0, 8, 67], "size": [22, 7, 69], "uv": [330, 273]},
+						{"origin": [-16, 8, -21], "size": [16, 7, 157], "uv": [97, 98]},
+						{"origin": [-38, 8, -21], "size": [22, 7, 88], "uv": [293, 102], "mirror": true},
+						{"origin": [-38, 8, 67], "size": [22, 7, 69], "uv": [330, 273], "mirror": true},
+						{"origin": [-40, 10, 135], "size": [15, 5, 3], "uv": [0, 85], "mirror": true},
+						{"origin": [9, 10, 135], "size": [15, 5, 3], "uv": [0, 85]},
+						{"origin": [16, 8, 92], "size": [6, 12, 22], "inflate": 0.1, "uv": [0, 94]},
+						{"origin": [-39, 8, 92], "size": [6, 12, 22], "inflate": 0.1, "uv": [0, 94], "mirror": true},
+						{"origin": [16, 8, -46], "size": [8, 10, 22], "uv": [34, 110]},
+						{"origin": [-40, 8, -46], "size": [8, 10, 22], "uv": [34, 110], "mirror": true},
+						{"origin": [0, 15, -19], "size": [24, 65, 91], "uv": [3, 57]},
+						{"origin": [0, 15, 72], "size": [24, 65, 64], "uv": [0, 384]},
+						{"origin": [25, 15, 54], "size": [0, 65, 79], "uv": [174, 280]},
+						{"origin": [-40.4, 13, 49], "size": [0, 65, 79], "uv": [170, 214], "mirror": true},
+						{"origin": [-40, 15, -19], "size": [24, 65, 91], "uv": [3, 57], "mirror": true},
+						{"origin": [-40, 15, 72], "size": [24, 65, 64], "uv": [0, 384], "mirror": true},
+						{"origin": [-16, 15, -19], "size": [16, 65, 91], "uv": [299, 357], "mirror": true},
+						{"origin": [-16, 15, 72], "size": [16, 65, 64], "uv": [0, 249], "mirror": true},
+						{"origin": [16, 0, -42], "size": [8, 14, 14], "uv": [0, 27]},
+						{"origin": [-41, 0, -42], "size": [8, 14, 14], "uv": [0, 27], "mirror": true},
+						{"origin": [16, 0, 96], "size": [8, 14, 14], "uv": [0, 27]},
+						{"origin": [-41, 0, 96], "size": [8, 14, 14], "uv": [0, 27], "mirror": true}
+					]
+				},
+				{
+					"name": "mudguard_left",
+					"parent": "body",
+					"pivot": [21.6, 14.3, 41],
+					"rotation": [0, 0, 25],
+					"cubes": [
+						{"origin": [18.6, 8.8, 92], "size": [6, 11, 22], "inflate": 0.03, "uv": [30, 5]},
+						{"origin": [20.41262, 9.64524, -46], "size": [6, 11, 22], "inflate": 0.05, "uv": [30, 5]}
+					]
+				},
+				{
+					"name": "mudguard_right",
+					"parent": "body",
+					"pivot": [-21.6, 14.3, 41],
+					"rotation": [0, 0, -25],
+					"cubes": [
+						{"origin": [-40.00723, 15.98451, 92], "size": [6, 11, 22], "inflate": 0.03, "uv": [30, 5], "mirror": true},
+						{"origin": [-41.81985, 16.82975, -46], "size": [6, 11, 22], "inflate": 0.05, "uv": [30, 5], "mirror": true}
+					]
+				},
+				{
+					"name": "left_mirror",
+					"parent": "body",
+					"pivot": [22.6, 56, -48],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [20.1, 42, -52.33013], "size": [9, 25, 0], "uv": [0, 0]},
+						{"origin": [25.1, 53, -53.33013], "size": [8, 11, 5], "uv": [18, 0]},
+						{"origin": [25.1, 45, -53.33013], "size": [8, 6, 5], "uv": [18, 16]}
+					]
+				},
+				{
+					"name": "right_mirror",
+					"parent": "body",
+					"pivot": [-38.4, 56, -48],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{"origin": [-44.9, 42, -52.33013], "size": [9, 25, 0], "uv": [0, 0], "mirror": true},
+						{"origin": [-48.9, 53, -53.33013], "size": [8, 11, 5], "uv": [18, 0], "mirror": true},
+						{"origin": [-48.9, 45, -53.33013], "size": [8, 6, 5], "uv": [18, 16], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

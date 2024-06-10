@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.generator.on": {
+      "states": {
+        "default": {
+          "animations": [ "off" ],
+          "transitions": [
+            { "on": "query.is_baby" }
+          ]
+        },
+	      "on": {
+          "animations": [ "on", "sound" ],
+          "particle_effects": [
+            {
+              "effect": "machine_smoke",
+              "locator": "smoke_locator"
+            }
+          ],
+          "transitions": [
+            { "default": "!query.is_baby" }
+          ] 
+        }
+      }
+    }
+  }
+}

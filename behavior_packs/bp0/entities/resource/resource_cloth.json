@@ -1,0 +1,329 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.resource_cloth",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "tag": "controller.animation.resource_tag",
+                "summon": "controller.animation.resource_summons"
+            },
+            "scripts": {
+                "animate": [
+                    "tag",
+                    "summon"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            },
+            "noxcrew:summon_resource_spawner": {
+                "minecraft:mark_variant": {
+                    "value": 1
+                }
+            },
+            "noxcrew:cloth_police": {
+                "minecraft:skin_id": {
+                    "value": 21
+                }
+            },
+            "noxcrew:cloth_hospital": {
+                "minecraft:skin_id": {
+                    "value": 22
+                }
+            },
+            "noxcrew:cloth_mall": {
+                "minecraft:skin_id": {
+                    "value": 23
+                }
+            },
+            "noxcrew:cloth_tower": {
+                "minecraft:skin_id": {
+                    "value": 24
+                }
+            },
+            "noxcrew:resource": {
+                "minecraft:variant": {
+                    "value": 0
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "operator": "equals",
+                                    "value": "player"
+                                },
+                                "target": "self",
+                                "event": "noxcrew:to_summon_resource_spawner"
+                            },
+                            "add_items": {
+                                "table": "loot_tables/resources/cloth.json"
+                            },
+                            "play_sounds": "beacon.activate",
+                            "interact_text": "action.interact.pickup_cloth"
+                        }
+                    ]
+                },
+                "minecraft:damage_sensor": {
+                    "triggers": {
+                        "cause": "all",
+                        "deals_damage": false
+                    }
+                }
+            },
+            "noxcrew:trap_police": {
+                "minecraft:transformation": {
+                    "into": "noxcrew:zcn.resource_cloth_trap<noxcrew:to_cloth_police>"
+                }
+            },
+            "noxcrew:trap_hospital": {
+                "minecraft:transformation": {
+                    "into": "noxcrew:zcn.resource_cloth_trap<noxcrew:to_cloth_hospital>"
+                }
+            },
+            "noxcrew:trap_mall": {
+                "minecraft:transformation": {
+                    "into": "noxcrew:zcn.resource_cloth_trap<noxcrew:to_cloth_mall>"
+                }
+            },
+            "noxcrew:trap_tower": {
+                "minecraft:transformation": {
+                    "into": "noxcrew:zcn.resource_cloth_trap<noxcrew:to_cloth_tower>"
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "resource"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 0.6
+            },
+            "minecraft:scale": {
+                "value": 0.66
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "width": 1.6,
+                        "height": 0.6,
+                        "pivot": [
+                            -0.3,
+                            0.3,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "minecraft:environment_sensor": {
+                "triggers": {
+                    "filters": {
+                        "test": "has_tag",
+                        "subject": "self",
+                        "operator": "equals",
+                        "value": "despawn"
+                    },
+                    "event": "noxcrew:to_despawn"
+                }
+            },
+            "minecraft:health": {
+                "value": 14,
+                "max": 14
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/resources/cloth.json"
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:cloth_police"
+                            ]
+                        }
+                    },
+                    {
+                        "randomize": [
+                            {
+                                "weight": 9,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:resource"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 1,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:trap_police"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "noxcrew:to_cloth_police": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:cloth_police"
+                            ]
+                        }
+                    },
+                    {
+                        "randomize": [
+                            {
+                                "weight": 9,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:resource"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 1,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:trap_police"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "noxcrew:to_cloth_hospital": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:cloth_hospital"
+                            ]
+                        }
+                    },
+                    {
+                        "randomize": [
+                            {
+                                "weight": 9,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:resource"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 1,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:trap_hospital"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "noxcrew:to_cloth_mall": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:cloth_mall"
+                            ]
+                        }
+                    },
+                    {
+                        "randomize": [
+                            {
+                                "weight": 9,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:resource"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 1,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:trap_mall"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "noxcrew:to_cloth_tower": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:cloth_tower"
+                            ]
+                        }
+                    },
+                    {
+                        "randomize": [
+                            {
+                                "weight": 9,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:resource"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 1,
+                                "add": {
+                                    "component_groups": [
+                                        "noxcrew:trap_tower"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "noxcrew:to_summon_resource_spawner": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:summon_resource_spawner"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.trash": {
+      "arrays": {
+        "geometries": {
+          "Array.geos": [
+            "Geometry.a",
+            "Geometry.b",
+            "Geometry.c",
+            "Geometry.d",
+            "Geometry.e",
+            "Geometry.f" 
+          ]
+        },
+        "textures": {
+          "Array.skins": [
+            "Texture.a",
+            "Texture.b",
+            "Texture.c",
+            "Texture.d",
+            "Texture.e",
+            "Texture.f"
+          ]
+        }
+      },
+      "geometry": "Array.geos[query.variant]",
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Array.skins[query.variant]"]
+    }
+  }
+}

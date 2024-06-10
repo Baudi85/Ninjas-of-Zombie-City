@@ -1,0 +1,50 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.range.move": {
+	 "initial_state": "spawn",
+      "states": {
+        "spawn": {
+          "animations": [ "spawn" ],
+          "transitions": [
+			{ "idle": "query.anim_time >= 1.0" }
+          ],
+          "blend_transition": 0.4 
+        },
+        "idle": {
+          "animations": [ "idle" ],
+          "transitions": [
+			{ "walk": "query.modified_move_speed > 0.01" }
+          ],
+          "blend_transition": 0.4 
+        },
+		"walk": {
+          "animations": [ "walk" ],
+          "transitions": [
+            { "idle": "query.modified_move_speed <= 0.01" }
+          ],
+          "blend_transition": 0.4
+        }
+      }
+    },
+    "controller.animation.range.shoot": {
+	 "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [ "misc" ],
+          "transitions": [
+            { "shoot": "query.has_target" }
+          ],
+          "blend_transition": 0.2
+        },
+		"shoot": {
+          "animations": [ "shoot", "fire_sound" ],
+          "transitions": [
+			{ "default": "!query.has_target" }
+          ],
+          "blend_transition": 0.2
+        }
+      }
+    }
+  }
+}

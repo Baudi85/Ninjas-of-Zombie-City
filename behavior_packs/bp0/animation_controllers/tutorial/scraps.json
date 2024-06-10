@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.tutorial_scraps": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "dead": "query.is_sheared"
+                        }
+                    ],
+                    "on_exit": [
+                        "/function tutorial/functions/scraps"
+                    ]
+                },
+                "dead": {}
+            }
+        }
+    }
+}

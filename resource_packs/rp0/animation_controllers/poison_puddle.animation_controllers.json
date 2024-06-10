@@ -1,0 +1,16 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.poison_puddle.particle": {
+      "states": {
+        "default": {
+          "particle_effects": [
+            {
+              "effect": "poison_particle"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

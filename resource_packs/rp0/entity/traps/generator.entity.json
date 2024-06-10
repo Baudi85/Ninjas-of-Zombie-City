@@ -1,0 +1,36 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.generator",
+      "textures": {
+        "default": "textures/entity/generator"
+      },
+      "geometry": {
+        "default": "geometry.generator"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "particle_effects": {
+        "machine_smoke": "noxcrew:zcn.machine_smoke"
+      },
+      "animations": {
+        "on": "animation.generator.on",
+        "off": "animation.generator.off",
+        "sound": "animation.generator.sound"
+      },
+      "animation_controllers": [
+        {
+          "on": "controller.animation.generator.on"
+        }
+      ],
+      "sound_effects": {
+        "generator_loop": "generator_loop"
+      },
+      "render_controllers": [
+        "controller.render.base_fix"
+      ]
+    }
+  }
+}

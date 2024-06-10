@@ -1,0 +1,48 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.mask",
+      "textures": {
+        "default": "textures/entity/zombie/mask"
+      },
+      "geometry": {
+        "default": "geometry.mask"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "particle_effects": {
+        "poof_particle": "noxcrew:zcn.poof_particle",
+        "footprint_particle": "noxcrew:zcn.footprint"
+      },
+      "animations": {
+        "idle": "animation.mask.idle",
+        "arms_idle": "animation.mask.arms_idle",
+        "run": "animation.mask.run",
+        "run_arms": "animation.mask.run_arms",
+        "attack": "animation.mask.attack",
+        "sheath": "animation.mask.sheath",
+        "unsheath": "animation.mask.unsheath",
+        "footprint": "animation.mask.footprint",
+        "particles": "controller.animation.mask.particles",
+        "move": "controller.animation.mask.move",
+        "sword": "controller.animation.mask.sword",
+        "poof": "animation.mask.poof"
+      },
+      "scripts": {
+        "animate": [
+          "move", "sword", "particles"
+        ]
+      },
+      "sound_effects": {
+        "mask_disappear": "mask_disappear",
+        "mask_sword": "mask_sword",
+        "mask_step": "mask_step"
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

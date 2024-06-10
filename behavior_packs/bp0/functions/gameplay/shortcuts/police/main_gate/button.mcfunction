@@ -1,0 +1,2 @@
+execute @e[type=noxcrew:counter] ~ ~ ~ detect 342 69 156 coral_block 12 tellraw @a {"rawtext": [{"translate" : "txt.misc.msg29"}]}
+execute @e[type=noxcrew:counter] ~ ~ ~ detect 342 69 156 sealantern 0 setblock 208 22 233 redstone_block

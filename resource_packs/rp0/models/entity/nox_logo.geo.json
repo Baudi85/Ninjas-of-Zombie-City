@@ -1,0 +1,70 @@
+{
+	"format_version": "1.10.0",
+	"geometry.nox_logo": {
+		"texturewidth": 128,
+		"textureheight": 64,
+		"visible_bounds_width": 7,
+		"visible_bounds_height": 2,
+		"visible_bounds_offset": [0, 1, 0],
+		"bones": [
+			{
+				"name": "n",
+				"pivot": [0, 0, 0]
+			},
+			{
+				"name": "bone",
+				"parent": "n",
+				"pivot": [0, 0, 0],
+				"cubes": [
+					{"origin": [-49.6, 2, 6], "size": [10, 13, 4], "uv": [0, 17]}
+				]
+			},
+			{
+				"name": "o",
+				"pivot": [0, 0, 0],
+				"rotation": [0, 0, 10],
+				"cubes": [
+					{"origin": [-38.00705, -4.7775, 6], "size": [11, 12, 4], "uv": [92, 0]}
+				]
+			},
+			{
+				"name": "x",
+				"pivot": [0, 0, 0],
+				"rotation": [0, 0, 5],
+				"cubes": [
+					{"origin": [-23.40782, -0.40169, 6], "size": [11, 13, 4], "uv": [62, 0]}
+				]
+			},
+			{
+				"name": "c",
+				"pivot": [0, 0, 0],
+				"cubes": [
+					{"origin": [-9.6, 2, 6], "size": [11, 12, 4], "uv": [28, 17]}
+				]
+			},
+			{
+				"name": "r",
+				"pivot": [0, 0, 0],
+				"cubes": [
+					{"origin": [3.4, 0, 6], "size": [17, 18, 4], "uv": [58, 17]}
+				]
+			},
+			{
+				"name": "e",
+				"pivot": [0, 0, 0],
+				"rotation": [0, 0, 5],
+				"cubes": [
+					{"origin": [22.59218, 4.59831, 6], "size": [10, 13, 4], "uv": [34, 0]}
+				]
+			},
+			{
+				"name": "w",
+				"pivot": [0, 0, 0],
+				"rotation": [0, 0, -2],
+				"cubes": [
+					{"origin": [37.38193, -1.03616, 6], "size": [13, 13, 4], "uv": [0, 0]}
+				]
+			}
+		]
+	}
+}

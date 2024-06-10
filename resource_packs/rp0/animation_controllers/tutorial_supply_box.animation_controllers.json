@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.tutorial_supplybox.open": {
+	 "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [ "idle" ],
+			"particle_effects": [
+			 { "effect": "objective" }
+			],
+          "transitions": [
+            { "interact": "query.is_baby" }
+          ]
+        },
+	    "interact": {
+          "animations": [ "interact" ],
+          "transitions": [
+		      	{ "open": "query.anim_time >= 1.0" }
+          ]
+        },
+	    "open": {
+          "animations": [ "open" ],
+			"particle_effects": [
+			 { "effect": "objective" }
+			]
+        }
+      }
+    }
+  }
+}

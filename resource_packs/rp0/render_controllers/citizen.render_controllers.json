@@ -1,0 +1,88 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.citizen_skin": {
+      "arrays": {
+        "geometries": {
+          "Array.geos": [
+            "Geometry.default",
+            "Geometry.default",
+            "Geometry.default",
+            "Geometry.slim"
+          ]
+        },
+        "textures": {
+          "Array.skins": [
+            "Texture.s1",
+            "Texture.s2",
+            "Texture.s3",
+            "Texture.s4" 
+          ]
+        }
+      },
+      "geometry": "Array.geos[query.skin_id]",
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Array.skins[query.skin_id]"]
+    }, 
+    "controller.render.citizen_shirt": {
+      "arrays": {
+        "geometries": {
+          "Array.geos": [
+            "Geometry.default",
+            "Geometry.slim" 
+          ]
+        },
+        "textures": {
+          "Array.skins": [
+            "Texture.t0",
+            "Texture.t1",
+            "Texture.t2",
+            "Texture.t3",
+            "Texture.t4", 
+            "Texture.t5",
+            "Texture.t6",
+            "Texture.t7",
+            "Texture.t8",
+            "Texture.t9",
+            "Texture.t10",
+            "Texture.t11",
+            "Texture.t12",
+            "Texture.t13",
+            "Texture.t14",
+            "Texture.t15" 
+          ]
+        }
+      },
+      "geometry": "Array.geos[variable.slim_shirt]",
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Array.skins[query.variant]"]
+    }, 
+    "controller.render.citizen_pants": {
+      "arrays": {
+        "geometries": {
+          "Array.geos": [
+            "Geometry.default",
+            "Geometry.default",
+            "Geometry.default",
+            "Geometry.default",
+            "Geometry.default",
+            "Geometry.slim"
+          ]
+        },
+        "textures": {
+          "Array.skins": [
+            "Texture.p0",
+            "Texture.p1",
+            "Texture.p2",
+            "Texture.p3",
+            "Texture.p4",
+            "Texture.p5"
+          ]
+        }
+      },
+      "geometry": "Array.geos[query.mark_variant]",
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Array.skins[query.mark_variant]"]
+    }
+  }
+}

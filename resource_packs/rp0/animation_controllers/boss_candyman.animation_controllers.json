@@ -1,0 +1,64 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.candyman.move": {
+      "states": {
+        "default": {
+          "animations": [ "idle", "look_at_target" ],
+		    	"transitions": [
+			    	{ "spin": "query.is_baby" },
+	      		{ "walk": "query.modified_move_speed > 0.01" },
+		      	{ "attack": "query.is_delayed_attacking" }
+          ],
+          "blend_transition": 0.2 
+        },
+	     "walk": {
+          "animations": [ "walk", "look_at_target" ],
+		    	"transitions": [
+		      	{ "spin": "query.is_baby" },
+			    { "default": "query.modified_move_speed <= 0.01" },
+		      	{ "attack": "query.is_delayed_attacking" }
+          ] ,
+          "blend_transition": 0.2 
+        },
+	    "spin": {
+          "animations": [ "spin", "spin_sound" ],
+		    	"transitions": [
+		      	{ "dizzy": "!query.is_baby" }
+          ] ,
+          "blend_transition": 0.2 ,
+          "blend_via_shortest_path" : true  
+        },
+	    "dizzy": {
+          "animations": [ "dizzy", "dizzy_sound" ],
+		    	"transitions": [
+		      	{ "walk": "!query.is_tamed && query.modified_move_speed > 0.01" },
+			    { "default": "!query.is_tamed && query.modified_move_speed <= 0.01" }
+          ] ,
+          "blend_transition": 0.2
+        },
+	    "attack": {
+          "animations": [ "attack" ],
+		    	"transitions": [
+			  	{ "default": "query.anim_time >= 0.84 && query.modified_move_speed <= 0.01" },
+		    	{ "walk": "query.anim_time >= 0.84 && query.modified_move_speed > 0.01" }
+          ] ,
+          "blend_transition": 0.2 
+        }
+      }
+    },
+    "controller.animation.candyman.particle": {
+      "states": {
+        "default": {
+          "particle_effects": [
+            {
+              "effect": "candyman_stick",
+              "locator": "stick_locator"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+

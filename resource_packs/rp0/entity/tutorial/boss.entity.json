@@ -1,0 +1,27 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.tutorial_boss",
+      "textures": {
+        "default": "textures/entity/tutorial/boss"
+      },
+      "geometry": {
+        "default": "geometry.tutorial_boss"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "fall": "animation.tutorial_boss.fall",
+        "fallen": "animation.tutorial_boss.fallen"
+        },
+      "animation_controllers": [
+        { "falldown": "controller.animation.tutorial_boss.falldown" } 
+      ],
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

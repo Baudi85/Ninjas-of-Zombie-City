@@ -1,0 +1,29 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.zombie_shield": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "shield": "query.skin_id == 3"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s remove shield"
+                    ],
+                    "on_exit": [
+                        "/tag @s remove shield"
+                    ]
+                },
+                "shield": {
+                    "transitions": [
+                        {
+                            "default": "query.skin_id != 3"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

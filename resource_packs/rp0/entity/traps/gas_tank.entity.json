@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.gas_tank",
+      "textures": {
+        "default": "textures/entity/gas_tank"
+      },
+      "geometry": {
+        "default": "geometry.gas_tank"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

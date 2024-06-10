@@ -1,0 +1,23 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.vendor": {
+      "arrays": { 
+      "textures": {
+        "Array.skins": [
+          "Texture.emi",
+          "Texture.pablo",
+          "Texture.jon",
+          "Texture.jana",
+          "Texture.max",
+          "Texture.sage",
+          "Texture.jim"
+        ]
+      }
+    },
+      "geometry": "Geometry.default",
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Array.skins[query.variant]"]
+    }
+  }
+}

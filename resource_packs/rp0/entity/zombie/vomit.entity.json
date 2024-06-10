@@ -1,0 +1,44 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.vomit",
+      "textures": {
+        "default": "textures/entity/zombie/vomit"
+      },
+      "geometry": {
+        "default": "geometry.vomit"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "particle_effects": {
+        "drip": "noxcrew:zcn.protectile_drip",
+        "spray": "noxcrew:zcn.protectile_spray"
+      },
+      "animations": {
+        "trunk": "animation.vomit.trunk",
+        "snot": "animation.vomit.snot",
+        "idle": "animation.vomit.idle",
+        "walk": "animation.vomit.walk",
+        "spit": "animation.vomit.spit",
+        "spawn": "animation.vomit.spawn",
+        "wait": "animation.vomit.wait"
+      },
+      "animation_controllers": [
+        {
+          "move": "controller.animation.vomit.move"
+        },
+        {
+          "move2": "controller.animation.vomit.move2"
+        }
+      ],
+      "sound_effects": {
+        "vomit_spew": "vomit_spew"
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

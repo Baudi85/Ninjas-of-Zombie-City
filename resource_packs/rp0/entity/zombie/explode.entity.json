@@ -1,0 +1,39 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.explode",
+      "textures": {
+        "default": "textures/entity/zombie/explode",
+        "shield": "textures/entity/zombie/shield"
+      },
+      "geometry": {
+        "default": "geometry.explode",
+        "shield": "geometry.explode_shield"
+      },
+      "materials": {
+        "default": "transparency",
+        "shield": "shield"
+      },
+      "animations": {
+        "cysts": "animation.explode.cysts",
+        "idle": "animation.explode.idle",
+        "walk": "animation.explode.walk",
+        "spawn": "animation.explode.spawn",
+        "explode": "animation.explode.explode"
+      },
+      "animation_controllers": [
+        {
+          "move": "controller.animation.explode.move"
+        }
+	  ],
+      "sound_effects": {
+        "explode_boom": "explode_boom"
+      },
+      "render_controllers": [
+        "controller.render.base_fix",
+        "controller.render.shield"
+      ]
+    }
+  }
+}

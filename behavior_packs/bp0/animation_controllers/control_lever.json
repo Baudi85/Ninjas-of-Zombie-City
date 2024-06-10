@@ -1,0 +1,35 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.control_lever": {
+            "states": {
+                "normal": {
+                    "transitions": [
+                        {
+                            "ninja": "query.variant == 1"
+                        }
+                    ],
+                    "animations": [
+                        "normalMode"
+                    ],
+                    "on_exit":[
+                        "/function playerManagement/ninjaModeMessage"
+                    ]
+                },
+                "ninja": {
+                    "transitions": [
+                        {
+                            "normal": "query.variant == 0"
+                        }
+                    ],
+                    "animations": [
+                        "ninjaMode"
+                    ],
+                    "on_exit":[
+                        "/function playerManagement/normalModeMessage"
+                    ]
+                }
+            }
+        }
+    }
+}

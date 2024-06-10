@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.machine_part_a",
+      "textures": {
+        "default": "textures/entity/machine"
+      },
+      "geometry": {
+        "default": "geometry.machine_part_a"
+      },
+      "materials": {
+        "default": "base"
+      }, 
+      "particle_effects": {
+        "objective": "noxcrew:zcn.objective"
+      },
+      "animations": {
+        "particle": "controller.animation.machine_parts.particle"
+      },
+      "scripts": {
+        "animate": [
+          "particle"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.base_lit"
+      ]
+    }
+  }
+}

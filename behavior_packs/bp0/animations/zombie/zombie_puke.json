@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.animate_zombiepuke": {
+			"loop": false,
+			"animation_length": 2.0,
+			"timeline": {
+				"1.0": [
+					"/execute @s ^ ^ ^2 tag @e[tag=zombie,r=2] add shield",
+					"/execute @s ^ ^ ^6 tag @e[tag=zombie,r=3] add shield",
+					"/execute @s ^ ^ ^11 tag @e[tag=zombie,r=4] add shield",
+                    "@s noxcrew:to_stop_puking"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.weapons_rack": {
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        { "weapon1": "query.variant >= 1" }, 
+        { "weapon2": "query.variant >= 2" }, 
+        { "weapon3": "query.variant >= 3" }, 
+        { "weapon4": "query.variant >= 4" } 
+      ],
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Texture.default"]
+    }
+  }
+}

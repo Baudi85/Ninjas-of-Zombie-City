@@ -1,0 +1,69 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.grunt",
+      "textures": {
+        "a": "textures/entity/zombie/grunt/a",
+        "a_a": "textures/entity/zombie/grunt/a_a",
+        "b": "textures/entity/zombie/grunt/b",
+        "b_a": "textures/entity/zombie/grunt/b_a",
+        "b_b": "textures/entity/zombie/grunt/b_b",
+        "c": "textures/entity/zombie/grunt/c",
+        "d": "textures/entity/zombie/grunt/d",
+        "d_a": "textures/entity/zombie/grunt/d_a",
+        "e": "textures/entity/zombie/grunt/e",
+        "f": "textures/entity/zombie/grunt/f",
+        "f_a": "textures/entity/zombie/grunt/f_a",
+        "g": "textures/entity/zombie/grunt/g",
+        "h": "textures/entity/zombie/grunt/h",
+        "i": "textures/entity/zombie/grunt/i",
+        "j": "textures/entity/zombie/grunt/j",
+        "k": "textures/entity/zombie/grunt/k",
+        "k_a": "textures/entity/zombie/grunt/k_a",
+        "l": "textures/entity/zombie/grunt/l",
+        "m": "textures/entity/zombie/grunt/m",
+        "shield": "textures/entity/zombie/shield"
+      },
+      "geometry": {
+        "default": "geometry.grunt_default",
+        "a": "geometry.grunt_a",
+        "b": "geometry.grunt_b",
+        "c": "geometry.grunt_c",
+        "d": "geometry.grunt_d",
+        "e": "geometry.grunt_e",
+        "f": "geometry.grunt_f",
+        "g": "geometry.grunt_g",
+        "h": "geometry.grunt_h",
+        "i": "geometry.grunt_i",
+        "j": "geometry.grunt_j",
+        "k": "geometry.grunt_k",
+        "l": "geometry.grunt_l",
+        "m": "geometry.grunt_m"
+      },
+      "materials": {
+        "default": "transparency",
+        "shield": "shield"
+      },
+      "animations": {
+        "spawn": "animation.grunt.spawn",
+        "walk": "animation.grunt.walk",
+        "run": "animation.grunt.run",
+        "attack": "animation.grunt.attack",
+        "idle1": "animation.grunt.idle1",
+        "idle2": "animation.grunt.idle2",
+        "look_at_target": "animation.grunt.look_at_target"
+      },
+      "animation_controllers": [
+        {
+          "move": "controller.animation.grunt.move"
+        }
+      ],
+      "render_controllers": [
+        "controller.render.grunt",
+        "controller.render.grunt_bat",
+        "controller.render.shield_grunt"
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.control_button",
+      "textures": {
+        "default": "textures/entity/control_button"
+      },
+      "geometry": {
+        "default": "geometry.control_button"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "press": "animation.control_button.press",
+        "ready": "animation.control_button.ready",
+        "grey": "animation.control_button.grey",
+        "red": "animation.control_button.red",
+        "pressing": "controller.animation.control_button.press",
+        "color": "controller.animation.control_button.color"
+        },
+      "scripts": {
+        "animate": [
+          "pressing", "color"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

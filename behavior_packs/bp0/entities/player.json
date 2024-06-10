@@ -1,0 +1,163 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "minecraft:player",
+            "is_spawnable": false,
+            "is_summonable": false,
+            "is_experimental": false,
+            "animations": {
+                "sprinting": "controller.animation.player_sprinting",
+                "parachute": "controller.animation.player_parachute",
+                "dead": "controller.animation.player_dies",
+                "height_achievement": "controller.animation.player_achievement"
+            },
+            "scripts": {
+                "animate": [
+                    "sprinting",
+                    "parachute",
+                    "height_achievement",
+                    "dead"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:height_achievement": {
+                "minecraft:is_baby": {}
+            },
+            "noxcrew:parachute": {
+                "minecraft:is_tamed": {}
+            }
+        },
+        "components": {
+            "minecraft:experience_reward": {
+                "on_death": "Math.Min(query.player_level * 7, 100)"
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "player"
+                ]
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "fall",
+                    "deals_damage": true,
+                    "damage_multiplier": 0.5
+                }
+            },
+            "minecraft:is_stackable": {},
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 1.8
+            },
+            "minecraft:can_climb": {},
+            "minecraft:movement": {
+                "value": 0.1
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "filters": {
+                            "test": "in_lava",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": true
+                        },
+                        "cause": "lava",
+                        "damage_per_tick": 4
+                    }
+                ]
+            },
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "event": "noxcrew:to_parachute",
+                        "filters": {
+                            "test": "has_tag",
+                            "subject": "self",
+                            "operator": "equals",
+                            "value": "to_parachute"
+                        }
+                    },
+                    {
+                        "event": "noxcrew:to_height_achievement",
+                        "filters": {
+                            "test": "is_altitude",
+                            "subject": "self",
+                            "operator": ">=",
+                            "value": 200
+                        }
+                    }
+                ]
+            },
+            "minecraft:attack": {
+                "damage": 1
+            },
+            "minecraft:player.saturation": {
+                "value": 20
+            },
+            "minecraft:player.exhaustion": {
+                "value": 0,
+                "max": 4
+            },
+            "minecraft:player.level": {
+                "value": 0,
+                "max": 24791
+            },
+            "minecraft:player.experience": {
+                "value": 0,
+                "max": 1
+            },
+            "minecraft:breathable": {
+                "total_supply": 15,
+                "suffocate_time": -1,
+                "inhale_time": 3.75,
+                "generates_bubbles": false
+            },
+            "minecraft:nameable": {
+                "always_show": true,
+                "allow_name_tag_renaming": false
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:timer": {
+                "looping": false,
+                "time": 0.1,
+                "time_down_event": {
+                    "event": "noxcrew:to_ninja_effects"
+                }
+            },
+            "minecraft:scaffolding_climber": {}
+        },
+        "events": {
+            "noxcrew:to_height_achievement": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:height_achievement"
+                    ]
+                }
+            },
+            "noxcrew:to_parachute": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:parachute"
+                    ]
+                }
+            },
+            "noxcrew:remove_parachute": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:parachute"
+                    ]
+                }
+            }
+        }
+    }
+}

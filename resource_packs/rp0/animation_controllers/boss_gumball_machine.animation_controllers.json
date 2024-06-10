@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.gumball_machine.drop": {
+      "states": {
+        "default": {
+          "transitions": [
+			{ "drop": "query.is_sheared" }
+          ]
+        },
+		"drop": {
+          "animations": [ "drop" ],
+          "transitions": [
+            { "default": "query.anim_time >= 1.73" }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.posters",
+      "textures": {
+        "a": "textures/entity/poster/a",
+        "b": "textures/entity/poster/b",
+        "c": "textures/entity/poster/c",
+        "d": "textures/entity/poster/d",
+        "e": "textures/entity/poster/e",
+        "f": "textures/entity/poster/f",
+        "g": "textures/entity/poster/g",
+        "h": "textures/entity/poster/h",
+        "i": "textures/entity/poster/i"
+      },
+      "geometry": {
+        "default": "geometry.poster"
+      },
+      "materials": {
+        "default": "base"
+      },
+      "render_controllers": [
+        "controller.render.poster"
+      ]
+    }
+  }
+}

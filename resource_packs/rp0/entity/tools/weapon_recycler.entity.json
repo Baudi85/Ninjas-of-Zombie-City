@@ -1,0 +1,32 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.weapon_recycler",
+      "textures": {
+        "default": "textures/entity/weapon_recycler"
+      },
+      "geometry": {
+        "default": "geometry.weapon_recycler"
+      },
+      "materials": {
+        "default": "transparency"
+      }, 
+      "particle_effects": {
+        "wood_chips": "noxcrew:zcn.wood_chips"
+      },
+      "animations": {
+        "on": "animation.weapon_recycler.on",
+        "off": "animation.weapon_recycler.off"
+      },
+      "animation_controllers": [
+        {
+          "on": "controller.animation.weapon_recycler.on"
+        }
+      ],
+      "render_controllers": [
+        "controller.render.base_fix"
+      ]
+    }
+  }
+}

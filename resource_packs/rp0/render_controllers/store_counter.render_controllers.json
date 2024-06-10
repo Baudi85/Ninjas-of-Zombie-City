@@ -1,0 +1,32 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.store_counter": {
+      "arrays": {
+        "geometries": {
+          "array.geos": [
+            "Geometry.solo",
+            "Geometry.default",
+            "Geometry.default",
+            "Geometry.default",
+            "Geometry.default",
+            "Geometry.solo"
+          ]
+        },
+        "textures": {
+          "array.skins": [
+            "Texture.me",
+            "Texture.cw",
+            "Texture.mw",
+            "Texture.cm",
+            "Texture.mm",
+            "Texture.ma"
+          ]
+        }
+      },
+      "geometry": "array.geos[query.skin_id]",
+      "materials": [{"*": "Material.default"}],
+      "textures": ["array.skins[query.skin_id]"]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.npc_vendor",
+      "textures": {
+        "emi": "textures/entity/citizen/vendor/emi",
+        "pablo": "textures/entity/citizen/vendor/pablo",
+        "jon": "textures/entity/citizen/vendor/jon",
+        "jana": "textures/entity/citizen/vendor/jana",
+        "max": "textures/entity/citizen/vendor/max",
+        "sage": "textures/entity/citizen/vendor/sage",
+        "jim": "textures/entity/citizen/vendor/jim"
+      },
+      "geometry": {
+        "default": "geometry.vendor"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "idle": "animation.citizen.idle",
+        "look_at_target": "animation.citizen.look_at_target",
+        "walk": "animation.citizen.walk",
+	    	"move": "controller.animation.citizen.move"
+      },
+      "scripts": {
+        "animate": [
+          "move"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.vendor"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dungeon4": {
+			"loop": false,
+			"animation_length": 12.0,
+			"timeline": {
+				"0.0": [
+					"/function voices/debriefer/directions/toDungeon4"
+				],
+				"10.0": [
+					"/function voices/debriefer/comm/commOutro"
+				],
+				"11.0": [
+					"/function gameplay/objective/give",
+					"@s noxcrew:to_despawn"
+				]
+			}
+		}
+	}
+}

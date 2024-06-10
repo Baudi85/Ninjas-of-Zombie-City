@@ -1,0 +1,67 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.supply_box",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, 53, 0],
+					"cubes": [
+						{"origin": [-11, 0, -15], "size": [22, 14, 30], "uv": [0, 0]},
+						{"origin": [-9, 14, -13], "size": [18, 2, 26], "uv": [0, 77]}
+					]
+				},
+				{
+					"name": "lid",
+					"parent": "body",
+					"pivot": [-15, 9.5, -2],
+					"cubes": [
+						{"origin": [-16.68585, 17.40873, -15.86778], "size": [22, 2, 30], "pivot": [0, 0, 0], "rotation": [0, -10, -45], "uv": [0, 44]}
+					]
+				},
+				{
+					"name": "balloons",
+					"parent": "body",
+					"pivot": [0, 15, -0.5],
+					"cubes": [
+						{"origin": [0.92419, 15.29289, -1.28291], "size": [0, 21, 1], "pivot": [0, 18, 0], "rotation": [0, 20, 15], "uv": [0, 0]},
+						{"origin": [0.94815, 15.29335, -0.51006], "size": [0, 22, 1], "pivot": [0, 18, 0], "rotation": [20, 80, 5], "uv": [0, 0]},
+						{"origin": [-0.04884, 15.49925, -0.92752], "size": [0, 23, 1], "pivot": [0, 18, 0], "rotation": [15, -155, 5], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "balloon1",
+					"parent": "balloons",
+					"pivot": [4.06443, 37, 5.01676],
+					"cubes": [
+						{"origin": [1.06443, 37, 1.76676], "size": [6, 6, 6], "pivot": [5, 37, 0], "rotation": [0, -5, 0], "uv": [2, 0]}
+					]
+				},
+				{
+					"name": "balloon2",
+					"parent": "balloons",
+					"pivot": [3.59117, 37, -1.12326],
+					"cubes": [
+						{"origin": [1.16475, 34, -4.30411], "size": [6, 6, 6], "pivot": [5, 34, -1], "rotation": [0, -35, 0], "uv": [2, 0]}
+					]
+				},
+				{
+					"name": "balloon3",
+					"parent": "balloons",
+					"pivot": [-4.24758, 35, -2.07751],
+					"cubes": [
+						{"origin": [-6.99758, 35, -2.57751], "size": [6, 6, 6], "pivot": [5, 37, 0], "rotation": [0, -15, 0], "uv": [2, 0]}
+					]
+				}
+			]
+		}
+	]
+}

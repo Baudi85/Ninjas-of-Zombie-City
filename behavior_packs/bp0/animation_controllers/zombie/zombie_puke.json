@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.zombie_puke": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "puke": "query.is_sheared"
+                        }
+                    ]
+                },
+                "puke": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_sheared"
+                        }
+                    ],
+                    "animations": [
+                        "puking"
+                    ]
+                }
+            }
+        }
+    }
+}

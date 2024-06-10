@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.bug_bear.move": {
+      "states": {
+        "default": {
+          "animations": [ "idle", "transform_sound" ],
+          "transitions": [
+			{ "fly_transition": "!query.is_on_ground" }
+          ]
+        },
+        "fly_transition": {
+          "animations": [ "transform_sound" ],
+          "transitions": [
+			{ "fly": "!query.is_on_ground" }
+          ],
+          "blend_transition": 0.2 
+        },
+		"fly": {
+          "animations": [ "fly", "fly_sound" ],
+          "transitions": [
+            { "default": "query.is_on_ground && query.modified_move_speed <= 0.01" },
+			{ "spit": "query.is_sheared" }
+          ] ,
+          "blend_transition": 0.2 
+        },
+		"spit": {
+          "animations": [ "fly", "spit", "fly_sound" ],
+          "transitions": [
+            { "default": "query.is_on_ground && query.modified_move_speed <= 0.01" },
+            { "fly": "!query.is_on_ground && query.modified_move_speed <= 0.01" }
+          ] ,
+          "blend_transition": 0.2 
+        }
+      }
+    }
+  }
+}

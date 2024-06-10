@@ -1,0 +1,27 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.elytra_equipper": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "equip": "query.is_tamed"
+                        }
+                    ]
+                },
+                "equip": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_tamed"
+                        }
+                    ],
+                    "on_entry": [
+                        "/execute @p ~ ~ ~ function gameplay/rack/elytra",
+                        "@s noxcrew:to_waiting"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,254 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.resource_magic_trap",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "tag": "controller.animation.resource_tag",
+                "summon": "controller.animation.resource_summons"
+            },
+            "scripts": {
+                "animate": [
+                    "tag",
+                    "summon"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            },
+            "noxcrew:summon_resource_spawner": {
+                "minecraft:mark_variant": {
+                    "value": 1
+                }
+            },
+            "noxcrew:magic_police": {
+                "minecraft:skin_id": {
+                    "value": 31
+                }
+            },
+            "noxcrew:magic_hospital": {
+                "minecraft:skin_id": {
+                    "value": 32
+                }
+            },
+            "noxcrew:magic_mall": {
+                "minecraft:skin_id": {
+                    "value": 33
+                }
+            },
+            "noxcrew:magic_tower": {
+                "minecraft:skin_id": {
+                    "value": 34
+                }
+            },
+            "noxcrew:trap": {
+                "minecraft:variant": {
+                    "value": 1
+                },
+                "minecraft:entity_sensor": {
+                    "sensor_range": 5,
+                    "minimum_count": 1,
+                    "event_filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                    },
+                    "event": "noxcrew:to_attacking"
+                }
+            },
+            "noxcrew:attacking": {
+                "minecraft:variant": {
+                    "value": 1
+                },
+                "minecraft:is_sheared": {},
+                "minecraft:behavior.nearest_attackable_target": {
+                    "priority": 1,
+                    "within_radius": 32,
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "player"
+                            },
+                            "max_dist": 32
+                        }
+                    ],
+                    "must_see": true
+                },
+                "minecraft:follow_range": {
+                    "value": 48
+                },
+                "minecraft:behavior.melee_attack": {
+                    "priority": 1,
+                    "speed_multiplier": 1,
+                    "reach_multiplier": 3.1,
+                    "track_target": false
+                },
+                "minecraft:attack": {
+                    "damage": 5
+                },
+                "minecraft:movement": {
+                    "value": 0.25
+                },
+                "minecraft:navigation.walk": {
+                    "is_amphibious": true,
+                    "can_pass_doors": true,
+                    "can_open_doors": false,
+                    "avoid_sun": false
+                },
+                "minecraft:movement.basic": {},
+                "minecraft:jump.static": {},
+                "minecraft:can_climb": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "resource"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 0.6
+            },
+            "minecraft:scale": {
+                "value": 1.33
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "width": 1.4,
+                        "height": 0.6,
+                        "pivot": [
+                            0,
+                            0.3,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "minecraft:environment_sensor": {
+                "triggers": {
+                    "filters": {
+                        "test": "has_tag",
+                        "subject": "self",
+                        "operator": "equals",
+                        "value": "despawn"
+                    },
+                    "event": "noxcrew:to_despawn"
+                }
+            },
+            "minecraft:health": {
+                "value": 14,
+                "max": 14
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/resources/magic_powder.json"
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:magic_police",
+                                "noxcrew:trap"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_magic_police": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:magic_police",
+                                "noxcrew:trap"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_magic_hospital": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:magic_hospital",
+                                "noxcrew:trap"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_magic_mall": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:magic_mall",
+                                "noxcrew:trap"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_magic_tower": {
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:magic_tower",
+                                "noxcrew:trap"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_summon_resource_spawner": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:summon_resource_spawner"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            },
+            "noxcrew:to_attacking": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:trap"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:attacking"
+                    ]
+                }
+            }
+        }
+    }
+}

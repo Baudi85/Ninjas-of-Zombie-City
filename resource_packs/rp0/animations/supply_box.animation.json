@@ -1,0 +1,152 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.supply_box.idle": {
+			"loop": true,
+			"bones": {
+				"balloons": {
+					"scale": 0
+				},
+				"lidR": {
+					"rotation": [0, 0, 220]
+				},
+				"lidL": {
+					"rotation": [0, 0, -220]
+				}
+			}
+		},
+		"animation.supply_box.interact": {
+			"animation_length": 2,
+			"bones": {
+				"balloons": {
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.6": [1, 1, 1]
+					}
+				},
+				"balloon1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.6": [-20, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.6": [0, 0, 2]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.6": [2, 2, 2]
+					}
+				},
+				"balloon2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.6": [0, 0, 20]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.6": [1, 0, -1]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.6": [2, 2, 2]
+					}
+				},
+				"balloon3": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.6": [0, -10, -10]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.6": [-2, 0, -4]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.6": [2, 2, 2]
+					}
+				},
+				"lid": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.6": [7.5, 7.5, 45.5],
+						"1.25": [7.5, 7.5, 45.5]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.4": [13.5, 12.45, 1.75],
+						"0.6": [16.5, 4.45, 1.75],
+						"1.25": [16.5, 4.45, 1.75]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.4": [1.05, 1.05, 1.05],
+						"0.6": [1.05, 1.05, 1.05],
+						"1.25": [1.05, 1.05, 1.05]
+					}
+				},
+				"lidR": {
+					"rotation": {
+						"0.15": [0, 0, 220],
+						"0.6": [0, 0, 0]
+					}
+				},
+				"lidL": {
+					"rotation": {
+						"0.0": [0, 0, -220],
+						"0.3": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.supply_box.fly": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": ["Math.cos(query.anim_time * 150) * -5", "Math.cos(query.anim_time * 250) * -15", "Math.cos(query.anim_time * 150 +50) * -5"],
+					"position": ["Math.cos(query.anim_time * 150 +65) * -10", 0, "Math.cos(query.anim_time * 150) * -3"]
+				},
+				"balloons": {
+					"scale": 1
+				},
+				"balloon1": {
+					"rotation": [-20, 0, 0],
+					"position": [0, 0, 2],
+					"scale": 2
+				},
+				"balloon2": {
+					"rotation": [0, 0, 20],
+					"position": [1, 0, -1],
+					"scale": 2
+				},
+				"balloon3": {
+					"rotation": [0, -10, -10],
+					"position": [-2, 0, -4],
+					"scale": 2
+				},
+				"lid": {
+					"rotation": [7.5, 7.5, 45.5],
+					"position": [16.5, 4.45, 1.75],
+					"scale": 1.05
+				},
+				"lidR": {
+					"rotation": [0, 0, 0]
+				},
+				"lidL": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		},
+		"animation.supply_box.shrink": {
+			"animation_length": 2,
+			"bones": {
+				"body": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"1.25": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

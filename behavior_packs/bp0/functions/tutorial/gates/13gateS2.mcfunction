@@ -1,0 +1,1 @@
+tellraw @a[x=920,y=90,z=64,dx=7,dy=4,dz=8] {"rawtext": [{"translate" : "txt.misc.msg1"}]}

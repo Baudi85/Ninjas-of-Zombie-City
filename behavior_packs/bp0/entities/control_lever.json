@@ -1,0 +1,129 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.control_lever",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "control": "controller.animation.control_lever",
+                "normalMode": "animation.control_lever_normal",
+                "ninjaMode": "animation.control_lever_ninja"
+            },
+            "scripts": {
+                "animate": [
+                    "control"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:normal": {
+                "minecraft:variant": {
+                    "value": 0
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "operator": "equals",
+                                    "value": "player"
+                                },
+                                "target": "self",
+                                "event": "noxcrew:to_ninja"
+                            },
+                            "play_sounds": "block.turtle_egg.break",
+                            "interact_text": "action.interact.change_difficulty"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:ninja": {
+                "minecraft:variant": {
+                    "value": 1
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "operator": "equals",
+                                    "value": "player"
+                                },
+                                "target": "self",
+                                "event": "noxcrew:to_normal"
+                            },
+                            "play_sounds": "block.turtle_egg.break",
+                            "interact_text": "action.interact.change_difficulty"
+                        }
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "control"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 1.2,
+                "height": 1.8
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:normal"
+                    ]
+                }
+            },
+            "noxcrew:to_ninja": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:normal"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:ninja"
+                    ]
+                }
+            },
+            "noxcrew:to_normal": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:ninja"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:normal"
+                    ]
+                }
+            }
+        }
+    }
+}

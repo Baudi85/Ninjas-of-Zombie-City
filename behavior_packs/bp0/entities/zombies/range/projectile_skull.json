@@ -1,0 +1,54 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.projectile_skull",
+            "is_spawnable": false,
+            "is_summonable": false,
+            "is_experimental": false,
+            "runtime_identifier": "minecraft:small_fireball"
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.31,
+                "height": 0.31
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 0,
+                "look_distance": 16,
+                "probability": 1
+            },
+            "minecraft:projectile": {
+                "on_hit": {
+                    "impact_damage": {
+                        "damage": 4.5,
+                        "knockback": false,
+                        "catch_fire": false,
+                        "semi_random_diff_damage": false
+                    },
+                    "remove_on_hit": {}
+                },
+                "power": 1.6,
+                "gravity": 0,
+                "inertia": 1,
+                "liquid_inertia": 1,
+                "uncertainty_base": 0,
+                "uncertainty_multiplier": 0,
+                "anchor": 1,
+                "offset": [
+                    0,
+                    -0.1,
+                    0
+                ],
+                "reflect_on_hurt": true,
+                "onFireTime": 0,
+                "catch_fire": false
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            }
+        }
+    }
+}

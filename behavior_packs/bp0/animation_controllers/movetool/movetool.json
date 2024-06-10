@@ -1,0 +1,97 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.movetool": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "up": "query.skin_id == 1"
+                        },
+                        {
+                            "down": "query.skin_id == 2"
+                        },
+                        {
+                            "push": "query.skin_id == 3"
+                        },
+                        {
+                            "pull": "query.skin_id == 4"
+                        },
+                        {
+                            "rotCW": "query.skin_id == 5"
+                        },
+                        {
+                            "rotCCW": "query.skin_id == 6"
+                        }
+                    ]
+                },
+                "up": {
+                    "transitions": [
+                        {
+                            "default": "query.skin_id == 0"
+                        }
+                    ],
+                    "on_entry":[
+                        "/function movetool/up",
+						"@s noxcrew:movetool_reset"
+					]
+                },
+                "down": {
+                    "transitions": [
+                        {
+                            "default": "query.skin_id == 0"
+                        }
+                    ],
+                    "on_entry":[
+                        "/function movetool/down",
+						"@s noxcrew:movetool_reset"
+					]
+                },
+                "push": {
+                    "transitions": [
+                        {
+                            "default": "query.skin_id == 0"
+                        }
+                    ],
+                    "on_entry":[
+                        "/function movetool/push",
+						"@s noxcrew:movetool_reset"
+					]
+                },
+                "pull": {
+                    "transitions": [
+                        {
+                            "default": "query.skin_id == 0"
+                        }
+                    ],
+                    "on_entry":[
+                        "/function movetool/pull",
+						"@s noxcrew:movetool_reset"
+					]
+                },
+                "rotCW": {
+                    "transitions": [
+                        {
+                            "default": "query.skin_id == 0"
+                        }
+                    ],
+                    "on_entry":[
+                        "/function movetool/rotCW",
+						"@s noxcrew:movetool_reset"
+					]
+                },
+                "rotCCW": {
+                    "transitions": [
+                        {
+                            "default": "query.skin_id == 0"
+                        }
+                    ],
+                    "on_entry":[
+                        "/function movetool/rotCCW",
+						"@s noxcrew:movetool_reset"
+					]
+                }
+            }
+        }
+    }
+}

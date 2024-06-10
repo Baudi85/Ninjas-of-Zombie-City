@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.talk_npc_robot": {
+			"loop": false,
+			"animation_length": 4,
+			"timeline": {
+				"0.0": [
+					"/function voices/survivors/robo"
+				],
+				"3.0": [
+					"@s noxcrew:to_escaping"
+				]
+			}
+		}
+	}
+}

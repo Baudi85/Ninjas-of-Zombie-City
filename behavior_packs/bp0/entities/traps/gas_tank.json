@@ -1,0 +1,105 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.gas_tank",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "gas_tank_refiller": "controller.animation.gas_tank_refiller"
+            },
+            "scripts": {
+                "animate": [
+                    "gas_tank_refiller"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:waiting": {
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "event": "noxcrew:to_refill",
+                                "target": "self"
+                            },
+                            "use_item": false,
+                            "interact_text": "action.interact.fill_fuel_can"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:refill": {
+                "minecraft:is_tamed": {},
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": 0.1,
+                    "time_down_event": {
+                        "event": "noxcrew:to_waiting"
+                    }
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "utility"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 1.6,
+                "height": 2.2
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting"
+                    ]
+                }
+            },
+            "noxcrew:to_refill": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:waiting"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:refill"
+                    ]
+                }
+            },
+            "noxcrew:to_waiting": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:refill"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:waiting"
+                    ]
+                }
+            }
+        }
+    }
+}

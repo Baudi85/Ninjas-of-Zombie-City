@@ -1,0 +1,33 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.machine": {
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        { "machine_part_a": "query.variant == 1 ? 0 : 1" },   
+
+        { "machine_part_b": "query.variant == 2 ? 0 : 1" },                
+        { "wires": "query.variant == 2 ? 0 : 1" },                
+        { "wires2": "query.variant == 2 ? 0 : 1" },      
+        { "knob_a": "query.variant == 2 ? 0 : 1" },      
+        { "knob_b": "query.variant == 2 ? 0 : 1" },      
+        { "clockhand": "query.variant == 2 ? 0 : 1" },      
+
+        { "machine_part_c": "query.variant == 3 ? 0 : 1" },    
+        { "machine_c_rotation": "query.variant == 3 ? 0 : 1" },    
+        
+        
+        { "machine_part_d": "query.variant == 4 ? 0 : 1" }, 
+        { "blade_a": "query.variant == 4 ? 0 : 1" }, 
+        { "blade_b": "query.variant == 4 ? 0 : 1" }, 
+        { "blade_c": "query.variant == 4 ? 0 : 1" }, 
+        { "blade_d": "query.variant == 4 ? 0 : 1" }, 
+        { "blade_e": "query.variant == 4 ? 0 : 1" } 
+      ],
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Texture.default"],
+      "ignore_lighting": true
+    }
+  }
+}
+

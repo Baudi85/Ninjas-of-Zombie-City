@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.paint_cans": {
+      "arrays": { 
+        "geometries": {
+          "Array.geos": [
+            "Geometry.a",
+            "Geometry.b"
+          ]
+        },
+        "textures": {
+          "Array.skins": [
+            "Texture.a",
+            "Texture.b" 
+          ]
+        }
+      },
+      "geometry": "Array.geos[query.variant]",
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Array.skins[query.variant]"]
+    }
+  }
+}

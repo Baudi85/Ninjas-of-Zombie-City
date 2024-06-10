@@ -1,0 +1,31 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.tutorial_supply_box",
+      "textures": {
+        "default": "textures/entity/tutorial/supply_box"
+      },
+      "geometry": {
+        "default": "geometry.tutorial_supply_box"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "particle_effects": {
+        "objective": "noxcrew:zcn.objective"
+      },
+      "animations": {
+        "idle": "animation.tutorial_supply_box.idle",
+        "interact": "animation.tutorial_supply_box.interact",
+        "open": "animation.tutorial_supply_box.open"
+        },
+      "animation_controllers": [
+        { "open": "controller.animation.tutorial_supplybox.open" } 
+      ],
+      "render_controllers": [
+        "controller.render.base_fix"
+      ]
+    }
+  }
+}

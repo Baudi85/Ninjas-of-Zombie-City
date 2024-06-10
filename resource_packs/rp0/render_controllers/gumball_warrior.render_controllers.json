@@ -1,0 +1,22 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.gumball_warrior": {
+      "arrays": { 
+      "textures": {
+        "Array.skins": [
+          "Texture.a",
+          "Texture.b",
+          "Texture.c",
+          "Texture.d",
+          "Texture.e",
+          "Texture.f"
+        ]
+      }
+    },
+      "geometry": "Geometry.default",
+      "materials": [{"*": "Material.default"}],
+      "textures": ["Array.skins[query.variant]"]
+    }
+  }
+}

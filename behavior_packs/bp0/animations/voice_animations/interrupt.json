@@ -1,0 +1,19 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.interrupt": {
+			"loop": false,
+			"animation_length": 10.0,
+			"timeline": {
+				"0.8": [
+					"/function voices/debriefer/interruptions/interrupt"
+				],
+				"3.8": [
+					"@s noxcrew:to_despawn",
+					"/function quests/button/unlock",
+					"/function quests/startMission"
+				]
+			}
+		}
+	}
+}

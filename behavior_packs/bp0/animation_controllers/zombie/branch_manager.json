@@ -1,0 +1,193 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.branch_manager": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "branch_110": "query.mark_variant == 110"
+                        },
+                        {
+                            "branch_120": "query.mark_variant == 120"
+                        },
+                        {
+                            "branch_130": "query.mark_variant == 130"
+                        },
+                        {
+                            "branch_210": "query.mark_variant == 210"
+                        },
+                        {
+                            "branch_220": "query.mark_variant == 220"
+                        },
+                        {
+                            "branch_230": "query.mark_variant == 230"
+                        },
+                        {
+                            "branch_310": "query.mark_variant == 310"
+                        },
+                        {
+                            "branch_320": "query.mark_variant == 320"
+                        },
+                        {
+                            "branch_330": "query.mark_variant == 330"
+                        },
+                        {
+                            "branch_410": "query.mark_variant == 410"
+                        },
+                        {
+                            "branch_420": "query.mark_variant == 420"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s add branchMob"
+                    ]
+                },
+                "dead": {},
+                "branch_110": {
+                    "on_entry": [
+                        "/scoreboard players add @e[type=noxcrew:counter] zCount110 1"
+                    ],
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/scoreboard players remove @e[type=noxcrew:counter] zCount110 1"
+                    ]
+                },
+                "branch_120": {
+                    "on_entry": [
+                        "/scoreboard players add @e[type=noxcrew:counter] zCount120 1"
+                    ],
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/scoreboard players remove @e[type=noxcrew:counter] zCount120 1"
+                    ]
+                },
+                "branch_130": {
+                    "on_entry": [
+                        "/scoreboard players add @e[type=noxcrew:counter] zCount130 1"
+                    ],
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/scoreboard players remove @e[type=noxcrew:counter] zCount130 1"
+                    ]
+                },
+                "branch_210": {
+                    "on_entry": [
+                        "/scoreboard players add @e[type=noxcrew:counter] zCount210 1"
+                    ],
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/scoreboard players remove @e[type=noxcrew:counter] zCount210 1"
+                    ]
+                },
+                "branch_220": {
+                    "on_entry": [
+                        "/scoreboard players add @e[type=noxcrew:counter] zCount220 1"
+                    ],
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/scoreboard players remove @e[type=noxcrew:counter] zCount220 1"
+                    ]
+                },
+                "branch_230": {
+                    "on_entry": [
+                        "/scoreboard players add @e[type=noxcrew:counter] zCount230 1"
+                    ],
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/scoreboard players remove @e[type=noxcrew:counter] zCount230 1"
+                    ]
+                },
+                "branch_310": {
+                    "on_entry": [
+                        "/scoreboard players add @e[type=noxcrew:counter] zCount310 1"
+                    ],
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/scoreboard players remove @e[type=noxcrew:counter] zCount310 1"
+                    ]
+                },
+                "branch_320": {
+                    "on_entry": [
+                        "/scoreboard players add @e[type=noxcrew:counter] zCount320 1"
+                    ],
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/scoreboard players remove @e[type=noxcrew:counter] zCount320 1"
+                    ]
+                },
+                "branch_330": {
+                    "on_entry": [
+                        "/scoreboard players add @e[type=noxcrew:counter] zCount330 1"
+                    ],
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/scoreboard players remove @e[type=noxcrew:counter] zCount330 1"
+                    ]
+                },
+                "branch_410": {
+                    "on_entry": [
+                        "/scoreboard players add @e[type=noxcrew:counter] zCount410 1"
+                    ],
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/scoreboard players remove @e[type=noxcrew:counter] zCount410 1"
+                    ]
+                },
+                "branch_420": {
+                    "on_entry": [
+                        "/scoreboard players add @e[type=noxcrew:counter] zCount420 1"
+                    ],
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ],
+                    "on_exit": [
+                        "/scoreboard players remove @e[type=noxcrew:counter] zCount420 1"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.tutorial_sign_resource",
+      "textures": {
+        "default": "textures/entity/tutorial/sign_resource"
+      },
+      "geometry": {
+        "default": "geometry.tutorial_sign"
+      },
+      "materials": {
+        "default": "base"
+      },
+      "render_controllers": [
+        "controller.render.base_lit"
+      ]
+    }
+  }
+}

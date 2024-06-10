@@ -1,0 +1,622 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.resource_spawner",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "main": "controller.animation.resource_main",
+                "block_check": "animation.block_checker"
+            },
+            "scripts": {
+                "animate": [
+                    "main"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:wood_police": {
+                "minecraft:skin_id": {
+                    "value": 11
+                }
+            },
+            "noxcrew:wood_hospital": {
+                "minecraft:skin_id": {
+                    "value": 12
+                }
+            },
+            "noxcrew:wood_mall": {
+                "minecraft:skin_id": {
+                    "value": 13
+                }
+            },
+            "noxcrew:wood_tower": {
+                "minecraft:skin_id": {
+                    "value": 14
+                }
+            },
+            "noxcrew:cloth_police": {
+                "minecraft:skin_id": {
+                    "value": 21
+                }
+            },
+            "noxcrew:cloth_hospital": {
+                "minecraft:skin_id": {
+                    "value": 22
+                }
+            },
+            "noxcrew:cloth_mall": {
+                "minecraft:skin_id": {
+                    "value": 23
+                }
+            },
+            "noxcrew:cloth_tower": {
+                "minecraft:skin_id": {
+                    "value": 24
+                }
+            },
+            "noxcrew:magic_police": {
+                "minecraft:skin_id": {
+                    "value": 31
+                }
+            },
+            "noxcrew:magic_hospital": {
+                "minecraft:skin_id": {
+                    "value": 32
+                }
+            },
+            "noxcrew:magic_mall": {
+                "minecraft:skin_id": {
+                    "value": 33
+                }
+            },
+            "noxcrew:magic_tower": {
+                "minecraft:skin_id": {
+                    "value": 34
+                }
+            },
+            "noxcrew:metal_police": {
+                "minecraft:skin_id": {
+                    "value": 41
+                }
+            },
+            "noxcrew:metal_hospital": {
+                "minecraft:skin_id": {
+                    "value": 42
+                }
+            },
+            "noxcrew:metal_mall": {
+                "minecraft:skin_id": {
+                    "value": 43
+                }
+            },
+            "noxcrew:metal_tower": {
+                "minecraft:skin_id": {
+                    "value": 44
+                }
+            },
+            "noxcrew:block_check": {
+                "minecraft:variant": {
+                    "value": 1
+                },
+                "minecraft:environment_sensor": {
+                    "triggers": [
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "check_nearby"
+                            },
+                            "event": "noxcrew:to_check_nearby"
+                        },
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "despawn"
+                            },
+                            "event": "noxcrew:to_despawn"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:check_nearby": {
+                "minecraft:variant": {
+                    "value": 2
+                },
+                "minecraft:entity_sensor": {
+                    "sensor_range": 10,
+                    "minimum_count": 1,
+                    "event_filters": {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "resource"
+                    },
+                    "event": "noxcrew:to_respawn"
+                },
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": 2,
+                    "time_down_event": {
+                        "event": "noxcrew:to_success",
+                        "target": "self"
+                    }
+                }
+            },
+            "noxcrew:respawn": {
+                "minecraft:variant": {
+                    "value": 99
+                },
+                "minecraft:environment_sensor": {
+                    "triggers": [
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "despawn"
+                            },
+                            "event": "noxcrew:to_despawn"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:success": {
+                "minecraft:variant": {
+                    "value": 3
+                },
+                "minecraft:environment_sensor": {
+                    "triggers": [
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "despawn"
+                            },
+                            "event": "noxcrew:to_despawn"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "resource_spawner"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 1,
+                "height": 1
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "noxcrew:to_wood": {
+                "sequence": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 6
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 9
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:wood_police"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 10
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 13
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:wood_hospital"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 14
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 17
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:wood_mall"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 18
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 21
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:wood_tower"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_cloth": {
+                "sequence": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 6
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 9
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:cloth_police"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 10
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 13
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:cloth_hospital"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 14
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 17
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:cloth_mall"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 18
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 21
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:cloth_tower"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_magic": {
+                "sequence": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 6
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 9
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:magic_police"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 10
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 13
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:magic_hospital"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 14
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 17
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:magic_mall"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 18
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 21
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:magic_tower"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_metal": {
+                "sequence": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 6
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 9
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:metal_police"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 10
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 13
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:metal_hospital"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 14
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 17
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:metal_mall"
+                            ]
+                        }
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_altitude",
+                                    "operator": ">=",
+                                    "value": 18
+                                },
+                                {
+                                    "test": "is_altitude",
+                                    "operator": "<=",
+                                    "value": 21
+                                }
+                            ]
+                        },
+                        "add": {
+                            "component_groups": [
+                                "noxcrew:metal_tower"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "noxcrew:to_block_check": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:block_check"
+                    ]
+                }
+            },
+            "noxcrew:to_check_nearby": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:block_check"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:check_nearby"
+                    ]
+                }
+            },
+            "noxcrew:to_respawn": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:check_nearby"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:respawn"
+                    ]
+                }
+            },
+            "noxcrew:to_success": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:check_nearby"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:success"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

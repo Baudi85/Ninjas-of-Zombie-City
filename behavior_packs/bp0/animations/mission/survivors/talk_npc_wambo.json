@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.talk_npc_wambo": {
+			"loop": false,
+			"animation_length": 6,
+			"timeline": {
+				"0.0": [
+					"/function voices/survivors/wambo"
+				],
+				"5.0": [
+					"@s noxcrew:to_escaping"
+				]
+			}
+		}
+	}
+}

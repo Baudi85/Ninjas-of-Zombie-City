@@ -1,0 +1,82 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.trap_activator": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "powered": "query.is_sheared"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s[tag=!trap] add trap"
+                    ]
+                },
+                "powered": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_sheared"
+                        }
+                    ],
+                    "animations": [
+                        "timer",
+                        "blade_damage"
+                    ]
+                }
+            }
+        },
+        "controller.animation.trap_activator_wires": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "powered": "query.is_sheared"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s[tag=!trap] add trap"
+                    ]
+                },
+                "powered": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_sheared"
+                        }
+                    ],
+                    "animations": [
+                        "timer"
+                    ]
+                }
+            }
+        },
+        "controller.animation.trap_activator_doorpower": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "powered": "query.is_sheared"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s[tag=!trap] add trap",
+                        "/execute @s[type=noxcrew:zcn.trap_doorpower] ~ ~ ~ setblock ~ ~ ~ air"
+                    ]
+                },
+                "powered": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_sheared"
+                        }
+                    ],
+                    "animations": [
+                        "timer"
+                    ],
+                    "on_entry": [
+                        "/execute @s[type=noxcrew:zcn.trap_doorpower] ~ ~ ~ setblock ~ ~ ~ redstone_block"
+                    ]
+                }
+            }
+        }
+    }
+}

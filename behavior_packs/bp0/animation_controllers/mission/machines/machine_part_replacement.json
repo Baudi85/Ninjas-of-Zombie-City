@@ -1,0 +1,22 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.machine_part_replacement": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "spawn_replacement": "query.is_sheared"
+                        }
+                    ]
+                },
+                "spawn_replacement": {
+                    "on_entry": [
+                        "/function quests/missions/machines/replacement_parts/manage",
+                        "@s noxcrew:to_despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

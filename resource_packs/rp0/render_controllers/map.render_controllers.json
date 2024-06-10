@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.map": {
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        { "pointer_e": "query.variant == 5" },   
+        { "pointer_d": "query.variant == 4" },    
+        { "pointer_c": "query.variant == 3" },    
+        { "pointer_b": "query.variant == 2" },    
+        { "pointer_a": "query.variant == 1" } 
+      ],
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.default" ],
+      "ignore_lighting" : true
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.branch41": {
+			"loop": false,
+			"animation_length": 7.0,
+			"timeline": {
+				"0.0": [
+					"/function voices/debriefer/branch/branch41"
+				],
+				"6.2": [
+					"@s noxcrew:to_talk3"
+					
+				]
+			}
+		},
+		"animation.branch42": {
+			"loop": false,
+			"animation_length": 8.0,
+			"timeline": {
+				"0.0": [
+					"/function voices/debriefer/branch/branch42"
+				],
+				"7.1": [
+					"@s noxcrew:to_talk3"
+				]
+			}
+		}
+	}
+}

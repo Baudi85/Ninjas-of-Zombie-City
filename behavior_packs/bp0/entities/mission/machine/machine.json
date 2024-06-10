@@ -1,0 +1,455 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "noxcrew:zcn.machine",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "animations": {
+                "machinelogic": "controller.animation.machine_logic",
+                "machineSuccess": "controller.animation.machine_success",
+                "machineRepair": "controller.animation.machine_repair"
+            },
+            "scripts": {
+                "animate": [
+                    "machinelogic",
+                    "machineSuccess",
+                    "machineRepair"
+                ]
+            }
+        },
+        "component_groups": {
+            "noxcrew:powered": {
+                "minecraft:variant": {
+                    "value": 0
+                },
+                "minecraft:is_sheared": {},
+                "minecraft:environment_sensor": {
+                    "triggers": [
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "despawn"
+                            },
+                            "event": "noxcrew:to_despawn"
+                        },
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "to_missing_a"
+                            },
+                            "event": "noxcrew:to_missing_a"
+                        },
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "to_missing_b"
+                            },
+                            "event": "noxcrew:to_missing_b"
+                        },
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "to_missing_c"
+                            },
+                            "event": "noxcrew:to_missing_c"
+                        },
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "to_missing_d"
+                            },
+                            "event": "noxcrew:to_missing_d"
+                        },
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "to_fixed"
+                            },
+                            "event": "noxcrew:to_repair"
+                        }
+                    ]
+                },
+				"minecraft:nameable": {
+					"always_show": false
+				}
+            },
+            "noxcrew:success": {
+                "minecraft:is_baby": {}
+            },
+            "noxcrew:repair": {
+                "minecraft:is_tamed": {}
+            },
+            "noxcrew:unpowered": {
+                "minecraft:environment_sensor": {
+                    "triggers": [
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "despawn"
+                            },
+                            "event": "noxcrew:to_despawn"
+                        },
+                        {
+                            "filters": {
+                                "test": "has_tag",
+                                "subject": "self",
+                                "operator": "equals",
+                                "value": "to_fixed"
+                            },
+                            "event": "noxcrew:to_repair"
+                        }
+                    ]
+                },
+				"minecraft:nameable": {
+					"always_show": true
+				}
+            },
+            "noxcrew:fixed": {
+                "minecraft:variant": {
+                    "value": 0
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "noxcrew:zcn.fuelcan_full"
+                                        }
+                                    ]
+                                },
+                                "event": "noxcrew:to_success",
+                                "target": "self"
+                            },
+                            "use_item": true,
+                            "transform_to_item": "noxcrew:zcn.fuelcan_empty",
+                            "play_sounds": "block.turtle_egg.hatch",
+                            "interact_text": "action.interact.fuel_machine"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:missing_a": {
+                "minecraft:variant": {
+                    "value": 1
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "noxcrew:zcn.machine_part_a"
+                                        }
+                                    ]
+                                },
+                                "event": "noxcrew:to_fixed",
+                                "target": "self"
+                            },
+                            "use_item": true,
+                            "play_sounds": "block.turtle_egg.crack",
+                            "interact_text": "action.interact.place_part"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:missing_b": {
+                "minecraft:variant": {
+                    "value": 2
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "noxcrew:zcn.machine_part_b"
+                                        }
+                                    ]
+                                },
+                                "event": "noxcrew:to_fixed",
+                                "target": "self"
+                            },
+                            "use_item": true,
+                            "play_sounds": "block.turtle_egg.crack",
+                            "interact_text": "action.interact.place_part"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:missing_c": {
+                "minecraft:variant": {
+                    "value": 3
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "noxcrew:zcn.machine_part_c"
+                                        }
+                                    ]
+                                },
+                                "event": "noxcrew:to_fixed",
+                                "target": "self"
+                            },
+                            "use_item": true,
+                            "play_sounds": "block.turtle_egg.crack",
+                            "interact_text": "action.interact.place_part"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:missing_d": {
+                "minecraft:variant": {
+                    "value": 4
+                },
+                "minecraft:interact": {
+                    "interactions": [
+                        {
+                            "on_interact": {
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        },
+                                        {
+                                            "test": "has_equipment",
+                                            "domain": "hand",
+                                            "subject": "other",
+                                            "value": "noxcrew:zcn.machine_part_d"
+                                        }
+                                    ]
+                                },
+                                "event": "noxcrew:to_fixed",
+                                "target": "self"
+                            },
+                            "use_item": true,
+                            "play_sounds": "block.turtle_egg.crack",
+                            "interact_text": "action.interact.place_part"
+                        }
+                    ]
+                }
+            },
+            "noxcrew:despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "machine"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 1.6,
+                "height": 2
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false
+            },
+            "minecraft:physics": {}
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:powered"
+                    ]
+                }
+            },
+            "noxcrew:to_missing_a": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:powered"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:unpowered",
+                        "noxcrew:missing_a"
+                    ]
+                }
+            },
+            "noxcrew:to_missing_b": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:powered"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:unpowered",
+                        "noxcrew:missing_b"
+                    ]
+                }
+            },
+            "noxcrew:to_missing_c": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:powered"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:unpowered",
+                        "noxcrew:missing_c"
+                    ]
+                }
+            },
+            "noxcrew:to_missing_d": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:powered"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:unpowered",
+                        "noxcrew:missing_d"
+                    ]
+                }
+            },
+            "noxcrew:to_success": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:unpowered",
+                        "noxcrew:fixed"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:success",
+                        "noxcrew:powered"
+                    ]
+                }
+            },
+            "noxcrew:remove_success": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:success"
+                    ]
+                }
+            },
+            "noxcrew:to_fixed": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:missing_a",
+                        "noxcrew:missing_b",
+                        "noxcrew:missing_c",
+                        "noxcrew:missing_d"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:fixed"
+                    ]
+                }
+            },
+            "noxcrew:to_repair": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:missing_a",
+                        "noxcrew:missing_b",
+                        "noxcrew:missing_c",
+                        "noxcrew:missing_d",
+                        "noxcrew:unpowered",
+                        "noxcrew:fixed",
+                        "noxcrew:powered"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:repair"
+                    ]
+                }
+            },
+            "noxcrew:remove_repair": {
+                "remove": {
+                    "component_groups": [
+                        "noxcrew:repair"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "noxcrew:powered"
+                    ]
+                }
+            },
+            "noxcrew:to_despawn": {
+                "add": {
+                    "component_groups": [
+                        "noxcrew:despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

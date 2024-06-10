@@ -1,0 +1,126 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.voice_main": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "to_mission": "query.mark_variant == 1"
+                        },
+                        {
+                            "to_interrupted": "query.mark_variant == 4"
+                        },
+                        {
+                            "to_success": "query.mark_variant == 10"
+                        },
+                        {
+                            "to_final_boss_success": "query.mark_variant == 60"
+                        }
+                    ]
+                },
+                "to_mission": {
+                    "transitions": [
+                        {
+                            "to_branch": "query.mark_variant == 2"
+                        },
+                        {
+                            "to_interrupted": "query.mark_variant == 4"
+                        }
+                    ],
+                    "animations": [
+                        "mission_type"
+                    ]
+                },
+                "to_branch": {
+                    "transitions": [
+                        {
+                            "to_direction": "query.mark_variant == 3"
+                        },
+                        {
+                            "to_interrupted": "query.mark_variant == 4"
+                        }
+                    ],
+                    "animations": [
+                        "dungeon_branch"
+                    ]
+                },
+                "to_direction": {
+                    "transitions": [
+                        {
+                            "default": "query.mark_variant == 0"
+                        },
+                        {
+                            "to_interrupted": "query.mark_variant == 4"
+                        }
+                    ],
+                    "animations": [
+                        "direction"
+                    ]
+                },
+                "to_interrupted": {
+                    "transitions": [
+                        {
+                            "default": "query.mark_variant == 0"
+                        }
+                    ],
+                    "animations": [
+                        "interrupt"
+                    ]
+                },
+                "to_success": {
+                    "transitions": [
+                        {
+                            "to_gear_unlock": "query.mark_variant >= 11 && query.mark_variant <= 16"
+                        },
+                        {
+                            "to_final_boss": "query.mark_variant == 50"
+                        },
+                        {
+                            "to_despawn": "query.mark_variant == 99"
+                        }
+                    ],
+                    "animations": [
+                        "mission_success"
+                    ]
+                },
+                "to_gear_unlock": {
+                    "transitions": [
+                        {
+                            "to_despawn": "query.mark_variant == 99"
+                        }
+                    ],
+                    "animations": [
+                        "gear_unlock"
+                    ]
+                },
+                "to_final_boss": {
+                    "transitions": [
+                        {
+                            "to_despawn": "query.mark_variant == 99"
+                        }
+                    ],
+                    "animations": [
+                        "final_boss"
+                    ]
+                },
+                "to_final_boss_success": {
+                    "transitions": [
+                        {
+                            "to_despawn": "query.mark_variant == 99"
+                        }
+                    ],
+                    "animations": [
+                        "final_boss_congrats"
+                    ]
+                },
+                "to_despawn": {
+                    "on_entry": [
+                        "/function quests/startMission",
+                        "@s noxcrew:to_despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

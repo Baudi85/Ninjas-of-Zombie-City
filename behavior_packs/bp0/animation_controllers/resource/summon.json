@@ -1,0 +1,221 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.resource_summons": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "wood_police": "query.skin_id == 11 && query.mark_variant == 1"
+                        },
+                        {
+                            "wood_hospital": "query.skin_id == 12 && query.mark_variant == 1"
+                        },
+                        {
+                            "wood_mall": "query.skin_id == 13 && query.mark_variant == 1"
+                        },
+                        {
+                            "wood_tower": "query.skin_id == 14 && query.mark_variant == 1"
+                        },
+                        {
+                            "cloth_police": "query.skin_id == 21 && query.mark_variant == 1"
+                        },
+                        {
+                            "cloth_hospital": "query.skin_id == 22 && query.mark_variant == 1"
+                        },
+                        {
+                            "cloth_mall": "query.skin_id == 23 && query.mark_variant == 1"
+                        },
+                        {
+                            "cloth_tower": "query.skin_id == 24 && query.mark_variant == 1"
+                        },
+                        {
+                            "magic_police": "query.skin_id == 31 && query.mark_variant == 1"
+                        },
+                        {
+                            "magic_hospital": "query.skin_id == 32 && query.mark_variant == 1"
+                        },
+                        {
+                            "magic_mall": "query.skin_id == 33 && query.mark_variant == 1"
+                        },
+                        {
+                            "magic_tower": "query.skin_id == 34 && query.mark_variant == 1"
+                        },
+                        {
+                            "metal_police": "query.skin_id == 41 && query.mark_variant == 1"
+                        },
+                        {
+                            "metal_hospital": "query.skin_id == 42 && query.mark_variant == 1"
+                        },
+                        {
+                            "metal_mall": "query.skin_id == 43 && query.mark_variant == 1"
+                        },
+                        {
+                            "metal_tower": "query.skin_id == 44 && query.mark_variant == 1"
+                        },
+                        {
+                            "wood_police": "query.skin_id == 11 && !query.is_alive"
+                        },
+                        {
+                            "wood_hospital": "query.skin_id == 12 && !query.is_alive"
+                        },
+                        {
+                            "wood_mall": "query.skin_id == 13 && !query.is_alive"
+                        },
+                        {
+                            "wood_tower": "query.skin_id == 14 && !query.is_alive"
+                        },
+                        {
+                            "cloth_police": "query.skin_id == 21 && !query.is_alive"
+                        },
+                        {
+                            "cloth_hospital": "query.skin_id == 22 && !query.is_alive"
+                        },
+                        {
+                            "cloth_mall": "query.skin_id == 23 && !query.is_alive"
+                        },
+                        {
+                            "cloth_tower": "query.skin_id == 24 && !query.is_alive"
+                        },
+                        {
+                            "magic_police": "query.skin_id == 31 && !query.is_alive"
+                        },
+                        {
+                            "magic_hospital": "query.skin_id == 32 && !query.is_alive"
+                        },
+                        {
+                            "magic_mall": "query.skin_id == 33 && !query.is_alive"
+                        },
+                        {
+                            "magic_tower": "query.skin_id == 34 && !query.is_alive"
+                        },
+                        {
+                            "metal_police": "query.skin_id == 41 && !query.is_alive"
+                        },
+                        {
+                            "metal_hospital": "query.skin_id == 42 && !query.is_alive"
+                        },
+                        {
+                            "metal_mall": "query.skin_id == 43 && !query.is_alive"
+                        },
+                        {
+                            "metal_tower": "query.skin_id == 44 && !query.is_alive"
+                        }
+                    ]
+                },
+                "wood_police": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 7 237 noxcrew:to_wood",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "wood_hospital": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 11 237 noxcrew:to_wood",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "wood_mall": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 15 237 noxcrew:to_wood",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "wood_tower": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 19 237 noxcrew:to_wood",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "cloth_police": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 7 237 noxcrew:to_cloth",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "cloth_hospital": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 11 237 noxcrew:to_cloth",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "cloth_mall": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 15 237 noxcrew:to_cloth",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "cloth_tower": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 19 237 noxcrew:to_cloth",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "magic_police": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 7 237 noxcrew:to_magic",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "magic_hospital": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 11 237 noxcrew:to_magic",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "magic_mall": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 15 237 noxcrew:to_magic",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "magic_tower": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 19 237 noxcrew:to_magic",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "metal_police": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 7 237 noxcrew:to_metal",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "metal_hospital": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 11 237 noxcrew:to_metal",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "metal_mall": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 15 237 noxcrew:to_metal",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                },
+                "metal_tower": {
+                    "on_entry": [
+                        "/summon noxcrew:zcn.resource_spawner 221 19 237 noxcrew:to_metal",
+                        "/function gameplay/resourceCounter",
+                        "/tag @s add despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

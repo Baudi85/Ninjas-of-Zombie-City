@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.npc_mad",
+      "textures": {
+        "default": "textures/entity/citizen/mad"
+      },
+      "geometry": {
+        "default": "geometry.npc_mad"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "particle_effects": {
+        "poof_particle": "noxcrew:zcn.poof_particle",
+        "objective": "noxcrew:zcn.objective"
+      },
+      "animations": {
+        "idle": "animation.survivor.idle",
+        "look_at_target": "animation.survivor.look_at_target",
+        "callout": "animation.survivor.callout",
+        "talking": "animation.survivor.talking",
+        "poof": "animation.survivor.poof",
+	    	"move": "controller.animation.survivor.move",
+	    	"particle": "controller.animation.survivor.particle"
+      },
+      "scripts": {
+        "animate": [
+          "move", "particle"
+        ]
+      },
+      "sound_effects": {
+        "poof": "survivor_disappear"
+      },
+      "render_controllers": [
+        "controller.render.base_lit"
+      ]
+    }
+  }
+}

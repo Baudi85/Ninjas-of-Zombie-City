@@ -1,0 +1,35 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.gumball_warrior",
+      "textures": {
+        "a": "textures/entity/zombie/candyman/gumball_warrior_a",
+        "b": "textures/entity/zombie/candyman/gumball_warrior_b",
+        "c": "textures/entity/zombie/candyman/gumball_warrior_c",
+        "d": "textures/entity/zombie/candyman/gumball_warrior_d",
+        "e": "textures/entity/zombie/candyman/gumball_warrior_e",
+        "f": "textures/entity/zombie/candyman/gumball_warrior_f"
+      },
+      "geometry": {
+        "default": "geometry.gumball_warrior"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": {
+        "idle": "animation.gumball_warrior.idle",
+        "walk": "animation.gumball_warrior.walk",
+        "attack": "animation.gumball_warrior.attack"
+      },
+      "animation_controllers": [
+        {
+          "move": "controller.animation.gumball_warrior.move"
+        }
+	  ],
+      "render_controllers": [
+        "controller.render.gumball_warrior"
+      ]
+    }
+  }
+}

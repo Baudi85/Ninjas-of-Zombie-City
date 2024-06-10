@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.weapon_recycler.on": {
+      "states": {
+        "default": {
+          "animations": [ "off" ],
+           "transitions": [
+			 { "on": "query.is_tamed" }
+          ]
+        },
+	    "on": {
+          "animations": [ "on" ],
+          "particle_effects": [
+            { "effect": "wood_chips" }
+          ],
+           "transitions": [
+             { "default": "query.anim_time >= 1.5" }
+          ],
+          "blend_transition": 0.2
+        }
+      }
+    }
+  }
+}

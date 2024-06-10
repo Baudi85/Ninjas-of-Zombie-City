@@ -1,0 +1,71 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": { 
+    
+    "zcn.movetool_horizontal": {
+      "textures": "textures/items/movetool_horizontal"
+    },
+    "zcn.movetool_removal": {
+      "textures": "textures/items/movetool_removal"
+    },
+    "zcn.movetool_rotate": {
+      "textures": "textures/items/movetool_rotate"
+    },
+    "zcn.movetool_vertical": {
+      "textures": "textures/items/movetool_vertical" 
+    },
+
+    "zcn.cloth": {
+      "textures": "textures/items/cloth"
+    },
+    "zcn.magic_powder": {
+      "textures": "textures/items/magic_powder"
+    },
+    "zcn.metal": {
+      "textures": "textures/items/metal"
+    },
+    "zcn.wood": {
+      "textures": "textures/items/wood" 
+    },
+
+
+    "zcn.zombie_coin": {
+      "textures": "textures/items/zombie_coin"
+    },
+
+    "zcn.machine_part_a": {
+      "textures": "textures/items/machine_part_a"
+    },
+    "zcn.machine_part_b": {
+      "textures": "textures/items/machine_part_b"
+    },
+    "zcn.machine_part_c": {
+      "textures": "textures/items/machine_part_c"
+    },
+    "zcn.machine_part_d": {
+      "textures": "textures/items/machine_part_d" 
+    },
+
+    "zcn.fuelcan_full": {
+      "textures": "textures/items/fuelcan_full"
+    },
+    "zcn.fuelcan_empty": {
+      "textures": "textures/items/fuelcan_empty"
+    },
+    
+
+    "zcn.mission_police": {
+      "textures": "textures/items/police"
+    },
+    "zcn.mission_hospital": {
+      "textures": "textures/items/hospital"
+    },
+    "zcn.mission_mall": {
+      "textures": "textures/items/mall"
+    },
+    "zcn.mission_tower": {
+      "textures": "textures/items/tower"
+    }
+  }
+}

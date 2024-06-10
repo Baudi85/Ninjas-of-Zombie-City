@@ -1,0 +1,71 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.climb.move": {
+	 "initial_state": "spawn",
+      "states": {
+        "spawn": {
+          "animations": [
+            "spawn"
+          ],
+          "transitions": [
+             { "idle": "query.anim_time >= 0.85" }
+          ],
+          "blend_transition": 0.2
+        },
+        "idle": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+             { "walk": "query.modified_move_speed > 0.01" },
+             { "wall_climb": "query.is_wall_climbing && !query.is_on_ground" }
+          ],
+          "blend_transition": 0.5
+        },
+        "walk": {
+          "animations": [
+            "walk", "step_sounds"
+          ],
+          "transitions": [
+             { "idle": "query.modified_move_speed <= 0.01" },
+             { "wall_climb": "query.is_wall_climbing && !query.is_on_ground" }
+          ],
+          "blend_transition": 0.5
+        },
+        "wall_climb": {
+          "animations": [
+            "walk", "wall_climb", "step_sounds"
+          ],
+          "transitions": [
+             { "walk": "query.is_on_ground && query.modified_move_speed > 0.01" },
+             { "idle": "query.is_on_ground" }
+          ],
+          "blend_transition": 0.5
+        }
+      }
+    },
+    "controller.animation.climb.mouth": {
+      "states": {
+        "default": {
+          "animations": [
+            "mouthidle"
+          ],
+          "transitions": [
+             { "bite": "query.is_delayed_attacking" }
+          ],
+          "blend_transition": 0.1
+        },
+        "bite": {
+          "animations": [
+            "bite"
+          ],
+          "transitions": [
+             { "default": "query.anim_time >= 1.0" }
+          ],
+          "blend_transition": 0.1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.zombie_tag": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "spawnmore": "query.is_tamed"
+                        }
+                    ],
+                    "on_entry": [
+                        "/tag @s add zombie"
+                    ]
+                },
+                "spawnmore": {
+                    "transitions": [
+                        {
+                            "stop": "!query.is_tamed"
+                        }
+                    ],
+                    "on_entry": [
+                        "/execute @s[type=noxcrew:zcn.grunt] ~ ~ ~ function gameplay/extragrunts",
+                        "@s noxcrew:remove_extrazombies"
+                    ]
+                },
+                "stop": {}
+            }
+        }
+    }
+}

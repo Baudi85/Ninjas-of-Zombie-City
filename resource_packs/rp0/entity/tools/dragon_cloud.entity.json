@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.dragon_cloud",
+      "textures": {
+        "default": "textures/entity/dragon_cloud"
+      },
+      "geometry": {
+        "default": "geometry.dragon_cloud"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "animations": { 
+        "idle": "animation.dragon_cloud.idle",
+        "blink": "animation.dragon_cloud.blink"
+      },
+      "scripts": {
+        "animate": [
+          "idle", "blink"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.base"
+      ]
+    }
+  }
+}

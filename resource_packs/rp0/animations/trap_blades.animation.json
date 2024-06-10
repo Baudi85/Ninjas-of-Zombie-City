@@ -1,0 +1,40 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.trap_blades.on": {
+			"loop": true,
+			"bones": {
+				"arm": {
+					"rotation": ["Math.cos(query.anim_time * 800) * 5", "query.anim_time * -750", 0]
+				},
+				"sawblade": {
+					"rotation": [0, "query.anim_time * -500", 0]
+				},
+				"engine": {
+					"rotation": ["Math.cos(query.anim_time * 1800) * 1", 0, "Math.cos(query.anim_time * 1500) * 1"]
+				}
+			}
+		},
+		"animation.trap_blades.off": {
+			"loop": true,
+			"bones": {
+				"arm": {
+					"rotation": [0, 0, 0]
+				},
+				"sawblade": {
+					"rotation": [0, 0, 0]
+				},
+				"engine": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		},
+		"animation.trap_blades.sound": {
+			"animation_length": 1.7,
+			"loop": true,
+			"sound_effects": {
+				"0.0": [{"effect": "saw_loop"}]
+			}
+		}
+	}
+}

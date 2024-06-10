@@ -1,0 +1,38 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.tank",
+      "textures": {
+        "default": "textures/entity/zombie/tank",
+        "shield": "textures/entity/zombie/shield"
+      },
+      "geometry": {
+        "default": "geometry.tank",
+        "shield": "geometry.tank_shield"
+      },
+      "materials": {
+        "default": "transparency",
+        "shield": "shield"
+      },
+      "animations": {
+        "idle": "animation.tank.idle",
+        "walk": "animation.tank.walk",
+        "attack": "animation.tank.attack",
+        "spawn": "animation.tank.spawn"
+      },
+      "animation_controllers": [
+        {
+          "move": "controller.animation.tank.move"
+        }
+      ],
+      "sound_effects": {
+        "tank_walk": "tank_walk"
+      },
+      "render_controllers": [
+        "controller.render.base",
+        "controller.render.shield"
+      ]
+    }
+  }
+}

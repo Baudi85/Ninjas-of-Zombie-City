@@ -1,0 +1,127 @@
+{
+    "tiers": [
+        {
+            "total_exp_required": 0,
+            "groups": [
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "noxcrew:zcn.zombiecoin",
+                                    "quantity": 8
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "noxcrew:zcn.cloth",
+                                    "quantity": 1
+                                }
+                            ],
+                            "max_uses": 9999,
+                            "reward_exp": false
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "noxcrew:zcn.zombiecoin",
+                                    "quantity": 15
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "noxcrew:zcn.magic_powder",
+                                    "quantity": 1
+                                }
+                            ],
+                            "max_uses": 9999,
+                            "reward_exp": false
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "noxcrew:zcn.zombiecoin",
+                                    "quantity": 5
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "noxcrew:zcn.metal",
+                                    "quantity": 1
+                                }
+                            ],
+                            "max_uses": 9999,
+                            "reward_exp": false
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "noxcrew:zcn.zombiecoin",
+                                    "quantity": 7
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "noxcrew:zcn.wood",
+                                    "quantity": 1
+                                }
+                            ],
+                            "max_uses": 9999,
+                            "reward_exp": false
+                        }
+                    ]
+                },
+                {
+                    "num_to_select": 1,
+                    "trades": [
+                        {
+                            "wants": [
+                                {
+                                    "item": "noxcrew:zcn.zombiecoin",
+                                    "quantity": 40
+                                },
+                                {
+                                    "item": "noxcrew:zcn.magic_powder",
+                                    "quantity": 5
+                                }
+                            ],
+                            "gives": [
+                                {
+                                    "item": "minecraft:experience_bottle",
+                                    "quantity": 1,
+                                    "functions": [
+                                        {
+                                            "function": "set_lore",
+                                            "lore": [
+                                                "The true ninja throws a Spirit Warp",
+                                                "to return to a friendly place."
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "max_uses": 9999,
+                            "reward_exp": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

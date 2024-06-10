@@ -1,0 +1,13 @@
+{
+  "materials": {
+    "version": "1.0.0",  
+    "base:entity": {},
+    "invisible:entity_alphatest": {},  
+    "shield:entity": {
+      "+states": [ "Blending" ],
+      "depthFunc": "LessEqual"
+    }, 
+    "transparency:entity_alphatest": {}, 
+    "vehical:entity_emissive_alpha": {} 
+   } 
+}

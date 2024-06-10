@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "noxcrew:zcn.weapon_rack",
+      "textures": {
+        "default": "textures/entity/weapons_rack"
+      },
+      "geometry": {
+        "default": "geometry.weapons_rack"
+      },
+      "materials": {
+        "default": "transparency"
+      },
+      "render_controllers": [
+        "controller.render.weapons_rack"
+      ]
+    }
+  }
+}

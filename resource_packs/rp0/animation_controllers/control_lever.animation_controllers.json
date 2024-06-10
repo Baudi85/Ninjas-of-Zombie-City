@@ -1,0 +1,50 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.control_lever.transition": {
+            "initial_state": "normal",
+            "states": {
+                "normal": {
+                    "animations": [
+                        "normal"
+                    ],
+                    "transitions": [
+                        {
+                            "ninja_transition": "query.variant == 1"
+                        }
+                    ]
+                },
+                "ninja_transition": {
+                    "animations": [
+                        "ninja_transition"
+                    ],
+                    "transitions": [
+                        {
+                            "ninja": "query.anim_time >= 0.75"
+                        }
+                    ]
+                },
+                "ninja": {
+                    "animations": [
+                        "ninja"
+                    ],
+                    "transitions": [
+                        {
+                            "normal_transition": "query.variant == 0"
+                        }
+                    ]
+                },
+                "normal_transition": {
+                    "animations": [
+                        "normal_transition"
+                    ],
+                    "transitions": [
+                        {
+                            "normal": "query.anim_time >= 0.75"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
